@@ -4,7 +4,7 @@ BaylorRPG is a text-based RPG currently in development that aims to be a fun, ad
 a Baylor student's daily life complete with all the quirks and inside humor a typical undergrad may encounter. Expected features include character customization, a battle system, inventory and skills menu, and a story-based adventure based on real locations and people on Baylor's campus.
 
 This site is where we collaborate to share updates, host files, and provide information for the status of our 
-game as it is in development and beyond. [Code and relevant files can be viewed here](https://github.com/cameron1701/BaylorRPG.git)
+game as it is in development and beyond. [Code and relevant files can be viewed here.](https://github.com/cameron1701/BaylorRPG.git)
 
 # *****Meeting notes*****  
 * Date: 9/9/2018
