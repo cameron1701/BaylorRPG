@@ -21,7 +21,7 @@ game as it is in development and beyond. [Code and relevant files can be viewed 
   
 * Date: 9/17/2018 
 * Members in attendance: All 
-* Time: 5:15pm
+* Time: 5:15pm - 9:05
 * Meeting actions: Final collaboration to compile individual work and work on the presentation of Iteration 1.
 
 ### Wiki
