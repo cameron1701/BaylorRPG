@@ -27,4 +27,4 @@ game as it is in development and beyond.
 
 ### Wiki
 
-https://github.com/cameron1701/BaylorRPG/wiki
+[https://github.com/cameron1701/BaylorRPG/wiki]
