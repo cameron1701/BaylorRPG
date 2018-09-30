@@ -24,6 +24,11 @@ game as it is in development and beyond. [Code and relevant files can be viewed 
 * Time: 5:15pm - 9:05
 * Meeting actions: Final collaboration to compile individual work and work on the presentation of Iteration 1.
 
+* Date: 9/30/2018
+* Members in attendance: Matthew, Arantxa, Cameron (Mark out of town, Zee dropped class)
+* Time: 1:00pm - 
+* Meeting actions: Focus on upcoming demo and assignment of duties as far as coding.
+
 ### Wiki
 
 [Visit our wiki on Github](https://github.com/cameron1701/BaylorRPG/wiki)
