@@ -27,7 +27,7 @@ game as it is in development and beyond. [Code and relevant files can be viewed 
 * Date: 9/30/2018
 * Members in attendance: Matthew, Arantxa, Cameron (Mark out of town, Zee dropped class)
 * Time: 1:00pm - 
-* Meeting actions: Focus on upcoming demo and assignment of duties as far as coding.
+* Meeting actions: Focus on upcoming demo and assignment of duties as far as delegating coding assignments.
 
 ### Wiki
 
