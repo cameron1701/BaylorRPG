@@ -1,8 +1,8 @@
 package apackage;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
+import java.awt.Graphics;
 
-import java.awt.*;
+import com.sun.xml.internal.bind.v2.model.core.ID;
 
 public abstract class GameObject {
 
