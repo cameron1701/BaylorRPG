@@ -1,11 +1,15 @@
 package battlePackage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
 	private String name;
 	private int currentHealth;
 	private int totalHealth;
 	private int attack;
 	private int defense;
+	private	List<String> attackNames = new ArrayList<String>();
 	
 	Player(String s) {
 		this.name = s;
@@ -13,6 +17,24 @@ public class Player {
 		this.currentHealth = this.totalHealth;
 		this.attack = 10;
 		this.defense = 5;
+		this.initAttackNames();
+	}
+	
+	public int getAttackNamesSize(){
+		return attackNames.size();
+	}
+	
+	public String getRandAttack(int a) {
+		return attackNames.get(a);
+	}
+	
+	public void initAttackNames() {
+		attackNames.add("managed your schedule!");
+		attackNames.add("pulled an all-nighter!");
+		attackNames.add("slept well!");
+		attackNames.add("went to office hours!");
+		attackNames.add("went to StackOverflow!");
+		attackNames.add("had Chick-Fil-A!");
 	}
 
 	public int getCurrentHealth() {

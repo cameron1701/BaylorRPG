@@ -7,6 +7,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -97,10 +98,11 @@ public class BattleSpace extends JPanel implements ActionListener{
 			this.runButton.setEnabled(true);
 		}
 		else if(e.getSource() == this.fightButton){
+				Random randNum = new Random();
 				this.fightButton.setEnabled(false);
 				this.runButton.setEnabled(false);
 				this.log.append("You Selected: " + this.fightButton.getActionCommand() + "\n");
-				this.log.append("You Attack!\n");
+				this.log.append("You " + player.getRandAttack(randNum.nextInt(player.getAttackNamesSize())) + "\n");
 				
 				// Have player select which enemy to attack
 				this.player.attack(this.enemyList.get(0));
@@ -123,7 +125,7 @@ public class BattleSpace extends JPanel implements ActionListener{
 			this.runButton.setEnabled(false);
 			this.log.append("You Selected: " + this.runButton.getActionCommand() + "\n");
 			this.log.append("You Run!\n");
-			this.endTurnButton.setEnabled(true);
+			this.showResult();
 		}
 		
 		else{
