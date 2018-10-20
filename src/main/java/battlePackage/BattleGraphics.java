@@ -19,7 +19,7 @@ public class BattleGraphics extends JPanel{
     BattleGraphics() {
     	//Get Image
     	try {
-			this.image = ImageIO.read(new File("/Users/mark.dejarnett/myDocs/smallerWin.png"));
+			this.image = ImageIO.read(new File("win.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

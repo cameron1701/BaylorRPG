@@ -6,6 +6,8 @@ import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -24,9 +26,9 @@ public class BattleSpace extends JPanel implements ActionListener{
 	private JTextArea log;
 	private JScrollPane logScrollPane;
 	private Player player;
-	private Enemy enemy;
+	private List<Enemy> enemyList;
 	
-	BattleSpace(Player p, Enemy e){
+	BattleSpace(Player p, List<Enemy> eList){
 		//Text Area Set Up
 		super(new BorderLayout());
 		this.log = new JTextArea(700, 700);
@@ -41,7 +43,7 @@ public class BattleSpace extends JPanel implements ActionListener{
 		
 		//Assign characters
 		this.player = p;
-		this.enemy = e;
+		this.enemyList = eList;
 		
 		//Button Set Up
 		this.fightButton = new JButton("ATTACK");
@@ -99,16 +101,18 @@ public class BattleSpace extends JPanel implements ActionListener{
 				this.runButton.setEnabled(false);
 				this.log.append("You Selected: " + this.fightButton.getActionCommand() + "\n");
 				this.log.append("You Attack!\n");
-				this.player.attack(this.enemy);
+				
+				// Have player select which enemy to attack
+				this.player.attack(this.enemyList.get(0));
 				this.endTurnButton.setEnabled(true);
-			if(this.enemy.getCurrentHealth() > 0) {
-				this.log.append("The " + this.enemy.getName() + " now has " + this.enemy.getCurrentHealth() + "/"
-						+ this.enemy.getTotalHealth() + " health.\n");
+			if(this.enemyList.get(0).getCurrentHealth() > 0) {
+				this.log.append("The " + this.enemyList.get(0).getName() + " now has " + this.enemyList.get(0).getCurrentHealth() + "/"
+						+ this.enemyList.get(0).getTotalHealth() + " health.\n");
 			}
 			else {
 				this.endTurnButton.setEnabled(false);
 				this.log.append("You Won the Fight!\n");
-				this.log.append("You have Defeated " + this.enemy.getName() + "!\n");
+				this.log.append("You have defeated " + this.enemyList.get(0).getName() + "!\n");
 				
 				//Show Win Graphic
 				this.showResult();
@@ -124,25 +128,26 @@ public class BattleSpace extends JPanel implements ActionListener{
 		
 		else{
 			if(this.player.getCurrentHealth() > 0) {
-				this.log.append("The " + this.enemy.getName() + " attacked!\n");
-				this.enemy.attack(this.player);	
-				this.endTurnButton.setEnabled(false);
-				this.fightButton.setEnabled(true);
-				this.runButton.setEnabled(true);
+				for(int i = 0; i < enemyList.size(); i++) {
+					this.log.append("The " + this.enemyList.get(i).getName() + " attacked!\n");
+					this.enemyList.get(i).attack(this.player);	
+					this.endTurnButton.setEnabled(false);
+					this.fightButton.setEnabled(true);
+					this.runButton.setEnabled(true);
+					this.log.append("You now have " + this.player.getCurrentHealth() + "/"
+							+ this.player.getTotalHealth() + " health.\n");
+				}
 			}
-			if(this.player.getCurrentHealth() > 0) {
-				this.log.append("You now have " + this.player.getCurrentHealth() + "/"
-						+ this.player.getTotalHealth() + " health.\n");
-			}
-			else {
+			if(this.player.getCurrentHealth() <= 0) {
 				this.endTurnButton.setEnabled(false);
 				this.log.append("You Lost The Fight!\n");
-				this.log.append(this.enemy.getName() + " has Defeated You!\n");
+				this.log.append(this.enemyList.get(0).getName() + " has Defeated You!\n");
 				
 				//Show Lose Graphic
 				this.showResult();
 			}
 		}
+
 	}
 	
 	private void createAndShowGUI() {

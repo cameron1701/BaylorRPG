@@ -7,12 +7,12 @@ public class Enemy {
 	private int attack;
 	private int defense;
 	
-	Enemy(String s) {
+	Enemy(String s, int tHealth, int atk, int def) {
 		this.name = s;
-		this.totalHealth = 10;
+		this.totalHealth = tHealth;
 		this.currentHealth = this.totalHealth;
-		this.attack = 3;
-		this.defense = 1;
+		this.attack = atk;
+		this.defense = def;
 	}
 
 	public int getCurrentHealth() {
