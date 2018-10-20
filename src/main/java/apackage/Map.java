@@ -23,6 +23,12 @@ public class Map {
 
         log.append(temp);
     }
+    
+    public static void main(String args[]) {
+    	Map map = new Map();
+    	
+    	map.printMenu();
+    }
 
 
 }

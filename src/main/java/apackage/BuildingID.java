@@ -10,7 +10,6 @@ public enum BuildingID {
     TEAL(6),
     FSTR(7);
 
-
     private int name;
 
     BuildingID(int name) {
