@@ -2,8 +2,6 @@ package apackage;
 
 import java.awt.Graphics;
 
-//import com.sun.xml.internal.bind.v2.model.core.ID;
-
 public abstract class GameObject {
 
     protected ObjectID id;
