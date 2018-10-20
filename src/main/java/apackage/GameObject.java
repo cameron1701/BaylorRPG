@@ -1,25 +1,23 @@
 package apackage;
 
-import java.awt.Graphics;
-
-import com.sun.xml.internal.bind.v2.model.core.ID;
+import java.awt.*;
 
 public abstract class GameObject {
 
-    protected ID id;
+    protected ObjectID id;
 
-    public GameObject(ID id){
+    public GameObject(ObjectID id) {
         this.id = id;
     }
 
     public abstract void tick();
     public abstract void render(Graphics graphics);
 
-    public void setId(ID id) {
+    public void setId(ObjectID id) {
         this.id = id;
     }
 
-    public ID getID(){
+    public ObjectID getID() {
         return this.id;
     }
 }

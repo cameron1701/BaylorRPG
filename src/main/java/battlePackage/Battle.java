@@ -1,16 +1,13 @@
 package battlePackage;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-
 public class Battle {
 	public static void battle() {
-		Player player = new Player("Player1");
-		List<Enemy> enemyList = new ArrayList<Enemy>();
+		final Player player = new Player("Player1");
+		final List<Enemy> enemyList = new ArrayList<Enemy>();
 		Enemy quiz1 = new Enemy("Quiz 1", 10, 2, 1);
 		
 		enemyList.add(new Enemy("A", 10, 2, 1));
@@ -24,11 +21,16 @@ public class Battle {
 				try {
 					UIManager.setLookAndFeel(
 					        UIManager.getSystemLookAndFeelClassName());
-				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-						| UnsupportedLookAndFeelException e) {
+				} catch (ClassNotFoundException e) {
+					e.printStackTrace();
+				} catch (InstantiationException e) {
+					e.printStackTrace();
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (UnsupportedLookAndFeelException e) {
 					e.printStackTrace();
 				}
-				
+
 			}	
 		});
 	}

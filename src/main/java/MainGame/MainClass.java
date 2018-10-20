@@ -1,8 +1,9 @@
 package MainGame;
 
+import battlePackage.Battle;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import battlePackage.Battle;
 
 public class MainClass extends Canvas implements Runnable {
 	private static final long serialVersionUID = 7034980898387217024L;
@@ -92,7 +93,8 @@ public class MainClass extends Canvas implements Runnable {
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, WIDTH, HEIGHT);
 
-		g.dispose();
+
+        g.dispose();
 		bs.show();
 	}
 
