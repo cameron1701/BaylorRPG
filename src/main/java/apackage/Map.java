@@ -1,29 +1,28 @@
 package apackage;
 
 import javax.swing.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Map {
-    private static List<String> buildingList = null;
+    protected static List<String> buildingList = null;
     private List<String> roomList = null;
-    private JTextArea log;
+    protected JTextArea log;
+    protected JTextField input;
+    private Building b;
+    private ObjectHandler handler;
 
     public Map() {
-        makeBuildingList();
+
     }
 
-    public static void makeBuildingList() {
-        buildingList = new ArrayList<String>();
-        buildingList.add("Cashion");
-        buildingList.add("Penland");
-        buildingList.add("Moody Library");
-        buildingList.add("The SUB");
-        buildingList.add("BSB");
-        buildingList.add("Waco Hall");
-        buildingList.add("Robinson Tower");
-        buildingList.add("Teal");
-        buildingList.add("Foster");
-        buildingList.add("Tidwell");
+    protected void printMenu() {
+        String temp = new String();
+        char selection;
+        temp = "+----------------------------------+\n" +
+                "        Select a building          ";
+
+        log.append(temp);
     }
+
+
 }

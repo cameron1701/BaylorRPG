@@ -1,5 +1,6 @@
 package MainGame;
 
+import apackage.ObjectHandler;
 import battlePackage.Battle;
 
 import java.awt.*;
@@ -10,6 +11,7 @@ public class MainClass extends Canvas implements Runnable {
 	public static final int WIDTH = 1000, HEIGHT = 1000;
 	private Thread thread;
 	private boolean running = false;
+    private ObjectHandler handler;
 
 	// Default constructor that creates the main game window
 	public MainClass() {
