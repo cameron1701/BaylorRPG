@@ -8,7 +8,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class Battle {
-	public static void main(String args[]) {
+	public static void battle() {
 		Player player = new Player("Player1");
 		List<Enemy> enemyList = new ArrayList<Enemy>();
 		Enemy quiz1 = new Enemy("Quiz 1", 10, 2, 1);
