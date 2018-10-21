@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>
+        Css An Upload Button
+    </title>
+    <style>
+        #tohide{
+          visibility:hidden;
+      }
+
+      .upload{
+        border-color:red;
+        border-radius:5px;
+        color:white;
+        background-color:black;
+        width:100px;
+        height:70px;
+        }
+
+        .upload:hover{
+          border-color:antiquewhite;
+          color:orange;
+          cursor:pointer;
+          }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="tohide" />
+    <input type="button" value="Upload" class="upload" onClick="document.getElementById('tohide').click()" />
+</body>
+
+</html>
