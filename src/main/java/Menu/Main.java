@@ -1,4 +1,7 @@
-package edu.baylor.ecs;
+package Menu;
+
+import battlePackage.*;
+import apackage.*;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -13,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Main implements ActionListener {
-	
+
 	private JFrame window;
 	private Container container;
 	private JPanel titleNamePanel, gamePanel;
@@ -21,7 +24,7 @@ public class Main implements ActionListener {
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton startNewGame, loadGame;
-	
+
 	public void createStartScreen() throws IOException {
 		// Create frame
 		window = new JFrame("BearQuest");
@@ -54,7 +57,7 @@ public class Main implements ActionListener {
 		startNewGame.setFont(normalFont);
 		startNewGame.addActionListener(this);
 		startNewGame.setFocusPainted(false);
-		
+
 		// Create load game button
 		loadGame = new JButton("Load Game");
 		loadGame.setBackground(Color.black);
@@ -85,20 +88,20 @@ public class Main implements ActionListener {
 			}
 		});
 	}
-	
+
 	public void actionPerformed(ActionEvent event) {
 		Game game = new Game();
-		
+
 		if (event.getActionCommand() == "Start New Game") {
 			System.out.println("New Game Started!");
-			
+
 			// Start new game
 			game.startNewGame(window, container, titleNamePanel, gamePanel);
 		}
 
 		if (event.getActionCommand() == "Load Game") {
 			System.out.println("Game loaded!");
-			
+
 			// Start new game
 			game.loadGame();
 		}

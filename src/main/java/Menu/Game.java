@@ -1,4 +1,7 @@
-package edu.baylor.ecs;
+package Menu;
+
+import battlePackage.*;
+import apackage.*;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -47,7 +50,7 @@ public class Game implements ActionListener {
 		this.container = c;
 		this.titleNamePanel = t;
 		this.gamePanel = g;
-		
+
 		// Clear start window
 		titleNamePanel.setVisible(false);
 		gamePanel.setVisible(false);
@@ -165,7 +168,7 @@ public class Game implements ActionListener {
 			String line = null, attackNames = null;
 			String[] col = null;
 			int currentHealth, totalHealth, attack, defense, level;
-			Level l = null;
+			// Level l = null;
 			List<String[]> lines = new ArrayList<String[]>();
 
 			// Read
@@ -195,7 +198,7 @@ public class Game implements ActionListener {
 					attackNames = attackNames.replace("_", " ");
 
 					// Create new instances of Level and Player classes, respectively
-					l = new Level(level);
+					// l = new Level(level);
 					player = new Player(playerName);
 				}
 
@@ -236,9 +239,9 @@ public class Game implements ActionListener {
 	}
 
 	void restartLevel() {
-		Level level = new Level(1);
+		// Level level = new Level(1);
 
-		level.restart(player);
+		// level.restart(player);
 	}
 
 	void quitGame() {
@@ -262,13 +265,13 @@ public class Game implements ActionListener {
 			Menu menu = new Menu();
 			menu.createMenuScreen(window, container, titleNamePanel, gamePanel);
 		}
-		
+
 		if (event.getActionCommand() == "Map") {
 			System.out.println("Map");
 
 			// Create Map screen
 			Map map = new Map();
-			map.createMapScreen();
+			// map.createMapScreen();
 		}
 	}
 }
