@@ -7,6 +7,9 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -22,6 +25,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private JFrame frame;
 	private JMenu selectEnemyMenu;
 	private JMenuBar menuBar;
+	private JButton returnButton;
 	private JButton fightButton;
 	private JButton runButton;
 	private JButton startButton;
@@ -30,8 +34,10 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private JTextArea log;
 	private JScrollPane logScrollPane;
 	private Player player;
+	private BattleGraphics bGraphic;
 	private int index;
 	private List<Enemy> enemies;
+	private Timer timer;
 
 	BattleSpace(Player p, List<Enemy> enemies) {
 		// Text Area Set Up
@@ -49,6 +55,9 @@ public class BattleSpace extends JPanel implements ActionListener {
 		// Assign characters
 		this.player = p;
 		this.enemies = enemies;
+
+		// Make a new Timer for showing results
+		this.timer = new Timer();
 
 		// Select Enemy Menu Set Up
 		this.selectEnemyMenu = new JMenu("Select Enemy");
@@ -100,6 +109,13 @@ public class BattleSpace extends JPanel implements ActionListener {
 		this.endTurnButton.setBorderPainted(false);
 		this.endTurnButton.setEnabled(false);
 
+		this.returnButton = new JButton("Return to Arena");
+		this.returnButton.addActionListener(this);
+		this.returnButton.setBackground(Color.GREEN);
+		this.returnButton.setOpaque(true);
+		this.returnButton.setBorderPainted(false);
+		this.returnButton.setEnabled(true);
+
 		// Button Panel Set Up
 		this.buttonPanel = new JPanel();
 		this.buttonPanel.add(this.fightButton);
@@ -148,10 +164,14 @@ public class BattleSpace extends JPanel implements ActionListener {
 
 			// Display Player Action Selection
 			this.log.append("You Selected: " + this.runButton.getActionCommand() + "\n");
-			this.log.append("You Retreat!\n");
 
 			// Show Retreat Graphic
-			this.showResult("retreat");
+			this.timer.schedule(new TimerTask() {
+				@Override
+				public void run() {
+					showResult("retreat");
+				}
+			}, 3000);
 		}
 
 		else if (e.getSource() == this.endTurnButton) {
@@ -186,8 +206,15 @@ public class BattleSpace extends JPanel implements ActionListener {
 				this.log.append(this.enemies.get(this.index).getName() + " has Defeated You!\n");
 
 				// Show Lose Graphic
-				this.showResult("lose");
+				this.timer.schedule(new TimerTask() {
+					@Override
+					public void run() {
+						showResult("lose");
+					}
+				}, 3000);
 			}
+		} else if (e.getSource() == this.returnButton) {
+			this.frame.dispose();
 		} else {
 			// Determine Enemy to Attack
 			for (int i = 0; i < this.enemies.size(); i++) {
@@ -224,7 +251,12 @@ public class BattleSpace extends JPanel implements ActionListener {
 				this.log.append("You Won the Battle!\n");
 
 				// Show Win Graphic
-				this.showResult("win");
+				this.timer.schedule(new TimerTask() {
+					@Override
+					public void run() {
+						showResult("win");
+					}
+				}, 3000);
 			}
 		}
 	}
@@ -246,9 +278,19 @@ public class BattleSpace extends JPanel implements ActionListener {
 
 	private void showResult(String str) {
 		// Show Battle Outcome
+		this.bGraphic = new BattleGraphics(str);
 		this.frame.remove(this);
-		this.frame.add(new BattleGraphics(str));
+		this.frame.getJMenuBar().remove(this.selectEnemyMenu);
+		this.frame.add(this.bGraphic);
 		this.frame.pack();
+
+		// Show Battle Statistics
+		this.timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+				printBattleStats();
+			}
+		}, 3000);
 	}
 
 	private void updateMenuItems() {
@@ -265,12 +307,43 @@ public class BattleSpace extends JPanel implements ActionListener {
 	}
 
 	private boolean endOfBattle() {
-		// Check all enemy health
+		// Check all Enemy Health
 		for (Enemy e : this.enemies) {
 			if (e.getCurrentHealth() > 0) {
 				return false;
 			}
 		}
 		return true;
+	}
+
+	private void printBattleStats() {
+		//Set Up Result Frame
+		this.remove(this.buttonPanel);
+		this.buttonPanel.removeAll();
+		this.buttonPanel.add(this.returnButton);
+		this.add(this.buttonPanel, BorderLayout.PAGE_END);
+		this.frame.remove(this.bGraphic);
+		this.frame.add(this);
+		this.frame.pack();
+		
+		// Print Battle Statistics
+		this.log.setText("");
+		this.log.append("\tBattle Statistics\n");
+		this.log.append("Player\t\t\tStatus\n");
+		if(this.player.getCurrentHealth() <= 0) {
+			this.log.append(this.player.getName() + "\t\t\tDiseased\n\n");
+		}
+		else {
+			this.log.append(this.player.getName() + "\t\t\t" + this.player.getCurrentHealth() + "\n\n");
+		}
+		
+		this.log.append("Enemy\t\t\tStatus\n");
+		for (Enemy e : this.enemies) {
+			if (e.getCurrentHealth() <= 0) {
+				this.log.append(e.getName() + "\t\t\tDiseased\n");
+			} else {
+				this.log.append(e.getName() + "\t\t\t" + e.getCurrentHealth() + "\n");
+			}
+		}
 	}
 }
