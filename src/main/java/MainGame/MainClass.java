@@ -2,6 +2,8 @@ package MainGame;
 
 import java.awt.*;
 
+import Menu.*;
+
 import apackage.TextArea;
 
 public class MainClass extends Canvas implements Runnable {
@@ -34,7 +36,7 @@ public class MainClass extends Canvas implements Runnable {
 	}
 
 	public void run() {
-        TextArea.startMap();
+        Main.startMenu();
 	}
 
 	public static void main(String[] args) {

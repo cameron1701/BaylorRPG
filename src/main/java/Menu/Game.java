@@ -4,6 +4,9 @@ import apackage.TextArea;
 import battlePackage.Player;
 
 import javax.swing.*;
+
+import MainGame.MainClass;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,7 +32,7 @@ public class Game implements ActionListener {
 	JButton menuButton, mapButton, choice1, choice2, choice3, choice4;
 	JTextArea mainTextArea;
 
-	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g) {
+	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g, Player p) {
 
 		// Assign values to window, container, titleNamePanel, and gamePanel
 		this.window = w;
@@ -48,7 +51,7 @@ public class Game implements ActionListener {
 		container.add(mainTextPanel);
 
 		// Set main text area
-		mainTextArea = new JTextArea("Welcome, " + playerName + "!");
+		mainTextArea = new JTextArea("Welcome, " + p.getName() + "!");
 		mainTextArea.setBounds(100, 100, 600, 250);
 		mainTextArea.setBackground(Color.black);
 		mainTextArea.setForeground(Color.white);
@@ -145,7 +148,7 @@ public class Game implements ActionListener {
 
 		// Create a new game and open the screen
 		Game game = new Game();
-		game.createGameScreen(window, container, titleNamePanel, gamePanel);
+		game.createGameScreen(window, container, titleNamePanel, gamePanel, player);
 	}
 
 	void loadGame() {
@@ -257,6 +260,7 @@ public class Game implements ActionListener {
 
 			// Create Map screen
             TextArea.startMap();
+			//MainClass.run();
 		}
 	}
 }

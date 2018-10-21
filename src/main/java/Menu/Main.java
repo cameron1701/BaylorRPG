@@ -71,7 +71,7 @@ public class Main implements ActionListener {
 		container.add(gamePanel);
 	}
 
-	public static void main(String[] args) {
+	public static void startMenu() {
 		final Main guiMaker = new Main();
 
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {

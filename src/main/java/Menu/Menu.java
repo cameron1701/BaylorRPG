@@ -25,6 +25,7 @@ public class Menu implements ActionListener {
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 22);
 	private JButton startNewGame, loadGame, saveGame, pauseGame, restartLevel, quitGame, back;
+	private Player player;
 
 	public void createMenuScreen(JFrame w, Container c, JPanel t, JPanel g) {
 		// Assign values to window, container, titleNamePanel, and gamePanel
@@ -188,7 +189,7 @@ public class Menu implements ActionListener {
 			System.out.println("Going back...");
 
 			// Create game screen
-			game.createGameScreen(window, container, titleNamePanel, gamePanel);
+			game.createGameScreen(window, container, titleNamePanel, gamePanel, player);
 		}
 	}
 }
