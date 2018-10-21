@@ -7,6 +7,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -38,6 +39,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private int index;
 	private List<Enemy> enemies;
 	private Timer timer;
+	private Random rand = new Random();
 
 	BattleSpace(Player p, List<Enemy> enemies) {
 		// Text Area Set Up
@@ -149,7 +151,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 			this.runButton.setEnabled(false);
 
 			// Display Player Action Selection
-			this.log.append("You Attack!\n");
+			this.log.append("You " + player.getRandAttack(rand.nextInt(player.getAttackNamesSize())) + "\n");
 			this.log.append("You Selected: " + this.fightButton.getActionCommand() + "\n");
 
 			// Prompt Player to Select an Enemy to Attack

@@ -100,8 +100,8 @@ public class TextArea extends JPanel implements ActionListener {
 			// Show building description
 			log.append(building.buildingDesc() + "\n");
 
-			// Have a battle in the SLC (for demo)
-			if (building.getID().equals("SLC")) {
+			// Have a battle in the BSB (for demo)
+			if (building.getID().equals("BSB")) {
 				Battle.battle();
 			}
 
