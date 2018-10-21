@@ -11,6 +11,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class Main implements ActionListener {
 
@@ -54,6 +56,7 @@ public class Main implements ActionListener {
 		startNewGame.setFont(normalFont);
 		startNewGame.addActionListener(this);
 		startNewGame.setFocusPainted(false);
+		//startNewGame.setBorderPainted(false);
 
 		// Create load game button
 		loadGame = new JButton("Load Game");
@@ -78,8 +81,9 @@ public class Main implements ActionListener {
 
 			public void run() {
 				try {
+					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 					guiMaker.createStartScreen();
-				} catch (IOException e) {
+				} catch (IOException | ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
 					e.printStackTrace();
 				}
 			}
