@@ -114,6 +114,7 @@ public class TextArea extends JPanel implements ActionListener {
 	private void createAndShowGUI() {
 		// Frame Set Up
 		this.frame = new JFrame("Map");
+		this.frame.setLocationRelativeTo(null);
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.frame.setPreferredSize(new Dimension(800, 700));
 		this.frame.setResizable(false);

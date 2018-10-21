@@ -38,8 +38,39 @@ public class MainClass extends Canvas implements Runnable {
 	}
 
 	public void run() {
-		TextArea.startMap();
+        TextArea.startMap();
+        while (running){
+
+            if (running){
+                render();
+            }
+
+        }
+        stop();
+
 	}
+
+
+    private void tick() {
+
+    }
+
+    private void render() {
+        BufferStrategy bs = this.getBufferStrategy();
+        if (bs == null) {
+            this.createBufferStrategy(3);
+            return;
+        }
+
+        Graphics g = bs.getDrawGraphics();
+
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, WIDTH, HEIGHT);
+
+
+        g.dispose();
+        bs.show();
+    }
 
 	public static void main(String[] args) {
 		new MainClass();
