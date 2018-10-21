@@ -53,6 +53,7 @@ public class MainClass extends Canvas implements Runnable {
 		Battle.battle();
 
 		// While the game is running
+		/*
 		while (running) {
 			long now = System.nanoTime(); // grab the current system time
 			delta += (now - lastTime) / ns; // find the diff. from the current time and the last iteration of the loop
@@ -75,6 +76,7 @@ public class MainClass extends Canvas implements Runnable {
 		}
 
 		stop();
+		*/
 	}
 
 	private void tick() {
