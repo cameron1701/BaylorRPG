@@ -20,7 +20,7 @@ game as it is in development and beyond. [Code and relevant files can be viewed 
         border-color:red;
         border-radius:5px;
         color:white;
-        background-color:black;
+        background-color:green;
         width:100px;
         height:70px;
         }
