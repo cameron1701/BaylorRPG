@@ -317,7 +317,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	}
 
 	private void printBattleStats() {
-		//Set Up Result Frame
+		// Set Up Result Frame
 		this.remove(this.buttonPanel);
 		this.buttonPanel.removeAll();
 		this.buttonPanel.add(this.returnButton);
@@ -325,18 +325,17 @@ public class BattleSpace extends JPanel implements ActionListener {
 		this.frame.remove(this.bGraphic);
 		this.frame.add(this);
 		this.frame.pack();
-		
+
 		// Print Battle Statistics
 		this.log.setText("");
 		this.log.append("\tBattle Statistics\n");
 		this.log.append("Player\t\t\tStatus\n");
-		if(this.player.getCurrentHealth() <= 0) {
+		if (this.player.getCurrentHealth() <= 0) {
 			this.log.append(this.player.getName() + "\t\t\tDiseased\n\n");
-		}
-		else {
+		} else {
 			this.log.append(this.player.getName() + "\t\t\t" + this.player.getCurrentHealth() + "\n\n");
 		}
-		
+
 		this.log.append("Enemy\t\t\tStatus\n");
 		for (Enemy e : this.enemies) {
 			if (e.getCurrentHealth() <= 0) {

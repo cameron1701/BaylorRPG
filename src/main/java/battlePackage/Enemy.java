@@ -1,12 +1,14 @@
 package battlePackage;
 
+// Enemy class (sort of similar to player)
 public class Enemy {
 	private String name;
 	private int currentHealth;
 	private int totalHealth;
 	private int attack;
 	private int defense;
-	
+
+	// Constructor to initiate stats and name
 	Enemy(String s, int tHealth, int atk, int def) {
 		this.name = s;
 		this.totalHealth = tHealth;
@@ -16,12 +18,12 @@ public class Enemy {
 	}
 
 	public boolean isDefeated() {
-		if(this.currentHealth <= 0) {
+		if (this.currentHealth <= 0) {
 			return true;
 		}
 		return false;
 	}
-	
+
 	public int getCurrentHealth() {
 		return currentHealth;
 	}
