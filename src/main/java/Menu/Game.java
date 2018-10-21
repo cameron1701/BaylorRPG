@@ -1,30 +1,19 @@
 package Menu;
 
-import battlePackage.*;
-import apackage.*;
+import apackage.TextArea;
+import battlePackage.Player;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
-import java.awt.GridLayout;
+import javax.swing.*;
+
+import MainGame.MainClass;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.UIManager;
 
 public class Game implements ActionListener {
 
@@ -43,7 +32,7 @@ public class Game implements ActionListener {
 	private JButton menuButton, mapButton, choice1, choice2, choice3, choice4;
 	private JTextArea mainTextArea;
 
-	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g) {
+	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g, Player p) {
 
 		// Assign values to window, container, titleNamePanel, and gamePanel
 		this.window = w;
@@ -62,7 +51,7 @@ public class Game implements ActionListener {
 		container.add(mainTextPanel);
 
 		// Set main text area
-		mainTextArea = new JTextArea("Welcome, " + playerName + "!");
+		mainTextArea = new JTextArea("Welcome, " + p.getName() + "!");
 		mainTextArea.setBounds(100, 100, 600, 250);
 		mainTextArea.setBackground(Color.black);
 		mainTextArea.setForeground(Color.white);
@@ -153,13 +142,13 @@ public class Game implements ActionListener {
 		UIManager.put("Button.foreground", Color.white);
 
 		// Take player name from user and create new player
-		playerName = (String) JOptionPane.showInputDialog(window, "Choose a name", "New Player",
+        playerName = JOptionPane.showInputDialog(window, "Choose a name", "New Player",
 				JOptionPane.DEFAULT_OPTION);
 		player = new Player(playerName);
 
 		// Create a new game and open the screen
 		Game game = new Game();
-		game.createGameScreen(window, container, titleNamePanel, gamePanel);
+		game.createGameScreen(window, container, titleNamePanel, gamePanel, player);
 	}
 
 	void loadGame() {
@@ -270,8 +259,13 @@ public class Game implements ActionListener {
 			System.out.println("Map");
 
 			// Create Map screen
+<<<<<<< HEAD
 			Map map = new Map();
 			map.printMenu();
+=======
+            TextArea.startMap();
+			//MainClass.run();
+>>>>>>> 0904c9fa05482eaf68872c220aac87d24edf2dcf
 		}
 	}
 }

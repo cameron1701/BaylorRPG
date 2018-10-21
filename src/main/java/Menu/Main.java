@@ -25,7 +25,7 @@ public class Main implements ActionListener {
 	public void createStartScreen() throws IOException {
 		// Create frame
 		window = new JFrame("BearQuest");
-		window.setSize(800, 600);
+		window.setSize(800, 700);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
 		window.setLayout(null);
@@ -71,7 +71,7 @@ public class Main implements ActionListener {
 		container.add(gamePanel);
 	}
 
-	public static void main(String[] args) {
+	public static void startMenu() {
 		final Main guiMaker = new Main();
 
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {

@@ -1,18 +1,21 @@
 package apackage;
 
 import javax.swing.*;
+
+import battlePackage.Battle;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TextArea extends JPanel implements ActionListener{
+public class TextArea extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	private JTextArea log;
 	private JScrollPane logScrollPane;
 	private JPanel buttonPanel;
 	private JButton nextButton;
-	//private String bID = "CASH";
+	// private String bID = "CASH";
 
 	private String inputString;
 	private JTextField input;
@@ -20,8 +23,8 @@ public class TextArea extends JPanel implements ActionListener{
 
 	private Building building = new Building("CASH");
 
-	TextArea(){
-		//Text Area Set Up
+	TextArea() {
+		// Text Area Set Up
 		super(new BorderLayout());
 		this.log = new JTextArea(700, 700);
 		this.log.setOpaque(true);
@@ -33,77 +36,85 @@ public class TextArea extends JPanel implements ActionListener{
 		this.logScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		this.logScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 
+		// Add scroll pane and tell border layout
 		this.add(this.logScrollPane, BorderLayout.CENTER);
 
-        this.nextButton = new JButton("NEXT");
-		this.nextButton.addActionListener(this);
-		this.nextButton.setBackground(Color.GREEN);
-		this.nextButton.setOpaque(true);
-		this.nextButton.setBorderPainted(false);
-		this.nextButton.setEnabled(true);
+		// Make a buttonListener
+		ButtonListener buttonListener = new ButtonListener();
 
-        ButtonListener buttonListener = new ButtonListener();
-
-        this.enterButton = new JButton("ENTER");
+		// Create enterButton
+		this.enterButton = new JButton("ENTER");
 		this.enterButton.addActionListener(this);
 		this.enterButton.setBackground(Color.GREEN);
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
+		// Make enterButton have a buttonListener
 		enterButton.addActionListener(buttonListener);
 
-        input = new JTextField(20);
+		// Make input text field
+		input = new JTextField(20);
 		input.setActionCommand("ENTER");
-        input.addActionListener(buttonListener);
+		input.addActionListener(buttonListener);
 
-        this.buttonPanel = new JPanel();
-		//this.buttonPanel.add(this.nextButton);
+		// Make new buttonPanel
+		this.buttonPanel = new JPanel();
+
+		// Add input field and enter button to buttonPanel
 		this.buttonPanel.add(this.input);
 		this.buttonPanel.add(this.enterButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
 
-        //building = new Building(building.setid(inputString));
-
-        // Print the menu of options to travel to
-        log.append("\nWhere would you like to go?\n");
-        log.append("\n+------------------------------+\n");
+		// Print the menu of options to travel to
+		log.append("\nWhere would you like to go?\n");
+		log.append("\n+------------------------------+\n");
 		building.printBuildingMenu(log);
-        log.append("+------------------------------+\n");
+		log.append("+------------------------------+\n");
 
-		//Create and Show Map
+		// Create and Show Map
 		this.createAndShowGUI();
 	}
 
-    @Override
+	@Override
 	public void actionPerformed(ActionEvent e) {
 
-    }
+	}
 
-	public class ButtonListener implements ActionListener
-    {
+	public class ButtonListener implements ActionListener {
 
-        public void actionPerformed(final ActionEvent ev)
-        {
-            inputString = input.getText();
-            input.setText("");
-            input.requestFocus();
+		public void actionPerformed(final ActionEvent ev) {
+			// Get input from input box
+			inputString = input.getText();
+			input.setText("");
+			input.requestFocus();
 
-            log.append("You selected " + inputString);
+			// Echo print
+			log.append("You selected " + inputString);
 
-            building = new Building(building.setid(inputString));
+			// Change buildings
+			building = new Building(building.setid(inputString));
 
-            log.append("\nYou are now in " + building.getID() + "\n\n");
+			// Print current building
+			log.append("\nYou are now in " + building.getID() + "\n\n");
 
-            log.append(building.buildingDesc() + "\n");
+			// Show building description
+			log.append(building.buildingDesc() + "\n");
 
-            building.printBuildingMenu(log);
-    		log.append("\nWhere would you like to go?\n");
-        }
-    }
+			// Have a battle in the BSB (for demo)
+			if (building.getID().equals("BSB")) {
+				Battle.battle();
+			}
 
-    private void createAndShowGUI() {
+			// Ask to move
+			building.printBuildingMenu(log);
+			log.append("\nWhere would you like to go?\n");
+		}
+	}
+
+	private void createAndShowGUI() {
 		// Frame Set Up
 		this.frame = new JFrame("Map");
+		this.frame.setLocationRelativeTo(null);
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.frame.setPreferredSize(new Dimension(800, 700));
 		this.frame.setResizable(false);
@@ -115,14 +126,14 @@ public class TextArea extends JPanel implements ActionListener{
 		this.frame.setVisible(true);
 	}
 
-    public static void main(String args[]) {
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                //Turn off metal's use of bold fonts
-                UIManager.put("swing.boldMetal", Boolean.FALSE);
-                new TextArea().setVisible(true);
-            }
-        });
-    }
+	public static void startMap() {
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				// Turn off metal's use of bold fonts
+				UIManager.put("swing.boldMetal", Boolean.FALSE);
+				new TextArea().setVisible(true);
+			}
+		});
+	}
 
 }

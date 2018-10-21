@@ -13,6 +13,7 @@ public class Building extends Map {
 	}
 
 	public void printBuildingMenu(JTextArea log) {
+		// Make a list of buildings we want in map
 		buildingList = new ArrayList<String>();
 		buildingList.add("Cashion");
 		buildingList.add("Penland");
@@ -31,7 +32,6 @@ public class Building extends Map {
 	public String getID() {
 		return id;
 	}
-	
 
 	public String buildingDesc() {
 		switch (id) {
@@ -100,8 +100,9 @@ public class Building extends Map {
 		}
 		return desc;
 	}
-	
+
 	public String setid(String s) {
+		// Set building name based on string param
 		switch (s) {
 		case "Cashion":
 			id = "CASH";
@@ -137,7 +138,7 @@ public class Building extends Map {
 			id = "TID";
 			break;
 		}
-		
+
 		return id;
 	}
 }

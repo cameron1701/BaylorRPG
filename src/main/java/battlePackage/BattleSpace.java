@@ -7,6 +7,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -38,6 +39,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private int index;
 	private List<Enemy> enemies;
 	private Timer timer;
+	private Random rand = new Random();
 
 	BattleSpace(Player p, List<Enemy> enemies) {
 		// Text Area Set Up
@@ -149,7 +151,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 			this.runButton.setEnabled(false);
 
 			// Display Player Action Selection
-			this.log.append("You Attack!\n");
+			this.log.append("You " + player.getRandAttack(rand.nextInt(player.getAttackNamesSize())) + "\n");
 			this.log.append("You Selected: " + this.fightButton.getActionCommand() + "\n");
 
 			// Prompt Player to Select an Enemy to Attack
@@ -317,7 +319,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	}
 
 	private void printBattleStats() {
-		//Set Up Result Frame
+		// Set Up Result Frame
 		this.remove(this.buttonPanel);
 		this.buttonPanel.removeAll();
 		this.buttonPanel.add(this.returnButton);
@@ -325,18 +327,17 @@ public class BattleSpace extends JPanel implements ActionListener {
 		this.frame.remove(this.bGraphic);
 		this.frame.add(this);
 		this.frame.pack();
-		
+
 		// Print Battle Statistics
 		this.log.setText("");
 		this.log.append("\tBattle Statistics\n");
 		this.log.append("Player\t\t\tStatus\n");
-		if(this.player.getCurrentHealth() <= 0) {
+		if (this.player.getCurrentHealth() <= 0) {
 			this.log.append(this.player.getName() + "\t\t\tDiseased\n\n");
-		}
-		else {
+		} else {
 			this.log.append(this.player.getName() + "\t\t\t" + this.player.getCurrentHealth() + "\n\n");
 		}
-		
+
 		this.log.append("Enemy\t\t\tStatus\n");
 		for (Enemy e : this.enemies) {
 			if (e.getCurrentHealth() <= 0) {

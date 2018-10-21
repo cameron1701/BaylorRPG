@@ -9,8 +9,8 @@ public class Player {
 	private int totalHealth;
 	private int attack;
 	private int defense;
-	private	List<String> attackNames = new ArrayList<String>();
-	
+	private List<String> attackNames = new ArrayList<String>();
+
 	public Player(String s) {
 		this.name = s;
 		this.totalHealth = 20;
@@ -19,19 +19,19 @@ public class Player {
 		this.defense = 5;
 		this.initAttackNames();
 	}
-	
+
 	public void initPlayer(String s) {
 		name = s;
 	}
-	
-	public int getAttackNamesSize(){
+
+	public int getAttackNamesSize() {
 		return attackNames.size();
 	}
-	
+
 	public String getRandAttack(int a) {
 		return attackNames.get(a);
 	}
-	
+
 	public void initAttackNames() {
 		attackNames.add("managed your schedule!");
 		attackNames.add("pulled an all-nighter!");
