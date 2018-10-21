@@ -49,7 +49,6 @@ public class MainClass extends Canvas implements Runnable {
 		double delta = 0; // difference in time between ticks
 		long timer = System.currentTimeMillis(); // instantiated to current time in ms, used to measure 1sec
 		int frames = 0; // counts frames per second i.e. calls to render
-		// Battle battle = new Battle();
 
 		Battle.battle();
 
@@ -66,7 +65,7 @@ public class MainClass extends Canvas implements Runnable {
 				render();
 			}
 			frames++; // increase the frame counter
-
+			
 			// If one sec. has passed
 			if (System.currentTimeMillis() - timer > 1000) {
 				timer += 1000; // increase the timer by 1000ms

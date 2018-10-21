@@ -11,13 +11,17 @@ public class Player {
 	private int defense;
 	private	List<String> attackNames = new ArrayList<String>();
 	
-	Player(String s) {
+	public Player(String s) {
 		this.name = s;
 		this.totalHealth = 20;
 		this.currentHealth = this.totalHealth;
 		this.attack = 10;
 		this.defense = 5;
 		this.initAttackNames();
+	}
+	
+	public void initPlayer(String s) {
+		name = s;
 	}
 	
 	public int getAttackNamesSize(){

@@ -1,12 +1,12 @@
 package apackage;
 
-import java.awt.*;
+import java.awt.Graphics;
 
 public abstract class GameObject {
 
     protected ObjectID id;
 
-    public GameObject(ObjectID id) {
+    public GameObject(ObjectID id){
         this.id = id;
     }
 
@@ -17,7 +17,7 @@ public abstract class GameObject {
         this.id = id;
     }
 
-    public ObjectID getID() {
+    public ObjectID getID(){
         return this.id;
     }
 }
