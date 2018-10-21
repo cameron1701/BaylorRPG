@@ -1,34 +1,37 @@
 package apackage;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.List;
 
 public class Map {
     protected static List<String> buildingList = null;
     private List<String> roomList = null;
     protected JTextArea log;
-    protected JTextField input;
-    private Building b;
-    private ObjectHandler handler;
+    JLabel label = new JLabel();
+    JTextField textfield = new JTextField("", 10);
+    private String selection;
 
     public Map() {
-
     }
 
-    protected void printMenu() {
+    public void printMenu() {
+        label.setBackground(Color.WHITE);
+        label.setForeground(Color.green);
+        textfield.setVisible(true);
+        label.setVisible(true);
+
         String temp = new String();
-        char selection;
+        System.out.println(selection);
         temp = "+----------------------------------+\n" +
                 "        Select a building          ";
-
-        log.append(temp);
     }
-    
+
+
     public static void main(String args[]) {
     	Map map = new Map();
     	
     	map.printMenu();
     }
-
-
 }
+

@@ -1,6 +1,6 @@
 package MainGame;
 
-import apackage.ObjectHandler;
+import apackage.Map;
 import battlePackage.Battle;
 
 import java.awt.*;
@@ -8,15 +8,16 @@ import java.awt.image.BufferStrategy;
 
 public class MainClass extends Canvas implements Runnable {
 	private static final long serialVersionUID = 7034980898387217024L;
-	public static final int WIDTH = 1000, HEIGHT = 1000;
+    public static final int WIDTH = 800, HEIGHT = 640;
 	private Thread thread;
 	private boolean running = false;
-    private ObjectHandler handler;
+    private Map myMap;
 
 	// Default constructor that creates the main game window
 	public MainClass() {
 		new Window(WIDTH, HEIGHT, "Bear Quest", this);
-	}
+
+    }
 
 	// Spawns a new process that starts the game
 	public synchronized void start() {
