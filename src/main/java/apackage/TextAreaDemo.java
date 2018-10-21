@@ -1,5 +1,9 @@
 package apackage;
-
+ 
+/*
+ * TextAreaDemo.java requires no other files.
+ */
+ 
 import javax.swing.*;
 import java.util.*;
 import javax.swing.event.DocumentEvent;
@@ -9,7 +13,7 @@ import javax.swing.text.BadLocationException;
 import javax.swing.GroupLayout.*;
  
  
-public class InputBox extends JFrame
+public class TextAreaDemo extends JFrame
         implements DocumentListener {
      
     private JLabel jLabel1;
@@ -21,12 +25,11 @@ public class InputBox extends JFrame
     private final List<String> words;
     private Mode mode = Mode.INSERT;
     
-    public String input;
+    public String input; 
      
      
-     
-    public InputBox() {
-        super("Input");
+    public TextAreaDemo() {
+        super("TextAreaDemo");
         initComponents();
          
         textArea.getDocument().addDocumentListener(this);
@@ -36,25 +39,20 @@ public class InputBox extends JFrame
         im.put(KeyStroke.getKeyStroke("ENTER"), COMMIT_ACTION);
         am.put(COMMIT_ACTION, new CommitAction());
          
-        words = new ArrayList<String>();
-		words.add("Cashion");
-		words.add("Penland");
-		words.add("Moody Library");
-		words.add("The SUB");
-		words.add("BSB");
-		words.add("Waco Hall");
-		words.add("Robinson Tower");
-		words.add("Teal");
-		words.add("Foster");
-		words.add("Tidwell");
+        words = new ArrayList<String>(5);
+        words.add("spark");
+        words.add("special");
+        words.add("spectacles");
+        words.add("spectacular");
+        words.add("swing");
     }
      
      
     private void initComponents() {
-        jLabel1 = new JLabel("Where would you like to go?");
+        jLabel1 = new JLabel("Try typing 'spectacular' or 'Swing'...");
          
         textArea = new JTextArea();
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         textArea.setColumns(20);
         textArea.setLineWrap(true);
         textArea.setRows(5);
@@ -151,12 +149,7 @@ public class InputBox extends JFrame
         } else {
             // Nothing found
             mode = Mode.INSERT;
-            input = content;
         }
-    }
-    
-    public String getInput() {
-    	return input;
     }
      
     private class CompletionTask implements Runnable {
@@ -188,5 +181,17 @@ public class InputBox extends JFrame
             }
         }
     }
-  
+    
+    public static void main(String args[]) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                //Turn off metal's use of bold fonts
+                UIManager.put("swing.boldMetal", Boolean.FALSE);
+                new TextAreaDemo().setVisible(true);
+                System.out.println("Hi");
+            }
+        });
+    }
+     
+     
 }

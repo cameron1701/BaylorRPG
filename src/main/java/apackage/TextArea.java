@@ -12,9 +12,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+
+import apackage.Test.ButtonListener;
 
 public class TextArea extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
@@ -24,7 +27,10 @@ public class TextArea extends JPanel implements ActionListener{
 	private JPanel buttonPanel;
 	private JButton nextButton;
 	private BuildingID bID = BuildingID.CASH;
-	private String input;
+	
+	private String inputString;
+	private JTextField input;
+	private JButton enterButton;
 	
 	private Building building = new Building(bID);
 	
@@ -50,9 +56,28 @@ public class TextArea extends JPanel implements ActionListener{
 		this.nextButton.setBorderPainted(false);
 		this.nextButton.setEnabled(true);
 		
+		ButtonListener buttonListener = new ButtonListener();
+		
+		this.enterButton = new JButton("ENTER");
+		this.enterButton.addActionListener(this);
+		this.enterButton.setBackground(Color.GREEN);
+		this.enterButton.setOpaque(true);
+		this.enterButton.setBorderPainted(false);
+		this.enterButton.setEnabled(true);
+		enterButton.addActionListener(buttonListener);
+		
+		input = new JTextField(20);
+		input.setActionCommand("ENTER");
+        input.addActionListener(buttonListener);
+		
 		this.buttonPanel = new JPanel();
-		this.buttonPanel.add(this.nextButton);
+		//this.buttonPanel.add(this.nextButton);
+		this.buttonPanel.add(this.input);
+		this.buttonPanel.add(this.enterButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
+		
+		building.printBuildingMenu(log);
+		log.append("\nWhere would you like to go?\n");
 		
 		//Create and Show Map
 		this.createAndShowGUI();
@@ -60,11 +85,25 @@ public class TextArea extends JPanel implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		building.printBuildingMenu(log);
-		new InputBox().setVisible(true);
-		//input = InputBox.input;
-		log.append("\nWhere would you like to go?");
+		
 	}
+	
+	public class ButtonListener implements ActionListener
+    {
+
+        public void actionPerformed(final ActionEvent ev)
+        {
+            inputString = input.getText();
+            input.setText("");
+            input.requestFocus();
+            
+            log.append("You selected " + inputString);
+            
+            bID.setName(inputString);
+            building = new Building(bID);
+            System.out.println(building.getID().toString());
+        }
+    }
 	
 	private void createAndShowGUI() {
 		// Frame Set Up

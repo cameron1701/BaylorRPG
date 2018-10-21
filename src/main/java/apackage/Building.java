@@ -17,13 +17,14 @@ public class Building extends Map {
 		buildingList = new ArrayList<String>();
 		buildingList.add("Cashion");
 		buildingList.add("Penland");
-		buildingList.add("Moody Library");
-		buildingList.add("The SUB");
+		buildingList.add("Moody");
+		buildingList.add("SUB");
 		buildingList.add("BSB");
-		buildingList.add("Waco Hall");
-		buildingList.add("Robinson Tower");
+		buildingList.add("SLC");
 		buildingList.add("Teal");
 		buildingList.add("Foster");
+		buildingList.add("Waco Hall");
+		buildingList.add("Robinson Tower");
 		buildingList.add("Tidwell");
 		for (String str : buildingList) {
 			log.append(str);
@@ -34,6 +35,7 @@ public class Building extends Map {
 	public BuildingID getID() {
 		return id;
 	}
+	
 
 	public String buildingDesc() {
 		switch (id) {
