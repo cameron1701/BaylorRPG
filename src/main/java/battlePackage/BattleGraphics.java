@@ -11,35 +11,46 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class BattleGraphics extends JPanel{
+public class BattleGraphics extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private BufferedImage image;
 	private GridBagConstraints constraints;
-	 
-    BattleGraphics() {
-    	//Get Image
-    	try {
-			this.image = ImageIO.read(new File("win.png"));
+	private String fileName;
+
+	BattleGraphics(String result) {
+		// Get Result type
+		if (result.equals("win")) {
+			this.fileName = "win.png";
+
+		} else if (result.equals("retreat")) {
+			this.fileName = "retreat.png";
+		} else {
+			this.fileName = "lose.png";
+		}
+
+		// Get Image
+		try {
+			this.image = ImageIO.read(new File(this.fileName));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-    	//Set up JPanel
-    	this.setBackground(Color.BLACK);
-        this.setOpaque(true);
-        this.setLayout(new GridBagLayout());
-        this.constraints = new GridBagConstraints();
-        this.constraints.insets = new Insets(5,5,5,5);
-        this.constraints.weightx = 1.0;
-        this.constraints.weighty = 1.0;
-    }
- 
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        
-        // Draw image centered.
-        int x = (getWidth() - this.image.getWidth())/2;
-        int y = (getHeight() - this.image.getHeight())/2;
-        g.drawImage(this.image, x, y, this);
-    }
+		// Set Up JPanel
+		this.setBackground(Color.BLACK);
+		this.setOpaque(true);
+		this.setLayout(new GridBagLayout());
+		this.constraints = new GridBagConstraints();
+		this.constraints.insets = new Insets(5, 5, 5, 5);
+		this.constraints.weightx = 1.0;
+		this.constraints.weighty = 1.0;
+	}
+
+	protected void paintComponent(Graphics g) {
+		super.paintComponent(g);
+
+		// Draw Image
+		int x = (getWidth() - this.image.getWidth()) / 2;
+		int y = (getHeight() - this.image.getHeight()) / 2;
+		g.drawImage(this.image, x, y, this);
+	}
 }
