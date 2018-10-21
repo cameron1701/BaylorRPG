@@ -17,8 +17,6 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-import apackage.Test.ButtonListener;
-
 public class TextArea extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
