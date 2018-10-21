@@ -12,6 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import battlePackage.Player;
+
 public class Menu implements ActionListener {
 
 	private JFrame window;

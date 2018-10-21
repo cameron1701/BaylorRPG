@@ -1,5 +1,6 @@
 package Menu;
 
+import apackage.Map;
 import apackage.TextArea;
 import battlePackage.Player;
 
@@ -259,13 +260,11 @@ public class Game implements ActionListener {
 			System.out.println("Map");
 
 			// Create Map screen
-<<<<<<< HEAD
 			Map map = new Map();
 			map.printMenu();
-=======
+
             TextArea.startMap();
 			//MainClass.run();
->>>>>>> 0904c9fa05482eaf68872c220aac87d24edf2dcf
 		}
 	}
 }
