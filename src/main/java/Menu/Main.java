@@ -1,8 +1,5 @@
 package Menu;
 
-import battlePackage.*;
-import apackage.*;
-
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
