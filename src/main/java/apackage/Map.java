@@ -26,12 +26,5 @@ public class Map {
         temp = "+----------------------------------+\n" +
                 "        Select a building          ";
     }
-
-
-    public static void main(String args[]) {
-    	Map map = new Map();
-    	
-    	map.printMenu();
-    }
 }
 

@@ -1,8 +1,7 @@
 package apackage;
 
+import javax.swing.*;
 import java.util.ArrayList;
-
-import javax.swing.JTextArea;
 
 public class Building extends Map {
 
@@ -23,9 +22,6 @@ public class Building extends Map {
 		buildingList.add("SLC");
 		buildingList.add("Teal");
 		buildingList.add("Foster");
-		buildingList.add("Waco Hall");
-		buildingList.add("Robinson Tower");
-		buildingList.add("Tidwell");
 		for (String str : buildingList) {
 			log.append(str);
 			log.append("\n");

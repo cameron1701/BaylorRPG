@@ -1,6 +1,5 @@
 package MainGame;
 
-import apackage.Map;
 import battlePackage.Battle;
 
 import java.awt.*;
@@ -11,7 +10,6 @@ public class MainClass extends Canvas implements Runnable {
     public static final int WIDTH = 800, HEIGHT = 640;
 	private Thread thread;
 	private boolean running = false;
-    private Map myMap;
 
 	// Default constructor that creates the main game window
 	public MainClass() {

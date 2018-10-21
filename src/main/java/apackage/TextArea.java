@@ -1,21 +1,9 @@
 package apackage;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Insets;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 
 public class TextArea extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
@@ -25,13 +13,13 @@ public class TextArea extends JPanel implements ActionListener{
 	private JPanel buttonPanel;
 	private JButton nextButton;
 	//private String bID = "CASH";
-	
+
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton;
-	
+
 	private Building building = new Building("CASH");
-	
+
 	TextArea(){
 		//Text Area Set Up
 		super(new BorderLayout());
@@ -44,49 +32,53 @@ public class TextArea extends JPanel implements ActionListener{
 		this.logScrollPane = new JScrollPane(this.log);
 		this.logScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		this.logScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
-		
+
 		this.add(this.logScrollPane, BorderLayout.CENTER);
-		
-		this.nextButton = new JButton("NEXT");
+
+        this.nextButton = new JButton("NEXT");
 		this.nextButton.addActionListener(this);
 		this.nextButton.setBackground(Color.GREEN);
 		this.nextButton.setOpaque(true);
 		this.nextButton.setBorderPainted(false);
 		this.nextButton.setEnabled(true);
-		
-		ButtonListener buttonListener = new ButtonListener();
-		
-		this.enterButton = new JButton("ENTER");
+
+        ButtonListener buttonListener = new ButtonListener();
+
+        this.enterButton = new JButton("ENTER");
 		this.enterButton.addActionListener(this);
 		this.enterButton.setBackground(Color.GREEN);
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
 		enterButton.addActionListener(buttonListener);
-		
-		input = new JTextField(20);
+
+        input = new JTextField(20);
 		input.setActionCommand("ENTER");
         input.addActionListener(buttonListener);
-		
-		this.buttonPanel = new JPanel();
+
+        this.buttonPanel = new JPanel();
 		//this.buttonPanel.add(this.nextButton);
 		this.buttonPanel.add(this.input);
 		this.buttonPanel.add(this.enterButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
-		
-		//building = new Building(building.setid(inputString));
+
+        //building = new Building(building.setid(inputString));
+
+        // Print the menu of options to travel to
+        log.append("\nWhere would you like to go?\n");
+        log.append("\n+------------------------------+\n");
 		building.printBuildingMenu(log);
-		log.append("\nWhere would you like to go?\n");
-		
+        log.append("+------------------------------+\n");
+
 		//Create and Show Map
 		this.createAndShowGUI();
 	}
-	
-	@Override
+
+    @Override
 	public void actionPerformed(ActionEvent e) {
-		
-	}
-	
+
+    }
+
 	public class ButtonListener implements ActionListener
     {
 
@@ -95,19 +87,21 @@ public class TextArea extends JPanel implements ActionListener{
             inputString = input.getText();
             input.setText("");
             input.requestFocus();
-            
+
             log.append("You selected " + inputString);
-            
+
             building = new Building(building.setid(inputString));
-            
+
             log.append("\nYou are now in " + building.getID() + "\n\n");
-            
+
+            log.append(building.buildingDesc() + "\n");
+
             building.printBuildingMenu(log);
     		log.append("\nWhere would you like to go?\n");
         }
     }
-	
-	private void createAndShowGUI() {
+
+    private void createAndShowGUI() {
 		// Frame Set Up
 		this.frame = new JFrame("Map");
 		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -120,7 +114,7 @@ public class TextArea extends JPanel implements ActionListener{
 		this.frame.pack();
 		this.frame.setVisible(true);
 	}
-	
+
     public static void main(String args[]) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -130,5 +124,5 @@ public class TextArea extends JPanel implements ActionListener{
             }
         });
     }
-	
+
 }
