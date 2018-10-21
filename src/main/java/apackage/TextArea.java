@@ -24,13 +24,13 @@ public class TextArea extends JPanel implements ActionListener{
 	private JScrollPane logScrollPane;
 	private JPanel buttonPanel;
 	private JButton nextButton;
-	private BuildingID bID = BuildingID.CASH;
+	//private String bID = "CASH";
 	
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton;
 	
-	private Building building = new Building(bID);
+	private Building building = new Building("CASH");
 	
 	TextArea(){
 		//Text Area Set Up
@@ -74,6 +74,7 @@ public class TextArea extends JPanel implements ActionListener{
 		this.buttonPanel.add(this.enterButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
 		
+		//building = new Building(building.setid(inputString));
 		building.printBuildingMenu(log);
 		log.append("\nWhere would you like to go?\n");
 		
@@ -97,9 +98,12 @@ public class TextArea extends JPanel implements ActionListener{
             
             log.append("You selected " + inputString);
             
-            bID.setName(inputString);
-            building = new Building(bID);
-            System.out.println(building.getID().toString());
+            building = new Building(building.setid(inputString));
+            
+            log.append("\nYou are now in " + building.getID() + "\n\n");
+            
+            building.printBuildingMenu(log);
+    		log.append("\nWhere would you like to go?\n");
         }
     }
 	
