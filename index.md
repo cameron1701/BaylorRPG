@@ -5,41 +5,6 @@ BaylorRPG is a text-based RPG currently in development that aims to be a fun-fil
 This site is where we collaborate to share updates, host files, and provide information for the status of our 
 game as it is in development and beyond. [Code and relevant files can be viewed here.](https://github.com/cameron1701/BaylorRPG.git)
 
-<html>
-
-<head>
-    <title>
-        Css An Upload Button
-    </title>
-    <style>
-        #tohide{
-          visibility:hidden;
-      }
-
-      .upload{
-        border-color:red;
-        border-radius:5px;
-        color:white;
-        background-color:green;
-        width:100px;
-        height:70px;
-        }
-
-        .upload:hover{
-          border-color:antiquewhite;
-          color:orange;
-          cursor:pointer;
-          }
-    </style>
-</head>
-
-<body>
-    <input type="file" id="tohide" />
-    <input type="button" value="Upload" class="upload" onClick="document.getElementById('tohide').click()" />
-</body>
-
-</html>
-
 # *Meeting notes*  
 * Date: 9/9/2018
 * Members in attendance: All
