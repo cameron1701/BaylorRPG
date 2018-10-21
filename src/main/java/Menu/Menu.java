@@ -1,4 +1,4 @@
-package Menu;
+package edu.baylor.ecs;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -17,14 +17,21 @@ public class Menu implements ActionListener {
 	
 	private JFrame window;
 	private Container container;
-	private JPanel titleNamePanel, gamePanel, mainTextPanel, choiceButtonPanel, playerPanel;
+	private JPanel titleNamePanel, gamePanel;
 	private JLabel titleNameLabel;
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
-	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
-	private JButton startNewGame, loadGame, saveGame, pauseGame, restartLevel, quitGame;
-	private JTextArea mainTextArea;
+	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 22);
+	private JButton startNewGame, loadGame, saveGame, pauseGame, restartLevel, quitGame, back;
 	
-	Menu() {
+	public void createMenuScreen(JFrame w, Container c, JPanel t, JPanel g) {
+		// Assign values to window, container, titleNamePanel, and gamePanel
+		this.window = w;
+		this.container = c;
+		this.titleNamePanel = t;
+		this.gamePanel = g;
+		
+		// Clear start window
+		
 		// Create frame
 		window = new JFrame("BearQuest");
 		window.setSize(800, 600);
@@ -36,9 +43,9 @@ public class Menu implements ActionListener {
 		window.setVisible(true);
 		container = window.getContentPane();
 	
-		// Title panel
+		// Create title panel
 		titleNamePanel = new JPanel();
-		titleNamePanel.setBounds(100, 100, 600, 150);
+		titleNamePanel.setBounds(100, 100, 600, 80);
 		titleNamePanel.setBackground(Color.black);
 		titleNameLabel = new JLabel("Game Menu");
 		titleNameLabel.setForeground(Color.white);
@@ -46,7 +53,7 @@ public class Menu implements ActionListener {
 	
 		// Create start new game panel
 		gamePanel = new JPanel();
-		gamePanel.setBounds(300, 200, 250, 700);
+		gamePanel.setBounds(300, 200, 180, 300);
 		gamePanel.setBackground(Color.black);
 	
 		// Create start new game button
@@ -102,6 +109,15 @@ public class Menu implements ActionListener {
 		quitGame.addActionListener(this);
 		quitGame.setFocusPainted(false);
 		//quitGame.setBorderPainted(false);
+		
+		// Create back button
+		back = new JButton("<<");
+		back.setBackground(Color.black);
+		back.setForeground(Color.white);
+		back.setFont(normalFont);
+		back.addActionListener(this);
+		back.setFocusPainted(false);
+		//back.setBorderPainted(false);
 	
 		titleNamePanel.add(titleNameLabel);
 		gamePanel.add(startNewGame);
@@ -110,6 +126,7 @@ public class Menu implements ActionListener {
 		gamePanel.add(pauseGame);
 		gamePanel.add(restartLevel);
 		gamePanel.add(quitGame);
+		gamePanel.add(back);
 	
 		container.add(titleNamePanel);
 		container.add(gamePanel);
@@ -122,7 +139,7 @@ public class Menu implements ActionListener {
 			System.out.println("New Game Started!");
 			
 			// Start new game
-			game.startNewGame(window);
+			game.startNewGame(window, container, titleNamePanel, gamePanel);
 		}
 
 		if (event.getActionCommand() == "Load Game") {
@@ -162,6 +179,13 @@ public class Menu implements ActionListener {
 			
 			// Quit game
 			game.quitGame();
+		}
+		
+		if (event.getActionCommand() == "<<") {
+			System.out.println("Going back...");
+			
+			// Create game screen
+			game.createGameScreen(window, container, titleNamePanel, gamePanel);
 		}
 	}
 }

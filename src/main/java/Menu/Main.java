@@ -1,20 +1,16 @@
-package Menu;
+package edu.baylor.ecs;
 
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
-import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
 
 public class Main implements ActionListener {
 	
@@ -25,7 +21,6 @@ public class Main implements ActionListener {
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton startNewGame, loadGame;
-	private JTextArea mainTextArea;
 	
 	public void createStartScreen() throws IOException {
 		// Create frame
@@ -93,16 +88,12 @@ public class Main implements ActionListener {
 	
 	public void actionPerformed(ActionEvent event) {
 		Game game = new Game();
-		//Map map = new Map();
 		
 		if (event.getActionCommand() == "Start New Game") {
 			System.out.println("New Game Started!");
 			
-			// Go to menu
-			//Menu menu = new Menu();
-			
 			// Start new game
-			game.startNewGame(window);
+			game.startNewGame(window, container, titleNamePanel, gamePanel);
 		}
 
 		if (event.getActionCommand() == "Load Game") {
