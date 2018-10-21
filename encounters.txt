@@ -1,10 +1,44 @@
-Cashion
-Penland
-Moody Library
-The SUB
-BSB
-Waco Hall
-Robinson Tower
-Teal
-Foster
-Tidwell
+********************************************************************************
+Cashion Encounters
+
+"You wait until 5:00pm to start a programming assignment that's due at 11:59pm\n"+
+"and don't finish in time.\n"+
+"-5 health.\n"
+
+"You awkwardly take the elevator with a professor you failed a class with last\n"+
+"semester. It is without question, the slowest elevator ride of your life.\n"
+
+"You decided to take the stairs to the third floor labs. You're embarrassed that\n"+
+"you're out of breath from such a short climb and breathe heavily through your nose\n"+
+"in a naive attempt to play it off like you're not completely out of shape.\n"
+
+********************************************************************************
+
+
+********************************************************************************
+BSB Encounters
+
+"On your walk to the BSB, you encounter the Dr. Livingstone's dog, BU. You give\n"+
+"him pettings and scritches because that's how you treat a G O O D B O Y E\n"+
+"+2 health.\n"
+
+"You run into a random cloud of gnats riding your bike to class.\n"+
+"-1 health.\n"
+
+********************************************************************************
+
+
+********************************************************************************
+Moody Encounters
+
+"You pull an all-nighter studying for a final in Club Moody and still fail\n"+
+"your test.\n"
+
+"The sorority girl in front of you at Starbucks takes 10 minutes to\n"+
+"to order her #$@&%*! coffee and you're now late for class.\n"
+
+"You find a quiet spot to study in the Garden Level and run into a guy you\n"+
+"sat next to in Heritage your freshman year and end up wasting an hour and a\n"+
+"half talking to him instead of studying.\n"
+
+********************************************************************************

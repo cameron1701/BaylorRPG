@@ -1,30 +1,16 @@
 package Menu;
 
-import battlePackage.*;
-import apackage.*;
+import apackage.TextArea;
+import battlePackage.Player;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import javax.swing.UIManager;
 
 public class Game implements ActionListener {
 
@@ -153,7 +139,7 @@ public class Game implements ActionListener {
 		UIManager.put("Button.foreground", Color.white);
 
 		// Take player name from user and create new player
-		playerName = (String) JOptionPane.showInputDialog(window, "Choose a name", "New Player",
+        playerName = JOptionPane.showInputDialog(window, "Choose a name", "New Player",
 				JOptionPane.DEFAULT_OPTION);
 		player = new Player(playerName);
 
@@ -270,8 +256,7 @@ public class Game implements ActionListener {
 			System.out.println("Map");
 
 			// Create Map screen
-			Map map = new Map();
-			// map.createMapScreen();
+            TextArea.startMap();
 		}
 	}
 }

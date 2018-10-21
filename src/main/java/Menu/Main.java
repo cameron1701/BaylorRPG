@@ -1,8 +1,5 @@
 package Menu;
 
-import battlePackage.*;
-import apackage.*;
-
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -28,7 +25,7 @@ public class Main implements ActionListener {
 	public void createStartScreen() throws IOException {
 		// Create frame
 		window = new JFrame("BearQuest");
-		window.setSize(800, 600);
+		window.setSize(800, 700);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
 		window.setLayout(null);

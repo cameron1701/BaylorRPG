@@ -1,11 +1,7 @@
 package MainGame;
 
-import battlePackage.Battle;
-
 import java.awt.*;
-import java.awt.image.BufferStrategy;
 
-import apackage.*;
 import apackage.TextArea;
 
 public class MainClass extends Canvas implements Runnable {
@@ -38,7 +34,7 @@ public class MainClass extends Canvas implements Runnable {
 	}
 
 	public void run() {
-		TextArea.startMap();
+        TextArea.startMap();
 	}
 
 	public static void main(String[] args) {
