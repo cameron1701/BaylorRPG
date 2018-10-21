@@ -99,6 +99,11 @@ public class TextArea extends JPanel implements ActionListener{
             log.append("You selected " + inputString);
             
             building = new Building(building.setid(inputString));
+            
+            log.append("\nYou are now in " + building.getID() + "\n\n");
+            
+            building.printBuildingMenu(log);
+    		log.append("\nWhere would you like to go?\n");
         }
     }
 	
