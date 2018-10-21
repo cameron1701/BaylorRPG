@@ -36,12 +36,12 @@ public class Game implements ActionListener {
 	private String playerName;
 	private Player player = null;
 	private List<Player> players = new ArrayList<Player>();
-	JPanel mainTextPanel, choiceButtonPanel, menuPanel;
-	JLabel titleNameLabel;
-	Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
-	Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
-	JButton menuButton, mapButton, choice1, choice2, choice3, choice4;
-	JTextArea mainTextArea;
+	private JPanel mainTextPanel, choiceButtonPanel, menuPanel;
+	private JLabel titleNameLabel;
+	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
+	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
+	private JButton menuButton, mapButton, choice1, choice2, choice3, choice4;
+	private JTextArea mainTextArea;
 
 	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g) {
 
@@ -271,7 +271,7 @@ public class Game implements ActionListener {
 
 			// Create Map screen
 			Map map = new Map();
-			// map.createMapScreen();
+			map.printMenu();
 		}
 	}
 }

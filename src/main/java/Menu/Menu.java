@@ -1,8 +1,5 @@
 package Menu;
 
-import battlePackage.*;
-import apackage.*;
-
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -14,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 public class Menu implements ActionListener {
 

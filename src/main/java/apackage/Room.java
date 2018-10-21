@@ -10,5 +10,4 @@ public class Room extends Map {
 	public String getName() {
 		return name;
 	}
-
 }
