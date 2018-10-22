@@ -5,6 +5,8 @@ BaylorRPG is a text-based RPG currently in development that aims to be a fun-fil
 This site is where we collaborate to share updates, host files, and provide information for the status of our 
 game as it is in development and beyond. [Code and relevant files can be viewed here.](https://github.com/cameron1701/BaylorRPG.git)
 
+http://localhost:63342/BearQuest/index.html?_ijt=hm9oj74e91hnaqbe22q9ab5vnj
+
 # *Meeting notes*  
 * Date: 9/9/2018
 * Members in attendance: All
