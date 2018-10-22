@@ -56,6 +56,11 @@ game as it is in development and beyond. [Code and relevant files can be viewed 
 * Time: 1:00pm - 8:00pm
 * Meeting actions: Work on code of Iteration 2 demo, work on files/diagrams.
 
+* Date: 10/21/2018
+* Members in attendance: Matthew, Arantxa, Cameron, Mark
+* Time: 1:00pm - 7:00pm
+* Meeting actions: Work on code of Iteration 2 demo, work on files/diagrams.
+
 ### Wiki
 
 [Visit our wiki on Github](https://github.com/cameron1701/BaylorRPG/wiki)
