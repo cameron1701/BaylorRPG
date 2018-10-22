@@ -30,7 +30,9 @@ public class BattleGraphics extends JPanel {
 
 		// Get Image
 		try {
+			//java.net.URL imageURL = BattleGraphics.class.getResource(fileName);
 			this.image = ImageIO.read(new File(this.fileName));
+			//this.image = (BufferedImage) imageURL.getContent();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
