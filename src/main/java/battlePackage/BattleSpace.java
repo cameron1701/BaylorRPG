@@ -266,15 +266,16 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private void createAndShowGUI() {
 		// Frame Set Up
 		this.frame = new JFrame("Battle");
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.frame.setPreferredSize(new Dimension(800, 700));
 		this.frame.setResizable(false);
 		this.frame.setJMenuBar(this.menuBar);
 		this.setOpaque(true);
 		this.frame.add(this);
-
+		
 		// Show Frame
 		this.frame.pack();
+		this.frame.setLocationRelativeTo(null);
 		this.frame.setVisible(true);
 	}
 

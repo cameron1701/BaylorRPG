@@ -14,8 +14,7 @@ public class MainClass extends Canvas implements Runnable {
 
 	// Default constructor that creates the main game window
 	public MainClass() {
-		new Window(WIDTH, HEIGHT, "Bear Quest", this);
-
+		new Window(WIDTH, HEIGHT, "BearQuest", this);
 	}
 
 	// Spawns a new process that starts the game
@@ -42,5 +41,4 @@ public class MainClass extends Canvas implements Runnable {
 	public static void main(String[] args) {
 		new MainClass();
 	}
-
 }

@@ -26,11 +26,9 @@ public class Game implements ActionListener {
 	private String playerName;
 	private Player player = null;
 	private List<Player> players = new ArrayList<Player>();
-	private JPanel mainTextPanel, choiceButtonPanel, menuPanel;
-	private JLabel titleNameLabel;
-	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
+	private JPanel mainTextPanel, menuPanel;
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
-	private JButton menuButton, mapButton, choice1, choice2, choice3, choice4;
+	private JButton menuButton, mapButton;
 	private JTextArea mainTextArea;
 
 	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g, Player p) {
@@ -47,66 +45,24 @@ public class Game implements ActionListener {
 
 		// Set main text panel
 		mainTextPanel = new JPanel();
-		mainTextPanel.setBounds(100, 100, 600, 250);
+		mainTextPanel.setBounds(100, 100, 600, 500);
 		mainTextPanel.setBackground(Color.black);
 		container.add(mainTextPanel);
 
 		// Set main text area
-		mainTextArea = new JTextArea("Welcome, " + p.getName() + "!");
-		mainTextArea.setBounds(100, 100, 600, 250);
+		mainTextArea = new JTextArea("Welcome, " + p.getName() + "!\n\nYou are about to embark"
+				+ " in a 4 year adventure that\nwill define the rest of your life!"
+				+ "\n\nThe first task for you to follow is to meet up with\nyour academic advisor."
+				+ " Once this is done, you will be able to walk around campus and complete your" 
+				+ "\nassignments.\n\nNow you should go and get to know the campus by\ngoing to the Map." 
+				+ "\n\nGood luck on your BearQuest!");
+		mainTextArea.setBounds(100, 100, 600, 400);
 		mainTextArea.setBackground(Color.black);
 		mainTextArea.setForeground(Color.white);
 		mainTextArea.setFont(normalFont);
 		mainTextArea.setLineWrap(true);
 		mainTextArea.setEditable(false);
 		mainTextPanel.add(mainTextArea);
-
-		// Set choice button panel
-		choiceButtonPanel = new JPanel();
-		choiceButtonPanel.setBounds(250, 350, 300, 150);
-		choiceButtonPanel.setBackground(Color.black);
-		choiceButtonPanel.setLayout(new GridLayout(4, 1));
-		container.add(choiceButtonPanel);
-
-		// Set choice 1 button
-		choice1 = new JButton("Choice 1");
-		choice1.setBackground(Color.black);
-		choice1.setForeground(Color.white);
-		choice1.setFont(normalFont);
-		choice1.setFocusPainted(false);
-		choice1.addActionListener(this);
-		choice1.setActionCommand("c1");
-		choiceButtonPanel.add(choice1);
-
-		// Set choice 2 button
-		choice2 = new JButton("Choice 2");
-		choice2.setBackground(Color.black);
-		choice2.setForeground(Color.white);
-		choice2.setFont(normalFont);
-		choice2.setFocusPainted(false);
-		choice2.addActionListener(this);
-		choice2.setActionCommand("c2");
-		choiceButtonPanel.add(choice2);
-
-		// Set choice 3 button
-		choice3 = new JButton("Choice 3");
-		choice3.setBackground(Color.black);
-		choice3.setForeground(Color.white);
-		choice3.setFont(normalFont);
-		choice3.setFocusPainted(false);
-		choice3.addActionListener(this);
-		choice3.setActionCommand("c3");
-		choiceButtonPanel.add(choice3);
-
-		// Set choice 4 button
-		choice4 = new JButton("Choice 4");
-		choice4.setBackground(Color.black);
-		choice4.setForeground(Color.white);
-		choice4.setFont(normalFont);
-		choice4.setFocusPainted(false);
-		choice4.addActionListener(this);
-		choice4.setActionCommand("c4");
-		choiceButtonPanel.add(choice4);
 
 		menuPanel = new JPanel();
 		menuPanel.setBounds(100, 15, 600, 50);

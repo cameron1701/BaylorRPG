@@ -2,6 +2,7 @@ package apackage;
 
 import javax.swing.*;
 
+import Menu.Menu;
 import battlePackage.Battle;
 
 import java.awt.*;
@@ -19,7 +20,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 	private String inputString;
 	private JTextField input;
-	private JButton enterButton;
+	private JButton enterButton, menuButton;
 
 	private Building building = new Building("CASH");
 
@@ -49,8 +50,19 @@ public class TextArea extends JPanel implements ActionListener {
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
-		// Make enterButton have a buttonListener
+		
+		// Create menuButton
+		this.menuButton = new JButton("MENU");
+		this.menuButton.addActionListener(this);
+		this.menuButton.setBackground(Color.GREEN);
+		this.menuButton.setOpaque(true);
+		this.menuButton.setBorderPainted(false);
+		this.menuButton.setEnabled(true);
+		this.menuButton.setActionCommand("Menu");
+		
+		// Make buttons have a buttonListener
 		enterButton.addActionListener(buttonListener);
+		menuButton.addActionListener(this);
 
 		// Make input text field
 		input = new JTextField(20);
@@ -63,6 +75,7 @@ public class TextArea extends JPanel implements ActionListener {
 		// Add input field and enter button to buttonPanel
 		this.buttonPanel.add(this.input);
 		this.buttonPanel.add(this.enterButton);
+		this.buttonPanel.add(this.menuButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
 
 		// Print the menu of options to travel to
@@ -76,8 +89,13 @@ public class TextArea extends JPanel implements ActionListener {
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent event) {
+		if (event.getActionCommand() == "Menu") {
 
+			// Create Menu screen
+			Menu menu = new Menu();
+			menu.createMenuScreen();
+		}
 	}
 
 	public class ButtonListener implements ActionListener {
@@ -115,7 +133,7 @@ public class TextArea extends JPanel implements ActionListener {
 		// Frame Set Up
 		this.frame = new JFrame("Map");
 		this.frame.setLocationRelativeTo(null);
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.frame.setPreferredSize(new Dimension(800, 700));
 		this.frame.setResizable(false);
 		this.setOpaque(true);
@@ -123,6 +141,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 		// Show Frame
 		this.frame.pack();
+		this.frame.setLocationRelativeTo(null);
 		this.frame.setVisible(true);
 	}
 
