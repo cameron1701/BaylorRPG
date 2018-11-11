@@ -1,0 +1,13 @@
+1 "On your walk to the BSB, you encounter the Dr. Livingstone's dog, BU. You give "+
+  "him pettings and scritches because that's how you treat a G O O D B O Y E .  "+
+  "+2 health.\n"
+
+2 "You run into a random cloud of gnats riding your bike to class.  "+
+  "-1 health.\n"
+
+3 "You find your lab TA on Tinder. How awkward would it be if I...\n"
+
+
+
+
+

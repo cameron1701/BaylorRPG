@@ -1,0 +1,7 @@
+1 "You wear your slime cap to class for a day unironically.\n"
+
+2 "You overhear two MIS majors droning on about how hard their Microsoft Excel test was "+
+  "and roll your eyes so hard they hurt for the rest of the day.\n"
+
+3 "Not wanting to pay for business textbooks, you download them from a sketchy site you found "+
+  "on Reddit and now have a virus.\n"

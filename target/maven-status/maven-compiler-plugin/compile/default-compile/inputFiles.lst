@@ -1,14 +1,14 @@
-E:\BaylorRPG\src\main\java\battlePackage\Battle.java
-E:\BaylorRPG\src\main\java\apackage\Map.java
-E:\BaylorRPG\src\main\java\battlePackage\BattleSpace.java
-E:\BaylorRPG\src\main\java\Menu\Main.java
-E:\BaylorRPG\src\main\java\Menu\Menu.java
-E:\BaylorRPG\src\main\java\MainGame\Window.java
-E:\BaylorRPG\src\main\java\battlePackage\Player.java
-E:\BaylorRPG\src\main\java\apackage\TextArea.java
-E:\BaylorRPG\src\main\java\battlePackage\Enemy.java
-E:\BaylorRPG\src\main\java\apackage\Building.java
-E:\BaylorRPG\src\main\java\apackage\Room.java
-E:\BaylorRPG\src\main\java\MainGame\MainClass.java
-E:\BaylorRPG\src\main\java\Menu\Game.java
-E:\BaylorRPG\src\main\java\battlePackage\BattleGraphics.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/MainGame/MainClass.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/battlePackage/Enemy.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/battlePackage/Player.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/battlePackage/Battle.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/apackage/Room.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/battlePackage/BattleSpace.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/Menu/Game.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/Menu/Menu.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/Menu/Main.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/apackage/Map.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/battlePackage/BattleGraphics.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/apackage/Building.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/MainGame/Window.java
+/Users/matt/Desktop/Code/CSI-3471/Group Project/BaylorRPG/src/main/java/apackage/TextArea.java
