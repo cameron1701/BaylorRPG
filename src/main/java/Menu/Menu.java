@@ -24,6 +24,12 @@ public class Menu implements ActionListener {
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 22);
 	private JButton startNewGame, loadGame, saveGame, pauseGame, restartLevel, quitGame, back;
 	private Player player;
+	private Game game;
+	
+	Menu(Game g, Player p){
+		this.player = p;
+		this.game = g;
+	}
 
 	public void createMenuScreen(JFrame w, Container c, JPanel t, JPanel g) {
 		// Assign values to window, container, titleNamePanel, and gamePanel
@@ -135,7 +141,7 @@ public class Menu implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent event) {
-		Game game = new Game();
+		//Game game = new Game();
 
 		if (event.getActionCommand() == "Start New Game") {
 			System.out.println("New Game Started!");

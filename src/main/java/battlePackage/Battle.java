@@ -8,9 +8,9 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class Battle {
-	public static void battle() {
+	public static void battle(Player p) {
 		// Make temp player and enemies for demo, instantiate
-		final Player player = new Player("Student");
+		final Player player = p;
 		final List<Enemy> enemies = new ArrayList<Enemy>();
 		enemies.add(new Enemy("Homework 1", 10, 2, 1));
 		enemies.add(new Enemy("Quiz", 5, 1, 0));

@@ -3,6 +3,7 @@ package apackage;
 import javax.swing.*;
 
 import battlePackage.Battle;
+import battlePackage.Player;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +16,7 @@ public class TextArea extends JPanel implements ActionListener {
 	private JScrollPane logScrollPane;
 	private JPanel buttonPanel;
 	private JButton nextButton;
+	private Player player;
 	// private String bID = "CASH";
 
 	private String inputString;
@@ -23,9 +25,10 @@ public class TextArea extends JPanel implements ActionListener {
 
 	private Building building = new Building("CASH");
 
-	TextArea() {
+	public TextArea(Player p) {
 		// Text Area Set Up
 		super(new BorderLayout());
+		this.player = p;
 		this.log = new JTextArea(700, 700);
 		this.log.setOpaque(true);
 		this.log.setMargin(new Insets(5, 5, 5, 5));
@@ -71,8 +74,15 @@ public class TextArea extends JPanel implements ActionListener {
 		building.printBuildingMenu(log);
 		log.append("+------------------------------+\n");
 
+		this.setVisible(true);
 		// Create and Show Map
-		this.createAndShowGUI();
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				// Turn off metal's use of bold fonts
+				UIManager.put("swing.boldMetal", Boolean.FALSE);
+				createAndShowGUI();
+			}
+		});
 	}
 
 	@Override
@@ -102,7 +112,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 			// Have a battle in the BSB (for demo)
 			if (building.getID().equals("BSB")) {
-				Battle.battle();
+				Battle.battle(player);
 			}
 
 			// Ask to move
@@ -124,16 +134,6 @@ public class TextArea extends JPanel implements ActionListener {
 		// Show Frame
 		this.frame.pack();
 		this.frame.setVisible(true);
-	}
-
-	public static void startMap() {
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				// Turn off metal's use of bold fonts
-				UIManager.put("swing.boldMetal", Boolean.FALSE);
-				new TextArea().setVisible(true);
-			}
-		});
 	}
 
 }
