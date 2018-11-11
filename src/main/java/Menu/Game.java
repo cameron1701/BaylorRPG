@@ -25,8 +25,14 @@ public class Game implements ActionListener {
 	private String[] headers;
 	private String playerName;
 	private Player player = null;
+<<<<<<< HEAD
 	private List<Player> players = new ArrayList<Player>();
 	private JPanel mainTextPanel, menuPanel;
+=======
+	private JPanel mainTextPanel, choiceButtonPanel, menuPanel;
+	private JLabel titleNameLabel;
+	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
+>>>>>>> 58329b3dd50e9c05e7fc14ad43cd9aa986c1526b
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton menuButton, mapButton;
 	private JTextArea mainTextArea;
@@ -104,8 +110,8 @@ public class Game implements ActionListener {
 		player = new Player(playerName);
 
 		// Create a new game and open the screen
-		Game game = new Game();
-		game.createGameScreen(window, container, titleNamePanel, gamePanel, player);
+		//Game game = new Game();
+		this.createGameScreen(window, container, titleNamePanel, gamePanel, player);
 	}
 
 	void loadGame() {
@@ -147,9 +153,6 @@ public class Game implements ActionListener {
 					// l = new Level(level);
 					player = new Player(playerName);
 				}
-
-				// Add player to the players list
-				players.add(player);
 			}
 
 		} catch (FileNotFoundException e) {
@@ -161,7 +164,7 @@ public class Game implements ActionListener {
 		try {
 			FileWriter writer = new FileWriter(file);
 
-			for (int i = 0; i < players.size(); i++) {
+			for (int i = 0; i < 1; i++) {
 				String str = new String();
 
 				/*
@@ -208,7 +211,7 @@ public class Game implements ActionListener {
 			System.out.println("Menu");
 
 			// Create Menu screen
-			Menu menu = new Menu();
+			Menu menu = new Menu(this, this.player);
 			menu.createMenuScreen(window, container, titleNamePanel, gamePanel);
 		}
 
@@ -219,7 +222,8 @@ public class Game implements ActionListener {
 			Map map = new Map();
 			map.printMenu();
 
-            TextArea.startMap();
+			new TextArea(this.player);
+            //TextArea.startMap();
 			//MainClass.run();
 		}
 	}

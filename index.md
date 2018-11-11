@@ -5,6 +5,8 @@ BaylorRPG is a text-based RPG currently in development that aims to be a fun-fil
 This site is where we collaborate to share updates, host files, and provide information for the status of our 
 game as it is in development and beyond. [Code and relevant files can be viewed here.](https://github.com/cameron1701/BaylorRPG.git)
 
+
+
 # *Meeting notes*  
 * Date: 9/9/2018
 * Members in attendance: All
@@ -52,6 +54,11 @@ game as it is in development and beyond. [Code and relevant files can be viewed 
 * Date: 10/20/2018
 * Members in attendance: Matthew, Arantxa, Cameron, Mark
 * Time: 1:00pm - 8:00pm
+* Meeting actions: Work on code of Iteration 2 demo, work on files/diagrams.
+
+* Date: 10/21/2018
+* Members in attendance: Matthew, Arantxa, Cameron, Mark
+* Time: 1:00pm - 7:00pm
 * Meeting actions: Work on code of Iteration 2 demo, work on files/diagrams.
 
 ### Wiki
