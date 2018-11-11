@@ -26,6 +26,8 @@ public class Menu implements ActionListener {
 	private Player player;
 	private Game game;
 	
+	public Menu(){}
+	
 	Menu(Game g, Player p){
 		this.player = p;
 		this.game = g;

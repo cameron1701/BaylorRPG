@@ -25,14 +25,11 @@ public class Game implements ActionListener {
 	private String[] headers;
 	private String playerName;
 	private Player player = null;
-<<<<<<< HEAD
+
 	private List<Player> players = new ArrayList<Player>();
 	private JPanel mainTextPanel, menuPanel;
-=======
-	private JPanel mainTextPanel, choiceButtonPanel, menuPanel;
 	private JLabel titleNameLabel;
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
->>>>>>> 58329b3dd50e9c05e7fc14ad43cd9aa986c1526b
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton menuButton, mapButton;
 	private JTextArea mainTextArea;
