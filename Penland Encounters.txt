@@ -1,0 +1,7 @@
+1 "You run out of dining dollars in 4 days.\n"
+
+2 "You swipe an underclassmen into the dining hall (Please swipe me, I'm starving!)\n"
+
+3 "The lady working the swipe in line is distracted and you sneak in without having to swipe.\n"
+
+4 "Oof, owie my immune system! You get food poisoning from Penland late night.\n"
