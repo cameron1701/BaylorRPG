@@ -15,7 +15,6 @@ import javax.swing.JPanel;
 import battlePackage.Player;
 
 public class Menu implements ActionListener {
-
 	private JFrame window;
 	private Container container;
 	private JPanel titleNamePanel, gamePanel;

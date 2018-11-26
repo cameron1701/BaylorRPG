@@ -12,7 +12,12 @@ public class Player {
 	private List<String> attackNames = new ArrayList<String>();
 
 	public Player(String s) {
-		this.name = s;
+		if(s != null) {
+			this.name = s;
+		}
+		else {
+			this.name = "player";
+		}
 		this.totalHealth = 20;
 		this.currentHealth = this.totalHealth;
 		this.attack = 10;

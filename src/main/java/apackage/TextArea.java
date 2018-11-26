@@ -53,7 +53,7 @@ public class TextArea extends JPanel implements ActionListener {
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
-		
+
 		// Create menuButton
 		this.menuButton = new JButton("MENU");
 		this.menuButton.addActionListener(this);
@@ -62,7 +62,7 @@ public class TextArea extends JPanel implements ActionListener {
 		this.menuButton.setBorderPainted(false);
 		this.menuButton.setEnabled(true);
 		this.menuButton.setActionCommand("Menu");
-		
+
 		// Make buttons have a buttonListener
 		enterButton.addActionListener(buttonListener);
 		menuButton.addActionListener(this);
@@ -109,7 +109,6 @@ public class TextArea extends JPanel implements ActionListener {
 	}
 
 	public class ButtonListener implements ActionListener {
-
 		public void actionPerformed(final ActionEvent ev) {
 			// Get input from input box
 			inputString = input.getText();
@@ -120,7 +119,7 @@ public class TextArea extends JPanel implements ActionListener {
 			log.append("You selected " + inputString);
 
 			// Change buildings
-			building = new Building(building.setid(inputString));
+			building = new Building(building.setID(inputString));
 
 			// Print current building
 			log.append("\nYou are now in " + building.getID() + "\n\n");
@@ -139,7 +138,7 @@ public class TextArea extends JPanel implements ActionListener {
 		}
 	}
 
-	private void createAndShowGUI() {
+	public void createAndShowGUI() {
 		// Frame Set Up
 		this.frame = new JFrame("Map");
 		this.frame.setLocationRelativeTo(null);

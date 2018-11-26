@@ -51,7 +51,6 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<addClasspath>true</addClasspath>
 							<mainClass>MainGame.MainClass</mainClass>
 						</manifest>
 					</archive>

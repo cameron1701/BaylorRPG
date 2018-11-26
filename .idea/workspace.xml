@@ -18,11 +18,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/Menu/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Main$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Menu/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/src - Shortcut.lnk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/src - Shortcut.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/Battle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/Battle$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/Battle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleGraphics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleGraphics.class" afterDir="false" />
@@ -149,7 +149,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/TextArea.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1234">
               <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
@@ -162,7 +162,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Room.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Room.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
@@ -171,7 +171,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Building.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Building.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
@@ -209,23 +209,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/ObjectHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/ObjectHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/battlePackage/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/battlePackage/Enemy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Window.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Window.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainGame/Window.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/ObjectID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/BuildingID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/MapVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/KeyboardInput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Building.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Map.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/ObjectID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/BuildingID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/MapVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/KeyboardInput.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Building.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Map.java" />
         <option value="$PROJECT_DIR$/src/main/java/battlePackage/Battle.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/TextArea.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainGame/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/Game.java" />
@@ -287,7 +287,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apackage" type="462c0819:PsiDirectoryNode" />
+              <item name="apackage.junit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BearQuest" type="b2602c69:ProjectViewProjectNode" />
@@ -334,7 +334,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="apackage" />
+      <recent name="apackage.junit" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,11 +377,11 @@
       </method>
     </configuration>
     <configuration name="Map" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apackage.Map" />
+      <option name="MAIN_CLASS_NAME" value="apackage.junit.Map" />
       <module name="BearQuest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="apackage.*" />
+          <option name="PATTERN" value="apackage.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -390,11 +390,11 @@
       </method>
     </configuration>
     <configuration name="TextArea" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apackage.TextArea" />
+      <option name="MAIN_CLASS_NAME" value="apackage.junit.TextArea" />
       <module name="BearQuest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="apackage.*" />
+          <option name="PATTERN" value="apackage.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -448,7 +448,7 @@
       <workItem from="1540267635729" duration="164000" />
       <workItem from="1541967061430" duration="3262000" />
     </task>
-    <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage removed, list of buildings added to Map class&quot;">
+    <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;">
       <created>1540022019181</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
@@ -617,7 +617,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="&quot;Game class removed, extra Window class in apackage removed, list of buildings added to Map class&quot;" />
+    <MESSAGE value="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;" />
     <MESSAGE value="&quot;Building class and Room class added.&quot;" />
     <MESSAGE value="&quot;New commit after pull from remote branch&quot;" />
     <MESSAGE value="&quot;Descriptions of buildings added when building is selected.&quot;" />
@@ -629,9 +629,9 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/ObjectHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/ObjectHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Window.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/battlePackage/BattleGraphics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -639,11 +639,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/ObjectID.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/MapVisitor.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/KeyboardInput.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/GameObject.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/BuildingID.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/ObjectID.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/MapVisitor.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/KeyboardInput.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/GameObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/BuildingID.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/MainGame/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -746,7 +746,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Room.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
@@ -760,7 +760,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Building.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Building.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
@@ -774,14 +774,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Map.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Map.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/TextArea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1234">
           <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
