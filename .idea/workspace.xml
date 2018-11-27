@@ -2,21 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BSB Encounters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cashion Encounters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Foster Encounters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moody Encounters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Penland Encounters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SUB Encounters.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BearQuest-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BearQuest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BearQuest.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainGame/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainGame/MainClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/MainGame/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainGame/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Menu/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Menu/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Menu/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea$ButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage.junit/TextArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apackage.junit/src - Shortcut.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/Battle$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/Battle$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleSpace.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/battlePackage/BattleGraphics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/battlePackage/BattleGraphics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,25 +42,25 @@
     <session id="-730351282">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="SUB Encounters" value="1" />
-          <entry key="html" value="2" />
-          <entry key="java" value="67" />
+          <entry key="html" value="1" />
+          <entry key="java" value="66" />
           <entry key="md" value="1" />
           <entry key="txt" value="7" />
           <entry key="xml" value="2" />
@@ -56,8 +68,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JAVA" value="67" />
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="66" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="8" />
           <entry key="XML" value="2" />
@@ -92,6 +104,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Moody Encounters.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Penland Encounters.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -113,56 +134,35 @@
         <entry file="file://$PROJECT_DIR$/BSB Encounters.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Foster Encounters.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#a#1;n#p#1;n#head#0;n#font#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/MainGame/MainClass.java">
+        <entry file="file://$PROJECT_DIR$/Foster Encounters.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/TextArea.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1234">
+              <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3645#3825#0" expanded="true" />
+                <element signature="e#3824#3825#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="154" column="36" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Room.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Room.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
@@ -171,7 +171,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Building.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Building.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
@@ -209,23 +209,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/ObjectHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/ObjectHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/battlePackage/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/battlePackage/Enemy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Window.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Window.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainGame/Window.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/ObjectID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/BuildingID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/MapVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/KeyboardInput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Building.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/Map.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/ObjectID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/BuildingID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/MapVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/KeyboardInput.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Building.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/Map.java" />
         <option value="$PROJECT_DIR$/src/main/java/battlePackage/Battle.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage.junit/TextArea.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/MainGame/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/Menu/Game.java" />
@@ -256,8 +256,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,7 +287,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apackage" type="462c0819:PsiDirectoryNode" />
+              <item name="apackage.junit" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BearQuest" type="b2602c69:ProjectViewProjectNode" />
@@ -319,12 +317,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543338002887" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541970332116" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -334,7 +334,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="apackage" />
+      <recent name="apackage.junit" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -377,11 +377,11 @@
       </method>
     </configuration>
     <configuration name="Map" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apackage.Map" />
+      <option name="MAIN_CLASS_NAME" value="apackage.junit.Map" />
       <module name="BearQuest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="apackage.*" />
+          <option name="PATTERN" value="apackage.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -390,11 +390,11 @@
       </method>
     </configuration>
     <configuration name="TextArea" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="apackage.TextArea" />
+      <option name="MAIN_CLASS_NAME" value="apackage.junit.TextArea" />
       <module name="BearQuest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="apackage.*" />
+          <option name="PATTERN" value="apackage.junit.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -446,11 +446,9 @@
       <workItem from="1540233494416" duration="340000" />
       <workItem from="1540261027964" duration="421000" />
       <workItem from="1540267635729" duration="164000" />
-      <workItem from="1541967061430" duration="4946000" />
-      <workItem from="1542041910785" duration="9000" />
-      <workItem from="1543337979108" duration="263000" />
+      <workItem from="1541967061430" duration="3262000" />
     </task>
-    <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage removed, list of buildings added to Map class&quot;">
+    <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;">
       <created>1540022019181</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
@@ -510,7 +508,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77084000" />
+    <option name="totallyTimeSpent" value="75128000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,7 +523,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3104435" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3018598" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -534,14 +532,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866243" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32866243" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32951653" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32866243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -619,7 +617,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="&quot;Game class removed, extra Window class in apackage removed, list of buildings added to Map class&quot;" />
+    <MESSAGE value="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;" />
     <MESSAGE value="&quot;Building class and Room class added.&quot;" />
     <MESSAGE value="&quot;New commit after pull from remote branch&quot;" />
     <MESSAGE value="&quot;Descriptions of buildings added when building is selected.&quot;" />
@@ -631,9 +629,9 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/ObjectHandler.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/ObjectHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Game.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Window.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/battlePackage/BattleGraphics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -641,11 +639,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/ObjectID.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/MapVisitor.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/KeyboardInput.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/GameObject.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/BuildingID.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/ObjectID.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/MapVisitor.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/KeyboardInput.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/GameObject.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/BuildingID.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/MainGame/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -695,6 +693,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-111">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#1;n#p#1;n#head#0;n#font#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -707,6 +716,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/MainGame/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -727,64 +746,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SUB Encounters" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Moody Encounters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Penland Encounters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cashion Encounters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BSB Encounters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Foster Encounters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="154" column="36" selection-start-line="154" selection-start-column="36" selection-end-line="154" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Room.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Building.java">
+    <entry file="file://$PROJECT_DIR$/SUB Encounters">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Building.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
@@ -798,24 +774,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="390">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage.junit/TextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1234">
+          <caret line="135" column="11" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#a#1;n#p#1;n#head#0;n#font#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3645#3825#0" expanded="true" />
+            <element signature="e#3824#3825#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/MainGame/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/BSB Encounters.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cashion Encounters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Penland Encounters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="81" selection-start-line="6" selection-start-column="81" selection-end-line="6" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Moody Encounters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Foster Encounters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>

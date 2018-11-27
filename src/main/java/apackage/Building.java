@@ -4,29 +4,28 @@ import javax.swing.*;
 import java.util.ArrayList;
 
 public class Building extends Map {
-
 	private String id;
 	private String desc;
 
-	Building(String id) {
-		this.id = id;
+	public Building(String id) {
+		this.setID(id);
 	}
 
 	public void printBuildingMenu(JTextArea log) {
-		// Make a list of buildings we want in map
-		buildingList = new ArrayList<String>();
-		buildingList.add("Cashion");
-		buildingList.add("Penland");
-		buildingList.add("Moody");
-		buildingList.add("SUB");
-		buildingList.add("BSB");
-		buildingList.add("SLC");
-		buildingList.add("Teal");
-		buildingList.add("Foster");
-		for (String str : buildingList) {
-			log.append(str);
-			log.append("\n");
-		}
+			// Make a list of buildings we want in map
+			buildingList = new ArrayList<String>();
+			buildingList.add("Cashion");
+			buildingList.add("Penland");
+			buildingList.add("Moody");
+			buildingList.add("SUB");
+			buildingList.add("BSB");
+			buildingList.add("SLC");
+			buildingList.add("Teal");
+			buildingList.add("Foster");
+			for (String str : buildingList) {
+				log.append(str);
+				log.append("\n");
+			}
 	}
 
 	public String getID() {
@@ -101,44 +100,45 @@ public class Building extends Map {
 		return desc;
 	}
 
-	public String setid(String s) {
+	public String setID(String s) {
 		// Set building name based on string param
-		switch (s) {
-		case "Cashion":
-			id = "CASH";
-			break;
-		case "Penland":
-			id = "PEN";
-			break;
-		case "Moody":
-			id = "MOOD";
-			break;
-		case "SUB":
-			id = "SUB";
-			break;
-		case "BSB":
-			id = "BSB";
-			break;
-		case "SLC":
-			id = "SLC";
-			break;
-		case "Teal":
-			id = "TEAL";
-			break;
-		case "Foster":
-			id = "FSTR";
-			break;
-		case "Waco Hall":
-			id = "WH";
-			break;
-		case "Robinson Tower":
-			id = "RT";
-			break;
-		case "Tidwell":
-			id = "TID";
-			break;
+		if(s != null) {
+			switch (s) {
+			case "Cashion":
+				id = "CASH";
+				break;
+			case "Penland":
+				id = "PEN";
+				break;
+			case "Moody":
+				id = "MOOD";
+				break;
+			case "SUB":
+				id = "SUB";
+				break;
+			case "BSB":
+				id = "BSB";
+				break;
+			case "SLC":
+				id = "SLC";
+				break;
+			case "Teal":
+				id = "TEAL";
+				break;
+			case "Foster":
+				id = "FSTR";
+				break;
+			case "Waco Hall":
+				id = "WH";
+				break;
+			case "Robinson Tower":
+				id = "RT";
+				break;
+			case "Tidwell":
+				id = "TID";
+				break;
+			}
 		}
-
 		return id;
 	}
 }

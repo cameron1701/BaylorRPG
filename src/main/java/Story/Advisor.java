@@ -1,16 +1,35 @@
-package apackage;
+package Story;
 
-import javax.swing.*;
-
-import Menu.Menu;
-import battlePackage.Battle;
-import battlePackage.Player;
-
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TextArea extends JPanel implements ActionListener {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
+import Menu.Menu;
+import apackage.Building;
+import apackage.TextArea.ButtonListener;
+import battlePackage.Battle;
+import battlePackage.Player;
+
+public class Advisor extends JPanel implements ActionListener{
+	public Player advise(Player p) {
+		
+		
+		return p;
+	}
+	
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	private JTextArea log;
@@ -18,15 +37,12 @@ public class TextArea extends JPanel implements ActionListener {
 	private JPanel buttonPanel;
 	private JButton nextButton;
 	private Player player;
-	// private String bID = "CASH";
 
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton, menuButton;
 
-	private Building building = new Building("CASH");
-
-	public TextArea(Player p) {
+	public Advisor(Player p) throws InterruptedException {
 		// Text Area Set Up
 		super(new BorderLayout());
 		this.player = p;
@@ -53,7 +69,7 @@ public class TextArea extends JPanel implements ActionListener {
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
-
+		
 		// Create menuButton
 		this.menuButton = new JButton("MENU");
 		this.menuButton.addActionListener(this);
@@ -62,7 +78,7 @@ public class TextArea extends JPanel implements ActionListener {
 		this.menuButton.setBorderPainted(false);
 		this.menuButton.setEnabled(true);
 		this.menuButton.setActionCommand("Menu");
-
+		
 		// Make buttons have a buttonListener
 		enterButton.addActionListener(buttonListener);
 		menuButton.addActionListener(this);
@@ -80,15 +96,16 @@ public class TextArea extends JPanel implements ActionListener {
 		this.buttonPanel.add(this.enterButton);
 		this.buttonPanel.add(this.menuButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
-
-		// Print the menu of options to travel to
-		log.append("\nWhere would you like to go?\n");
-		log.append("\n+------------------------------+\n");
-		building.printBuildingMenu(log);
-		log.append("+------------------------------+\n");
+		
+		log.append("Hi there " + p.getName() + ", and welcome to your first year at Baylor University!");
+		Thread.sleep(2000);
+		log.append("I see your major is Computer Science! That sounds like a lot of fun.");
+		Thread.sleep(1000);
+		log.append("Before you start your journey, please pick a student build!");
+		//log.append("");
 
 		this.setVisible(true);
-		// Create and Show Map
+		// Create and Show Advisor
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				// Turn off metal's use of bold fonts
@@ -109,38 +126,19 @@ public class TextArea extends JPanel implements ActionListener {
 	}
 
 	public class ButtonListener implements ActionListener {
+
 		public void actionPerformed(final ActionEvent ev) {
 			// Get input from input box
 			inputString = input.getText();
 			input.setText("");
 			input.requestFocus();
 
-			// Echo print
-			log.append("You selected " + inputString);
-
-			// Change buildings
-			building = new Building(building.setID(inputString));
-
-			// Print current building
-			log.append("\nYou are now in " + building.getID() + "\n\n");
-
-			// Show building description
-			log.append(building.buildingDesc() + "\n");
-
-			// Have a battle in the BSB (for demo)
-			if (building.getID().equals("BSB")) {
-				Battle.battle(player);
-			}
-
-			// Ask to move
-			building.printBuildingMenu(log);
-			log.append("\nWhere would you like to go?\n");
 		}
 	}
 
-	public void createAndShowGUI() {
+	private void createAndShowGUI() {
 		// Frame Set Up
-		this.frame = new JFrame("Map");
+		this.frame = new JFrame("Advisor");
 		this.frame.setLocationRelativeTo(null);
 		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.frame.setPreferredSize(new Dimension(800, 700));
