@@ -15,9 +15,9 @@ public class BattleGraphics extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private BufferedImage image;
 	private GridBagConstraints constraints;
-	private String fileName;
+	private String fileName = null;
 
-	BattleGraphics(String result) {
+	public BattleGraphics(String result) throws IOException{
 		// Get Result type
 		if (result.equals("win")) {
 			this.fileName = "win.png";
@@ -29,13 +29,10 @@ public class BattleGraphics extends JPanel {
 		}
 
 		// Get Image
-		try {
-			//java.net.URL imageURL = BattleGraphics.class.getResource(fileName);
-			this.image = ImageIO.read(new File(this.fileName));
-			//this.image = (BufferedImage) imageURL.getContent();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		//java.net.URL imageURL = BattleGraphics.class.getResource(fileName);
+		this.image = ImageIO.read(new File(this.fileName));
+		//this.image = (BufferedImage) imageURL.getContent();
+		
 
 		// Set Up JPanel
 		this.setBackground(Color.BLACK);

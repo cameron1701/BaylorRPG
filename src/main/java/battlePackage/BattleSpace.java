@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
@@ -41,7 +42,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private Timer timer;
 	private Random rand = new Random();
 
-	BattleSpace(Player p, List<Enemy> enemies) {
+	public BattleSpace(Player p, List<Enemy> enemies) {
 		// Text Area Set Up
 		super(new BorderLayout());
 		this.log = new JTextArea(700, 700);
@@ -171,7 +172,11 @@ public class BattleSpace extends JPanel implements ActionListener {
 			this.timer.schedule(new TimerTask() {
 				@Override
 				public void run() {
-					showResult("retreat");
+					try {
+						showResult("retreat");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
 				}
 			}, 3000);
 		}
@@ -211,7 +216,11 @@ public class BattleSpace extends JPanel implements ActionListener {
 				this.timer.schedule(new TimerTask() {
 					@Override
 					public void run() {
-						showResult("lose");
+						try {
+							showResult("lose");
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
 					}
 				}, 3000);
 			}
@@ -256,7 +265,11 @@ public class BattleSpace extends JPanel implements ActionListener {
 				this.timer.schedule(new TimerTask() {
 					@Override
 					public void run() {
-						showResult("win");
+						try {
+							showResult("win");
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
 					}
 				}, 3000);
 			}
@@ -279,7 +292,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 		this.frame.setVisible(true);
 	}
 
-	private void showResult(String str) {
+	public void showResult(String str) throws IOException{
 		// Show Battle Outcome
 		this.bGraphic = new BattleGraphics(str);
 		this.frame.remove(this);
@@ -296,7 +309,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 		}, 3000);
 	}
 
-	private void updateMenuItems() {
+	public void updateMenuItems() {
 		// Update Enemy Menu Status
 		for (int i = 0; i < this.selectEnemyMenu.getItemCount(); i++) {
 			if (this.enemies.get(i).getCurrentHealth() <= 0) {
@@ -309,7 +322,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 		}
 	}
 
-	private boolean endOfBattle() {
+	public boolean endOfBattle() {
 		// Check all Enemy Health
 		for (Enemy e : this.enemies) {
 			if (e.getCurrentHealth() > 0) {
@@ -319,7 +332,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 		return true;
 	}
 
-	private void printBattleStats() {
+	public void printBattleStats() {
 		// Set Up Result Frame
 		this.remove(this.buttonPanel);
 		this.buttonPanel.removeAll();
