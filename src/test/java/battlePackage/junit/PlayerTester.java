@@ -42,7 +42,7 @@ public class PlayerTester {
 	void testCurrentHealth() {
 		if(this.p != null) {
 			this.p.setCurrentHealth(6);
-			Assertions.assertEquals(14, this.p.getCurrentHealth(), "14 Expected");
+			Assertions.assertEquals(24, this.p.getCurrentHealth(), "24 Expected");
 		}
 	}
 

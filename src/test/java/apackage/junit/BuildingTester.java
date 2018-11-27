@@ -59,7 +59,7 @@ public class BuildingTester {
 	void testGetBuildingDescr() {
 		if (this.building != null) {
 			Assertions.assertEquals(
-					"Cashion is your second home and the main building you will toil your life away coding\n"
+					"Cashion is your second home and the main building, you will toil your life away coding\n"
 							+ "programs and stressing out with your fellow masochists...errr...classmates.\n"
 							+ "Beware traveler, for enemies you encounter here will be far more difficult than any\n"
 							+ "you will likely encounter anywhere else on campus. They can come in the form of challenging\n"
