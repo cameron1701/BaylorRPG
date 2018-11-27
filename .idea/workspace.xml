@@ -1,24 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/apackage/Encounter.java" afterDir="false" />
+    <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="&quot;Random encounters implemented fully&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BSB Encounters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BSB Encounters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cashion Encounters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cashion Encounters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Foster Encounters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Foster Encounters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Moody Encounters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Moody Encounters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Penland Encounters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Penland Encounters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SUB Encounters.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SUB Encounters.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apackage/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apackage/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Menu/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Menu/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/Building.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/Building.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea$ButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea$ButtonListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apackage/TextArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apackage/TextArea.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,7 +54,7 @@
           <entry key="SUB Encounters" value="13" />
           <entry key="html" value="20" />
           <entry key="java" value="12777" />
-          <entry key="txt" value="1526" />
+          <entry key="txt" value="1567" />
           <entry key="xml" value="23" />
         </counts>
       </usages-collector>
@@ -78,7 +62,7 @@
         <counts>
           <entry key="HTML" value="20" />
           <entry key="JAVA" value="12777" />
-          <entry key="PLAIN_TEXT" value="1539" />
+          <entry key="PLAIN_TEXT" value="1580" />
           <entry key="XML" value="23" />
         </counts>
       </usages-collector>
@@ -96,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Building.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="56" column="90" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
+            <state relative-caret-position="285">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#660#661#0" expanded="true" />
@@ -111,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1485">
-              <caret line="107" column="38" lean-forward="true" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+              <caret line="104" column="38" lean-forward="true" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -278,7 +262,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543358163052" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543358592048" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -401,7 +385,7 @@
       <workItem from="1540261027964" duration="421000" />
       <workItem from="1540267635729" duration="164000" />
       <workItem from="1541967061430" duration="3262000" />
-      <workItem from="1543349538076" duration="8180000" />
+      <workItem from="1543349538076" duration="9166000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage removed, list of buildings added to Map class&quot;">
       <created>1540022019181</created>
@@ -459,11 +443,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540167229979</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&quot;Random encounters implemented fully&quot;">
+      <created>1543358238996</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543358238996</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85944000" />
+    <option name="totallyTimeSpent" value="86930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +467,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31473532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -487,14 +477,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866243" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32866243" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32866243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -578,7 +568,8 @@
     <MESSAGE value="&quot;Descriptions of buildings added when building is selected.&quot;" />
     <MESSAGE value="&quot;Map loads from game, needs to transition cleaner.&quot;" />
     <MESSAGE value="&quot;index file fixed&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;index file fixed&quot;" />
+    <MESSAGE value="&quot;Random encounters implemented fully&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Random encounters implemented fully&quot;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -588,7 +579,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java</url>
-          <line>105</line>
+          <line>102</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -789,14 +780,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1485">
-          <caret line="107" column="38" lean-forward="true" selection-start-line="107" selection-start-column="38" selection-end-line="107" selection-end-column="38" />
+          <caret line="104" column="38" lean-forward="true" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Building.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="56" column="90" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
+        <state relative-caret-position="285">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#660#661#0" expanded="true" />
