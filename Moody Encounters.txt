@@ -1,9 +1,5 @@
-"You pull an all-nighter studying for a final in Club Moody and still fail "+
-"your test.\n"
+1 You pull an all-nighter studying for a final in Club Moody and still fail your test.\n"
 
-"The sorority girl in front of you at Starbucks takes 10 minutes to "+
-"to order her coffee and you're now late for class.\n"
+2 The sorority girl in front of you at Starbucks takes 10 minutes to to order her coffee and you're now late for class.\n"
 
-"You find a quiet spot to study in the Garden Level and run into a guy you "+
-"sat next to in Heritage your freshman year and end up wasting an hour and a "+
-"half talking to him instead of studying.\n"
+3 You find a quiet spot to study in the Garden Level and run into a guy you sat next to in Heritage your freshman year and end up wasting an hour and a half talking to him instead of studying.\n"

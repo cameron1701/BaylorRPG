@@ -1,9 +1,8 @@
 package apackage;
 
-import javax.swing.*;
-
 import battlePackage.Battle;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -99,6 +98,13 @@ public class TextArea extends JPanel implements ActionListener {
 
 			// Show building description
 			log.append(building.buildingDesc() + "\n");
+
+			String encounter = null;
+			encounter = Encounter.randomEncounter(building.getID());
+			if (encounter.length() > 0) {
+				log.append("ENCOUNTER!\n");
+				log.append(encounter + "\n\n");
+			}
 
 			// Have a battle in the BSB (for demo)
 			if (building.getID().equals("BSB")) {

@@ -14,7 +14,7 @@ public class Building extends Map {
 
 	public void printBuildingMenu(JTextArea log) {
 		// Make a list of buildings we want in map
-		buildingList = new ArrayList<String>();
+		buildingList = new ArrayList<>();
 		buildingList.add("Cashion");
 		buildingList.add("Penland");
 		buildingList.add("Moody");
@@ -54,7 +54,7 @@ public class Building extends Map {
 			desc = "Within close proximity of Cashion, Penland Dining Hall is a great place to fuel your late\n"
 					+ "semester midnight munchies and to blow all your entry swipes within the first few weeks of\n"
 					+ "the semester. Burgers, hotdogs, juice and cereal among others will increase your health and\n"
-					+ "give you time to complain about your classes with other students.";
+					+ "give you time to complain about your classes with other students.\n";
 			break;
 		case "MOOD":
 			desc = "Moody library can be a great place to study during the beginning of the semester, but quickly\n"
@@ -72,7 +72,7 @@ public class Building extends Map {
 			desc = "The SUB is an oasis located in Fountain Mall. Here, a weary traveler can purchase wares\n"
 					+ "such as Chick-Fil-a nuggies with hunny mussy sauce, energy drinks, coffee, and knock-off\n"
 					+ "Chinese food. Though their are no enemy encounters in this building, the road you travel\n"
-					+ "to get there is fraught with peril.";
+					+ "to get there is fraught with peril.\n";
 			break;
 		case "BSB":
 			desc = "The Baylor Science Building, or BSB, is where you will take all of your science (geology)\n"
@@ -91,7 +91,8 @@ public class Building extends Map {
 			break;
 		case "TEAL":
 			desc = "Teal is your home. You can go here to sleep, study, and relax. There are no enemies here\n"
-					+ "and is a great place to replenish your stats.\n";
+					+ "and is a great place to replenish your stats. If you die in the game, you will respawn\n"
+					+ "here.\n";
 			break;
 		case "FSTR":
 			desc = "Paul L. Foster Campus for Business and Innovation. You will never find a more wretched hive\n"

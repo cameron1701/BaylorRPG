@@ -1,18 +1,12 @@
 package Menu;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Font;
+import battlePackage.Player;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import battlePackage.Player;
 
 public class Menu implements ActionListener {
 
@@ -137,21 +131,21 @@ public class Menu implements ActionListener {
 	public void actionPerformed(ActionEvent event) {
 		Game game = new Game();
 
-		if (event.getActionCommand() == "Start New Game") {
+        if (event.getActionCommand().equals("Start New Game")) {
 			System.out.println("New Game Started!");
 
 			// Start new game
 			game.startNewGame(window, container, titleNamePanel, gamePanel);
 		}
 
-		if (event.getActionCommand() == "Load Game") {
+        if (event.getActionCommand().equals("Load Game")) {
 			System.out.println("Game loaded!");
 
 			// Load saved game
 			game.loadGame();
 		}
 
-		if (event.getActionCommand() == "Save Game") {
+        if (event.getActionCommand().equals("Save Game")) {
 			System.out.println("Game saved!");
 
 			// Save game
@@ -162,28 +156,28 @@ public class Menu implements ActionListener {
 			}
 		}
 
-		if (event.getActionCommand() == "Pause Game") {
+        if (event.getActionCommand().equals("Pause Game")) {
 			System.out.println("Game paused!");
 
 			// Pause game
 			game.pauseGame();
 		}
 
-		if (event.getActionCommand() == "Restart Level") {
+        if (event.getActionCommand().equals("Restart Level")) {
 			System.out.println("Level restarted!");
 
 			// Restart level
 			game.restartLevel();
 		}
 
-		if (event.getActionCommand() == "Quit Game") {
+        if (event.getActionCommand().equals("Quit Game")) {
 			System.out.println("Game quit!");
 
 			// Quit game
 			game.quitGame();
 		}
 
-		if (event.getActionCommand() == "<<") {
+        if (event.getActionCommand().equals("<<")) {
 			System.out.println("Going back...");
 
 			// Create game screen
