@@ -48,6 +48,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 		// Create enterButton
 		this.enterButton = new JButton("ENTER");
+		this.enterButton.setName("ENTER");
 		this.enterButton.addActionListener(this);
 		this.enterButton.setBackground(Color.GREEN);
 		this.enterButton.setOpaque(true);
@@ -56,6 +57,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 		// Create menuButton
 		this.menuButton = new JButton("MENU");
+		this.menuButton.setName("MENU");
 		this.menuButton.addActionListener(this);
 		this.menuButton.setBackground(Color.GREEN);
 		this.menuButton.setOpaque(true);

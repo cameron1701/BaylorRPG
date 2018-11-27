@@ -18,7 +18,7 @@ public class Player {
 		else {
 			this.name = "player";
 		}
-		this.totalHealth = 30;
+		this.totalHealth = 30;	
 		this.currentHealth = this.totalHealth;
 		this.attack = 10;
 		this.defense = 7;

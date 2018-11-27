@@ -1,91 +1,48 @@
 package apackage.junit;
 
 import apackage.TextArea;
-import battlePackage.Battle;
 import battlePackage.Player;
-import java.awt.event.ActionEvent;
+import java.awt.Component;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class TextAreaTester {
+public class TextAreaTester{
 	protected TextArea area = null;
-
+	
 	@BeforeEach
 	void init() {
-		this.area = new TextArea(new Player("player1"));
+		this.area = new TextArea(new Player("testP"));
 	}
-
-	@Test
-	void testTextAreaValid() {
-		Assertions.assertTrue(this.area.isValid(), "True Expected");
-	}
-
+	
 	@Test
 	void testTextAreaEnabled() {
-		if (this.area != null) {
-			Assertions.assertTrue(this.area.isEnabled(), "True Expected");
-		}
-	}
-
-	@Test
-	void testTextAreaVisible() {
-		if (this.area != null) {
-			Assertions.assertTrue(this.area.isVisible(), "True Expected");
-		}
-	}
-
-	@Test
-	void testTextAreaComponentCount() {
-		if (this.area != null) {
-			Assertions.assertEquals(2, this.area.getComponentCount(), "Two Components Expected");
-		}
-	}
-
-	@Test
-	void testCreateMenuAction() {
-		if (this.area != null) {
-			ActionEvent event = new ActionEvent(this.area, 1, "MENU");
-			this.area.actionPerformed(event);
-			//Assertions.assertEquals("MENU", event.getActionCommand(), "MENU Expected");
+		if(this.area != null) {
+			Assertions.assertTrue(this.area.isEnabled(), "TextArea should be Enabled");
 		}
 	}
 	
 	@Test
-	void testCreateBattleAction() {
+	void testTextAreaVisible() {
 		if(this.area != null) {
-			ActionEvent event = new ActionEvent(this.area, 1, "Battle");
-			this.area.new ButtonListener().actionPerformed(event);
-			Assertions.assertEquals("ENTER", event.getActionCommand(), "");
+			Assertions.assertTrue(this.area.isVisible(), "TextArea should be Visible");
 		}
 	}
-
+	
 	@Test
-	void testFrameCreation() {
-		if (this.area != null) {
-			Assertions.assertNotNull(this.area.getRootPane(), "Not Null Expected");
+	void testTextAreaComponentCount() {
+		if(this.area != null) {
+			Assertions.assertEquals(2, this.area.getComponentCount(), "TextArea should have 2 Components");
 		}
 	}
-
+	
 	@Test
-	void testFrameValid() {
+	void testComponentCreation() {
 		if (this.area != null) {
-			Assertions.assertTrue(this.area.getRootPane().isValid(), "True Expected");
-		}
-	}
-
-	@Test
-	void testFrameVisible() {
-		if (this.area != null) {
-			Assertions.assertTrue(this.area.getRootPane().isVisible(), "True Expected");
-		}
-	}
-
-	@Test
-	void testFrameEnabled() {
-		if (this.area != null) {
-			Assertions.assertTrue(this.area.getRootPane().isEnabled(), "True Expected");
+			for(Component c : this.area.getComponents()) {
+				Assertions.assertNotNull(c, "Component should not be null");
+			}
 		}
 	}
 
@@ -93,5 +50,7 @@ public class TextAreaTester {
 	void tearDown() {
 		this.area.invalidate();
 		this.area = null;
+		Assertions.assertNull(this.area, "TextArea should be null");
 	}
 }
+

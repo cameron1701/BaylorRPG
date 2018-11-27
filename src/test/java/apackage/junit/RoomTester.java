@@ -19,17 +19,7 @@ public class RoomTester {
 	void testName() {
 		if (this.room != null) {
 			this.room.setName("Computer Lab");
-			assertEquals("Computer Lab", this.room.getName(), "Computer Lab Expected");
-		}
-	}
-
-	@Test
-	void testSetNullName() {
-		if (this.room != null) {
-			this.room.setName(null);
-			Assertions.assertThrows(NullPointerException.class, () -> {
-				this.room.getName();
-			}, "NullPointerException is Expected");
+			Assertions.assertEquals("Computer Lab", this.room.getName(), "Computer Lab Expected");
 		}
 	}
 }

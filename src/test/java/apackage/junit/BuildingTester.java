@@ -15,23 +15,23 @@ public class BuildingTester {
 	}
 
 	@Test
-	void testNullTextArea() {
+	void testNullTextArea() throws NullPointerException {
 		if (this.building != null) {
 			Assertions.assertThrows(NullPointerException.class, () -> {
 				this.building.printBuildingMenu(null);
 			}, "NullPointerException is Expected");
 		}
 	}
-	
+
 	@Test
 	void testPrintBuildingMenu() {
 		if (this.building != null) {
 			JTextArea testLog = new JTextArea();
 			this.building.printBuildingMenu(testLog);
-			Assertions.assertTrue(testLog.getText().contains("Foster\n"), "True Expected"); 
+			Assertions.assertTrue(testLog.getText().contains("Foster\n"), "True Expected");
 		}
 	}
-	
+
 	@Test
 	void testID() {
 		if (this.building != null) {
@@ -75,5 +75,4 @@ public class BuildingTester {
 					this.building.buildingDesc(), "Cashion Building Description Expected");
 		}
 	}
-
 }

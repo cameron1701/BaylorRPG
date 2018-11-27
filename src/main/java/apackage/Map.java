@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Map {
 	protected static List<String> buildingList = null;
-	private List<String> roomList = null;
 	protected JTextArea log;
 	JLabel label = new JLabel();
 	JTextField textfield = new JTextField("", 10);
@@ -25,5 +24,9 @@ public class Map {
 		String temp = new String();
 		System.out.println(selection);
 		temp = "+----------------------------------+\n" + "        Select a building          ";
+	}
+	
+	public List<String> getBuildingList() {
+		return buildingList;
 	}
 }

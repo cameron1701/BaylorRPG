@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
@@ -175,7 +176,12 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 			this.timer.schedule(new TimerTask() {
 				@Override
 				public void run() {
-					showResult("retreat");
+					try {
+						showResult("retreat");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 			}, 3000);
 		}
@@ -208,7 +214,12 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 				this.timer.schedule(new TimerTask() {
 					@Override
 					public void run() {
-						showResult("lose");
+						try {
+							showResult("lose");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 				}, 3000);
 			}
@@ -246,7 +257,12 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 				this.timer.schedule(new TimerTask() {
 					@Override
 					public void run() {
-						showResult("win");
+						try {
+							showResult("win");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 					}
 				}, 3000);
 			}
@@ -269,7 +285,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 		this.frame.setVisible(true);
 	}
 
-	private void showResult(String str) {
+	private void showResult(String str) throws IOException {
 		// Show Battle Outcome
 		this.bGraphic = new BattleGraphics(str);
 		this.frame.remove(this);
