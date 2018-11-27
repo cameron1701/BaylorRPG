@@ -1,35 +1,14 @@
 package Story;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Insets;
+import Menu.Menu;
+import battlePackage.Player;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
-
-import Menu.Menu;
-import apackage.Building;
-import apackage.TextArea.ButtonListener;
-import battlePackage.Battle;
-import battlePackage.Player;
-
 public class Advisor extends JPanel implements ActionListener{
-	public Player advise(Player p) {
-		
-		
-		return p;
-	}
-	
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	private JTextArea log;
@@ -37,11 +16,9 @@ public class Advisor extends JPanel implements ActionListener{
 	private JPanel buttonPanel;
 	private JButton nextButton;
 	private Player player;
-
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton, menuButton;
-
 	public Advisor(Player p) throws InterruptedException {
 		// Text Area Set Up
 		super(new BorderLayout());
@@ -69,7 +46,7 @@ public class Advisor extends JPanel implements ActionListener{
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
-		
+
 		// Create menuButton
 		this.menuButton = new JButton("MENU");
 		this.menuButton.addActionListener(this);
@@ -78,7 +55,7 @@ public class Advisor extends JPanel implements ActionListener{
 		this.menuButton.setBorderPainted(false);
 		this.menuButton.setEnabled(true);
 		this.menuButton.setActionCommand("Menu");
-		
+
 		// Make buttons have a buttonListener
 		enterButton.addActionListener(buttonListener);
 		menuButton.addActionListener(this);
@@ -96,7 +73,7 @@ public class Advisor extends JPanel implements ActionListener{
 		this.buttonPanel.add(this.enterButton);
 		this.buttonPanel.add(this.menuButton);
 		this.add(this.buttonPanel, BorderLayout.PAGE_END);
-		
+
 		log.append("Hi there " + p.getName() + ", and welcome to your first year at Baylor University!");
 		Thread.sleep(2000);
 		log.append("I see your major is Computer Science! That sounds like a lot of fun.");
@@ -115,6 +92,12 @@ public class Advisor extends JPanel implements ActionListener{
 		});
 	}
 
+	public Player advise(Player p) {
+
+
+		return p;
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getActionCommand() == "Menu") {
@@ -122,17 +105,6 @@ public class Advisor extends JPanel implements ActionListener{
 			// Create Menu screen
 			Menu menu = new Menu();
 			menu.createMenuScreen();
-		}
-	}
-
-	public class ButtonListener implements ActionListener {
-
-		public void actionPerformed(final ActionEvent ev) {
-			// Get input from input box
-			inputString = input.getText();
-			input.setText("");
-			input.requestFocus();
-
 		}
 	}
 
@@ -150,6 +122,17 @@ public class Advisor extends JPanel implements ActionListener{
 		this.frame.pack();
 		this.frame.setLocationRelativeTo(null);
 		this.frame.setVisible(true);
+	}
+
+	public class ButtonListener implements ActionListener {
+
+		public void actionPerformed(final ActionEvent ev) {
+			// Get input from input box
+			inputString = input.getText();
+			input.setText("");
+			input.requestFocus();
+
+		}
 	}
 
 }

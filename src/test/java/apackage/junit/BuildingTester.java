@@ -1,10 +1,11 @@
 package apackage.junit;
 
 import apackage.Building;
-import javax.swing.JTextArea;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import javax.swing.*;
 
 public class BuildingTester {
 	protected Building building = null;

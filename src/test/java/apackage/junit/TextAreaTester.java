@@ -1,13 +1,13 @@
 package apackage.junit;
 
 import apackage.TextArea;
-import battlePackage.Battle;
 import battlePackage.Player;
-import java.awt.event.ActionEvent;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.awt.event.ActionEvent;
 
 public class TextAreaTester {
 	protected TextArea area = null;

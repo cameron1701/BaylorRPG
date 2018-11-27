@@ -1,11 +1,10 @@
 package apackage;
 
-import javax.swing.*;
-
 import Menu.Menu;
 import battlePackage.Battle;
 import battlePackage.Player;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -108,6 +107,22 @@ public class TextArea extends JPanel implements ActionListener {
 		}
 	}
 
+	public void createAndShowGUI() {
+		// Frame Set Up
+		this.frame = new JFrame("Map");
+		this.frame.setLocationRelativeTo(null);
+		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		this.frame.setPreferredSize(new Dimension(800, 700));
+		this.frame.setResizable(false);
+		this.setOpaque(true);
+		this.frame.add(this);
+
+		// Show Frame
+		this.frame.pack();
+		this.frame.setLocationRelativeTo(null);
+		this.frame.setVisible(true);
+	}
+
 	public class ButtonListener implements ActionListener {
 		public void actionPerformed(final ActionEvent ev) {
 			// Get input from input box
@@ -136,22 +151,6 @@ public class TextArea extends JPanel implements ActionListener {
 			building.printBuildingMenu(log);
 			log.append("\nWhere would you like to go?\n");
 		}
-	}
-
-	public void createAndShowGUI() {
-		// Frame Set Up
-		this.frame = new JFrame("Map");
-		this.frame.setLocationRelativeTo(null);
-		this.frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		this.frame.setPreferredSize(new Dimension(800, 700));
-		this.frame.setResizable(false);
-		this.setOpaque(true);
-		this.frame.add(this);
-
-		// Show Frame
-		this.frame.pack();
-		this.frame.setLocationRelativeTo(null);
-		this.frame.setVisible(true);
 	}
 
 }

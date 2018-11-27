@@ -3,6 +3,6 @@ package Story;
 import battlePackage.Enemy;
 
 public class Boss {
-	Enemy boss;
-	String[] attackLines;
+    Enemy boss;
+    String[] attackLines;
 }

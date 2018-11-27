@@ -1,11 +1,11 @@
 package apackage.junit;
 
-import static org.junit.Assert.assertEquals;
+import apackage.Room;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import apackage.Room;
+import static org.junit.Assert.assertEquals;
 
 public class RoomTester {
 	protected Room room = null;

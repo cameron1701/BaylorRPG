@@ -3,8 +3,9 @@ package apackage;
 // Room class for rooms inside buildings (currently unused)
 public class Room extends Map {
 	private String name;
-	
-	public Room() {}
+
+	public Room() {
+	}
 
 	public void setName(String s) {
 		name = s;
