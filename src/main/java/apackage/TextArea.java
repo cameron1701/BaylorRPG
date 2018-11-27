@@ -22,6 +22,11 @@ public class TextArea extends JPanel implements ActionListener {
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton, menuButton;
+<<<<<<< HEAD
+=======
+	
+	private int stepCount = 0;
+>>>>>>> 2fc943dd0b1bff9c5aab4d6c560385db9d109b45
 	private Building building = new Building("CASH");
 
 	public TextArea(Player p) {
@@ -123,13 +128,16 @@ public class TextArea extends JPanel implements ActionListener {
 
 			// Print current building
 			log.append("\nYou are now in " + building.getID() + "\n\n");
+			
+			stepCount++;
 
 			// Show building description
 			log.append(building.buildingDesc() + "\n");
 
-			// Have a battle in the BSB (for demo)
-			if (building.getID().equals("BSB")) {
+			// Have a battle every three steps
+			if (stepCount == 3) {
 				Battle.battle(player);
+				stepCount = 0;
 			}
 
 			// Ask to move
