@@ -9,18 +9,20 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class Battle {
 	public static void battle(Player p) {
-		// Make temp player and enemies for demo, instantiate
-		final Player player = p;
-		final List<Enemy> enemies = new ArrayList<Enemy>();
-		enemies.add(new Enemy("Homework 1", 10, 2, 1));
-		enemies.add(new Enemy("Quiz", 5, 1, 0));
-		enemies.add(new Enemy("Practicum", 7, 4, 1));
+		final Player player = new Player("Student");
+		final EnemyList e = new EnemyList();
+		final List<Enemy> toBattle = new ArrayList<Enemy>();
+		
+		toBattle.add(e.getRandomEnemy());
+		toBattle.add(e.getRandomEnemy());
+		toBattle.add(e.getRandomEnemy());
 
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
 				// Make new BattleSpace with player and enemies
-				new BattleSpace(player, enemies);
+				new BattleSpace(player, toBattle);
+				
 				try {
 					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
