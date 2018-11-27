@@ -17,6 +17,10 @@ public class Enemy {
 		this.defense = def;
 	}
 
+	public Enemy() {
+		
+	}
+
 	public boolean isDefeated() {
 		if (this.currentHealth <= 0) {
 			return true;

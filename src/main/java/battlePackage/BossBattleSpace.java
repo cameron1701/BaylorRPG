@@ -23,7 +23,7 @@ import javax.swing.ScrollPaneConstants;
 
 import Story.Boss;
 
-public class BattleSpace extends JPanel implements ActionListener {
+public class BossBattleSpace extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	private JMenu selectEnemyMenu;
@@ -39,11 +39,11 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private Player player;
 	private BattleGraphics bGraphic;
 	private int index;
-	private List<Enemy> enemies;
+	private Boss boss;
 	private Timer timer;
 	private Random rand = new Random();
 
-	BattleSpace(Player p, List<Enemy> enemies) {
+	BossBattleSpace(Player p, Boss b) {
 		// Text Area Set Up
 		super(new BorderLayout());
 		this.log = new JTextArea(700, 700);
@@ -58,7 +58,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 
 		// Assign characters
 		this.player = p;
-		this.enemies = enemies;
+		this.boss = b;
 
 		// Make a new Timer for showing results
 		this.timer = new Timer();
@@ -69,15 +69,15 @@ public class BattleSpace extends JPanel implements ActionListener {
 		this.selectEnemyMenu.setOpaque(true);
 		this.selectEnemyMenu.setEnabled(false);
 
+		
 		// Add Menu Items
-		for (Enemy e : this.enemies) {
-			JMenuItem menuItem = new JMenuItem(e.getName() + ": " + e.getCurrentHealth());
-			menuItem.setVisible(true);
-			menuItem.setBackground(Color.BLACK);
-			menuItem.setForeground(Color.GREEN);
-			menuItem.addActionListener(this);
-			this.selectEnemyMenu.add(menuItem);
-		}
+		JMenuItem menuItem = new JMenuItem(boss.getBoss().getName() + ": " + boss.getBoss().getCurrentHealth());
+		menuItem.setVisible(true);
+		menuItem.setBackground(Color.BLACK);
+		menuItem.setForeground(Color.GREEN);
+		menuItem.addActionListener(this);
+		this.selectEnemyMenu.add(menuItem);
+		
 
 		// Add Menu to MenuBar
 		this.menuBar = new JMenuBar();
@@ -159,7 +159,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 			this.log.append("You Selected: " + this.fightButton.getActionCommand() + "\n");
 
 			// Prompt Player to Select an Enemy to Attack
-			this.log.append("Select an Enemy...\n");
+			this.log.append("Select the Boss...\n");
 
 			// Enable Enemy Selection Menu
 			this.selectEnemyMenu.setEnabled(true);
@@ -181,16 +181,9 @@ public class BattleSpace extends JPanel implements ActionListener {
 		}
 
 		else if (e.getSource() == this.endTurnButton) {
-			// Get Enemies that are Alive
-			for (Enemy enemy : this.enemies) {
-				if (!enemy.isDefeated()) {
-					// Show Enemy Action
-					this.log.append("The " + enemy.getName() + " attacked!\n");
-
-					// Enemy Attack
-					enemy.attack(this.player);
-				}
-			}
+		
+			log.append(boss.getBoss().getName() + ": " + boss.getLine(rand.nextInt(boss.getAttackLinesSize())) + "\n");
+			boss.getBoss().attack(player);
 
 			// Disable Button
 			this.endTurnButton.setEnabled(false);
@@ -209,7 +202,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 
 				// Show Results
 				this.log.append("You Lost The Fight!\n");
-				this.log.append(this.enemies.get(this.index).getName() + " has Defeated You!\n");
+				this.log.append(this.boss.getBoss().getName() + " has Defeated You!\n");
 
 				// Show Lose Graphic
 				this.timer.schedule(new TimerTask() {
@@ -222,15 +215,8 @@ public class BattleSpace extends JPanel implements ActionListener {
 		} else if (e.getSource() == this.returnButton) {
 			this.frame.dispose();
 		} else {
-			// Determine Enemy to Attack
-			for (int i = 0; i < this.enemies.size(); i++) {
-				if (e.getActionCommand().contains(this.enemies.get(i).getName())) {
-					this.index = i;
-				}
-			}
-
 			// Attack Enemy
-			this.player.attack(this.enemies.get(this.index));
+			this.player.attack(boss.getBoss());
 
 			// Update Enemy Selection Menu
 			this.updateMenuItems();
@@ -240,12 +226,12 @@ public class BattleSpace extends JPanel implements ActionListener {
 			this.endTurnButton.setEnabled(true);
 
 			// Show Result from Attack
-			if (this.enemies.get(this.index).getCurrentHealth() > 0) {
-				this.log.append("The " + this.enemies.get(this.index).getName() + " now has "
-						+ this.enemies.get(this.index).getCurrentHealth() + "/"
-						+ this.enemies.get(this.index).getTotalHealth() + " health.\n");
+			if (this.boss.getBoss().getCurrentHealth() > 0) {
+				this.log.append(this.boss.getBoss().getName() + " now has "
+						+ this.boss.getBoss().getCurrentHealth() + "/"
+						+ this.boss.getBoss().getTotalHealth() + " health.\n");
 			} else {
-				this.log.append("You have Defeated " + this.enemies.get(this.index).getName() + "!\n");
+				this.log.append("You have Defeated " + this.boss.getBoss().getName() + "!\n");
 			}
 
 			// Check if Battle is Finished
@@ -303,22 +289,19 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private void updateMenuItems() {
 		// Update Enemy Menu Status
 		for (int i = 0; i < this.selectEnemyMenu.getItemCount(); i++) {
-			if (this.enemies.get(i).getCurrentHealth() <= 0) {
-				this.selectEnemyMenu.getItem(i).setText(this.enemies.get(i).getName() + ": Diseased");
+			if (this.boss.getBoss().getCurrentHealth() <= 0) {
+				this.selectEnemyMenu.getItem(i).setText(this.boss.getBoss().getName() + ": Deceased");
 				this.selectEnemyMenu.getItem(i).setEnabled(false);
 			} else {
 				this.selectEnemyMenu.getItem(i)
-						.setText(this.enemies.get(i).getName() + ": " + this.enemies.get(i).getCurrentHealth());
+						.setText(this.boss.getBoss().getName() + ": " + this.boss.getBoss().getCurrentHealth());
 			}
 		}
 	}
 
 	private boolean endOfBattle() {
-		// Check all Enemy Health
-		for (Enemy e : this.enemies) {
-			if (e.getCurrentHealth() > 0) {
-				return false;
-			}
+		if (boss.getBoss().getCurrentHealth() > 0) {
+			return false;
 		}
 		return true;
 	}
@@ -338,18 +321,16 @@ public class BattleSpace extends JPanel implements ActionListener {
 		this.log.append("\tBattle Statistics\n");
 		this.log.append("Player\t\t\tStatus\n");
 		if (this.player.getCurrentHealth() <= 0) {
-			this.log.append(this.player.getName() + "\t\t\tDiseased\n\n");
+			this.log.append(this.player.getName() + "\t\t\tDeceased\n\n");
 		} else {
 			this.log.append(this.player.getName() + "\t\t\t" + this.player.getCurrentHealth() + "\n\n");
 		}
 
 		this.log.append("Enemy\t\t\tStatus\n");
-		for (Enemy e : this.enemies) {
-			if (e.getCurrentHealth() <= 0) {
-				this.log.append(e.getName() + "\t\t\tDiseased\n");
+			if (boss.getBoss().getCurrentHealth() <= 0) {
+				this.log.append(boss.getBoss().getName() + "\t\t\tDeceased\n");
 			} else {
-				this.log.append(e.getName() + "\t\t\t" + e.getCurrentHealth() + "\n");
+				this.log.append(boss.getBoss().getName() + "\t\t\t" + boss.getBoss().getCurrentHealth() + "\n");
 			}
-		}
 	}
 }

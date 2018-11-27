@@ -35,7 +35,7 @@ public class Building extends Map {
 	public String buildingDesc() {
 		switch (id) {
 		case "CASH":
-			desc = "Cashion is your second home and the main building you will toil your life away coding\n"
+			desc = "Cashion is your second home and the main building, you will toil your life away coding\n"
 					+ "programs and stressing out with your fellow masochists...errr...classmates.\n"
 					+ "Beware traveler, for enemies you encounter here will be far more difficult than any\n"
 					+ "you will likely encounter anywhere else on campus. They can come in the form of challenging\n"
@@ -69,13 +69,13 @@ public class Building extends Map {
 			break;
 		case "SUB":
 			desc = "The SUB is an oasis located in Fountain Mall. Here, a weary traveler can purchase wares\n"
-					+ "such as Chick-Fil-a nuggies with hunny mussy sauce, energy drinks, coffee, and knock-off\n"
-					+ "Chinese food. Though their are no enemy encounters in this building, the road you travel\n"
+					+ "such as Chick-Fil-A nuggies with hunny mussy sauce, energy drinks, coffee, and knock-off\n"
+					+ "Chinese food. Though there are no enemy encounters in this building, the road you travel\n"
 					+ "to get there is fraught with peril.";
 			break;
 		case "BSB":
 			desc = "The Baylor Science Building, or BSB, is where you will take all of your science (geology)\n"
-					+ "classes required for your major. The road to travel to this location is the longest of \n"
+					+ "classes required for your major. The road to travel to this location is the longest \n"
 					+ "of any you will make including a long stretch of swampland along the way. Do not \n"
 					+ "underestimate the enemies you may face here, including Exams, Stress and arduous Labs.\n"
 					+ "Boost your stamina and study abilities by visiting the conveniently located Starbucks"
@@ -83,9 +83,9 @@ public class Building extends Map {
 			break;
 		case "SLC":
 			desc = "The Student Life Center is probably the least likely place you'll encounter another Computer\n"
-					+ "Science student even though with as much time as you spend sedentary in a chair in front\n"
+					+ "Science student, even though with as much time as you spend sedentary in a chair in front\n"
 					+ "of a computer screen, it is where you should be spending at least a little bit of your\n"
-					+ "time outside of class in the gym. If you do go here, you can boost your health drastically\n"
+					+ "time outside of class. If you do go here, you can boost your health drastically\n"
 					+ "but will take a large hit in study ability.\n";
 			break;
 		case "TEAL":
