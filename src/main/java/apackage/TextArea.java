@@ -130,16 +130,10 @@ public class TextArea extends JPanel implements ActionListener {
 			// Show building description
 			log.append(building.buildingDesc() + "\n");
 
-<<<<<<< HEAD
-			// Have a battle in the BSB (for demo)
-			if (building.getID().equals("BSB")) {
-				Battle.battle(player);
-=======
 			// Have a battle every three steps
 			if (stepCount == 3) {
-				Battle.battle();
+				Battle.battle(player);
 				stepCount = 0;
->>>>>>> Random_Battles
 			}
 
 			// Ask to move
