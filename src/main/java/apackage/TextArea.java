@@ -17,12 +17,12 @@ public class TextArea extends JPanel implements ActionListener {
 	private JPanel buttonPanel;
 	private JButton nextButton;
 	private Player player;
-	// private String bID = "CASH";
 
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton, menuButton;
-
+	
+	private int stepCount = 0;
 	private Building building = new Building("CASH");
 
 	public TextArea(Player p) {
@@ -47,6 +47,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 		// Create enterButton
 		this.enterButton = new JButton("ENTER");
+		this.enterButton.setName("ENTER");
 		this.enterButton.addActionListener(this);
 		this.enterButton.setBackground(Color.GREEN);
 		this.enterButton.setOpaque(true);
@@ -55,6 +56,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 		// Create menuButton
 		this.menuButton = new JButton("MENU");
+		this.menuButton.setName("MENU");
 		this.menuButton.addActionListener(this);
 		this.menuButton.setBackground(Color.GREEN);
 		this.menuButton.setOpaque(true);
@@ -130,26 +132,49 @@ public class TextArea extends JPanel implements ActionListener {
 			input.setText("");
 			input.requestFocus();
 
-			// Echo print
-			log.append("You selected " + inputString);
-
-			// Change buildings
-			building = new Building(building.setID(inputString));
-
-			// Print current building
-			log.append("\nYou are now in " + building.getID() + "\n\n");
-
-			// Show building description
-			log.append(building.buildingDesc() + "\n");
-
-			// Have a battle in the BSB (for demo)
-			if (building.getID().equals("BSB")) {
-				Battle.battle(player);
+			if(!inputString.equals("Y") && !inputString.equals("y")) {
+				// Echo print
+				log.append("You selected " + inputString);
+	
+				// Change buildings
+				//building = new Building(building.setID(inputString));
+				building.setID(inputString);
+	
+				// Print current building
+				log.append("\nYou are now in " + building.getID() + "\n\n");
+				
+				stepCount++;
+	
+				// Show building description
+				log.append(building.buildingDesc() + "\n");
+				building.printBuildingMenu(log);
+				log.append("\nWhere would you like to go?\n");
+				
+				if(building.getID().equals("CASH")) {
+					log.append("You have entered the domain of Dr. Cerny...\n" +
+								"Would you like to battle him? (Y/N) \n");
+					log.append("If no, enter where you would like to go.\n");
+				} else if(building.getID().equals("BSB")) {
+					log.append("You have entered the domain of Prof. Fry...\n" +
+							"Would you like to battle her? (Y/N) \n");
+					log.append("If no, enter where you would like to go.\n");
+				} else if (building.getID().equals("TEAL")) {
+					log.append("You have entered the domain of Dr. Booth...\n" +
+							"Would you like to battle him? (Y/N) \n");
+					log.append("If no, enter where you would like to go.\n");
+				}
+				
+			} else {
+				Battle.bossBattle(player, building.getID());
+				building.printBuildingMenu(log);
+				log.append("\nWhere would you like to go?\n");
 			}
 
-			// Ask to move
-			building.printBuildingMenu(log);
-			log.append("\nWhere would you like to go?\n");
+			// Have a battle every three steps
+			if (stepCount == 3) {
+				Battle.battle(player);
+				stepCount = 0;
+			}
 		}
 	}
 

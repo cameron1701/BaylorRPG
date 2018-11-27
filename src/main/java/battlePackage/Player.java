@@ -12,15 +12,16 @@ public class Player {
 	private List<String> attackNames = new ArrayList<String>();
 
 	public Player(String s) {
-        if (s != null) {
-            this.name = s;
-        } else {
-            this.name = "player";
-        }
-		this.totalHealth = 20;
+		if(s != null) {
+			this.name = s;
+		}
+		else {
+			this.name = "player";
+		}
+		this.totalHealth = 30;	
 		this.currentHealth = this.totalHealth;
 		this.attack = 10;
-		this.defense = 5;
+		this.defense = 7;
 		this.initAttackNames();
 	}
 

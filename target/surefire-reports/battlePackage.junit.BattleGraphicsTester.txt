@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: battlePackage.junit.BattleGraphicsTester
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.519 sec <<< FAILURE! - in battlePackage.junit.BattleGraphicsTester
+testInvalidFile  Time elapsed: 0.021 sec  <<< ERROR!
+org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.lang.String arg0] in executable [void battlePackage.junit.BattleGraphicsTester.init(java.lang.String) throws java.io.IOException].
+
+testNullFile  Time elapsed: 0.001 sec  <<< ERROR!
+org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.lang.String arg0] in executable [void battlePackage.junit.BattleGraphicsTester.init(java.lang.String) throws java.io.IOException].
+
+testPaintComponent  Time elapsed: 0.001 sec  <<< ERROR!
+org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [java.lang.String arg0] in executable [void battlePackage.junit.BattleGraphicsTester.init(java.lang.String) throws java.io.IOException].
+
+init{String}[1]  Time elapsed: 0.443 sec  <<< ERROR!
+javax.imageio.IIOException: Can't read input file!
+	at battlePackage.junit.BattleGraphicsTester.init(BattleGraphicsTester.java:19)
+
+init{String}[2]  Time elapsed: 0.002 sec  <<< ERROR!
+javax.imageio.IIOException: Can't read input file!
+	at battlePackage.junit.BattleGraphicsTester.init(BattleGraphicsTester.java:19)
+
+init{String}[3]  Time elapsed: 0.002 sec  <<< ERROR!
+javax.imageio.IIOException: Can't read input file!
+	at battlePackage.junit.BattleGraphicsTester.init(BattleGraphicsTester.java:19)
+

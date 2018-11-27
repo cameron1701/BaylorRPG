@@ -9,12 +9,16 @@ public class Enemy {
 	private int defense;
 
 	// Constructor to initiate stats and name
-	Enemy(String s, int tHealth, int atk, int def) {
+	public Enemy(String s, int tHealth, int atk, int def) {
 		this.name = s;
 		this.totalHealth = tHealth;
 		this.currentHealth = this.totalHealth;
 		this.attack = atk;
 		this.defense = def;
+	}
+
+	public Enemy() {
+		
 	}
 
 	public boolean isDefeated() {
