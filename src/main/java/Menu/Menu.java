@@ -18,9 +18,9 @@ public class Menu implements ActionListener {
 	private JButton startNewGame, loadGame, saveGame, pauseGame, restartLevel, quitGame, back;
 	private Player player;
 	private Game game;
-	
+
 	public Menu(){}
-	
+
 	Menu(Game g, Player p){
 		this.player = p;
 		this.game = g;
@@ -126,7 +126,7 @@ public class Menu implements ActionListener {
 		container.add(titleNamePanel);
 		container.add(gamePanel);
 	}
-	
+
 	public void createMenuScreen(JFrame w, Container c, JPanel t, JPanel g) {
 		// Assign values to window, container, titleNamePanel, and gamePanel
 		this.window = w;
@@ -237,21 +237,21 @@ public class Menu implements ActionListener {
 	public void actionPerformed(ActionEvent event) {
 		//Game game = new Game();
 
-		if (event.getActionCommand().equals("Start New Game")) {
+        if (event.getActionCommand().equals("Start New Game")) {
 			System.out.println("New Game Started!");
 
 			// Start new game
 			game.startNewGame(window, container, titleNamePanel, gamePanel);
 		}
 
-		if (event.getActionCommand().equals("Load Game")) {
+        if (event.getActionCommand().equals("Load Game")) {
 			System.out.println("Game loaded!");
 
 			// Load saved game
 			game.loadGame();
 		}
 
-		if (event.getActionCommand().equals("Save Game")) {
+        if (event.getActionCommand().equals("Save Game")) {
 			System.out.println("Game saved!");
 
 			// Save game
@@ -262,28 +262,28 @@ public class Menu implements ActionListener {
 			}
 		}
 
-		if (event.getActionCommand().equals("Pause Game")) {
+        if (event.getActionCommand().equals("Pause Game")) {
 			System.out.println("Game paused!");
 
 			// Pause game
 			game.pauseGame();
 		}
 
-		if (event.getActionCommand().equals("Restart Level")) {
+        if (event.getActionCommand().equals("Restart Level")) {
 			System.out.println("Level restarted!");
 
 			// Restart level
 			game.restartLevel();
 		}
 
-		if (event.getActionCommand().equals("Quit Game")) {
+        if (event.getActionCommand().equals("Quit Game")) {
 			System.out.println("Game quit!");
 
 			// Quit game
 			game.quitGame();
 		}
 
-		if (event.getActionCommand().equals("<<")) {
+        if (event.getActionCommand().equals("<<")) {
 			System.out.println("Going back...");
 
 			// Create game screen

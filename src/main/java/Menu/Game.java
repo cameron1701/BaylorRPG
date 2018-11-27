@@ -5,9 +5,6 @@ import apackage.TextArea;
 import battlePackage.Player;
 
 import javax.swing.*;
-
-import MainGame.MainClass;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -118,7 +115,7 @@ public class Game implements ActionListener {
 			String[] col = null;
 			int currentHealth, totalHealth, attack, defense, level;
 			// Level l = null;
-			List<String[]> lines = new ArrayList<String[]>();
+            List<String[]> lines = new ArrayList<>();
 
 			// Read
 			line = reader.nextLine();

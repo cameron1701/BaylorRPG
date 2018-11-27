@@ -1,10 +1,5 @@
-"You wait until 5:00pm to start a programming assignment that's due at 11:59pm "+
-"and don't finish in time.  "+
-"-5 health.\n"
+1 You wait until 5:00pm to start a programming assignment that's due at 11:59pm and don't finish in time.  -5 health.\n"
 
-"You awkwardly take the elevator with a professor you failed a class with last "+
-"semester. It is without question, the slowest elevator ride of your life.\n"
+2 You awkwardly take the elevator with a professor you failed a class with last semester. It is without question, the slowest elevator ride of your life.\n"
 
-"You decided to take the stairs to the third floor labs. You're embarrassed that "+
-"you're out of breath from such a short climb and breathe heavily through your nose "+
-"in a naive attempt to play it off like you're not completely out of shape.\n"
+3 You decided to take the stairs to the third floor labs. You're embarrassed that you're out of breath from such a short climb and breathe heavily through your nose in a naive attempt to play it off like you're not completely out of shape.\n"

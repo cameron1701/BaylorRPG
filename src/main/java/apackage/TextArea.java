@@ -21,7 +21,7 @@ public class TextArea extends JPanel implements ActionListener {
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton, menuButton;
-	
+
 	private int stepCount = 0;
 	private Building building = new Building("CASH");
 
@@ -135,21 +135,21 @@ public class TextArea extends JPanel implements ActionListener {
 			if(!inputString.equals("Y") && !inputString.equals("y")) {
 				// Echo print
 				log.append("You selected " + inputString);
-	
+
 				// Change buildings
 				//building = new Building(building.setID(inputString));
 				building.setID(inputString);
-	
+
 				// Print current building
 				log.append("\nYou are now in " + building.getID() + "\n\n");
-				
+
 				stepCount++;
-	
+
 				// Show building description
 				log.append(building.buildingDesc() + "\n");
 				building.printBuildingMenu(log);
 				log.append("\nWhere would you like to go?\n");
-				
+
 				if(building.getID().equals("CASH")) {
 					log.append("You have entered the domain of Dr. Cerny...\n" +
 								"Would you like to battle him? (Y/N) \n");
@@ -163,12 +163,56 @@ public class TextArea extends JPanel implements ActionListener {
 							"Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
 				}
-				
+
 			} else {
 				Battle.bossBattle(player, building.getID());
 				building.printBuildingMenu(log);
 				log.append("\nWhere would you like to go?\n");
 			}
+			// Echo print
+			log.append("You selected " + inputString);
+
+			// Change buildings
+			building = new Building(building.setid(inputString));
+
+			// Print current building
+			log.append("\nYou are now in " + building.getID() + "\n\n");
+
+			// Show building description
+			log.append(building.buildingDesc() + "\n");
+
+			String encounter = null;
+			encounter = Encounter.randomEncounter(building.getID());
+			if (encounter.length() > 0) {
+				log.append("ENCOUNTER!\n");
+				log.append(encounter + "\n\n");
+			}
+
+			// Have a battle in the BSB (for demo)
+			if (building.getID().equals("BSB")) {
+				Battle.battle();
+			}
+
+			// Ask to move
+			building.printBuildingMenu(log);
+			log.append("\nWhere would you like to go?\n");
+		}
+	}
+
+	private void createAndShowGUI() {
+		// Frame Set Up
+		this.frame = new JFrame("Map");
+		this.frame.setLocationRelativeTo(null);
+		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setPreferredSize(new Dimension(800, 700));
+		this.frame.setResizable(false);
+		this.setOpaque(true);
+		this.frame.add(this);
+
+		// Show Frame
+		this.frame.pack();
+		this.frame.setVisible(true);
+	}
 
 			// Have a battle every three steps
 			if (stepCount == 3) {
