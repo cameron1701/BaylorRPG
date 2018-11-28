@@ -25,7 +25,7 @@ public class TextArea extends JPanel implements ActionListener {
 
 	private int stepCount = 0;
 	private Building building = new Building("CASH");
-	
+
 	private EnemyList e = new EnemyList();
 
 	public TextArea(Player p) {
@@ -135,7 +135,7 @@ public class TextArea extends JPanel implements ActionListener {
 			input.setText("");
 			input.requestFocus();
 
-			if(!inputString.equals("Y") && !inputString.equals("y")) {
+			if (!inputString.equals("Y") && !inputString.equals("y")) {
 				// Echo print
 				log.append("You selected " + inputString);
 
@@ -150,20 +150,21 @@ public class TextArea extends JPanel implements ActionListener {
 				// Show building description
 				log.append(building.buildingDesc() + "\n");
 				building.printBuildingMenu(log);
-				
+
 				log.append("\nWhere would you like to go?\n");
 
-				if(building.getID().equals("CASH") && !e.getBossList().get(1).getDefeated()) {
-					log.append("You have entered the domain of Dr. Cerny...\n" +
-								"Would you like to battle him? (Y/N) \n");
+				// Show boss battles if available
+				if (building.getID().equals("CASH") && !e.getBossList().get(1).getDefeated()) {
+					log.append(
+							"You have entered the domain of Dr. Cerny...\n" + "Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
-				} else if(building.getID().equals("BSB") && !e.getBossList().get(2).getDefeated()) {
-					log.append("You have entered the domain of Prof. Fry...\n" +
-							"Would you like to battle her? (Y/N) \n");
+				} else if (building.getID().equals("BSB") && !e.getBossList().get(2).getDefeated()) {
+					log.append(
+							"You have entered the domain of Prof. Fry...\n" + "Would you like to battle her? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
 				} else if (building.getID().equals("TEAL") && !e.getBossList().get(0).getDefeated()) {
-					log.append("You have entered the domain of Dr. Booth...\n" +
-							"Would you like to battle him? (Y/N) \n");
+					log.append(
+							"You have entered the domain of Dr. Booth...\n" + "Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
 				}
 
@@ -173,14 +174,12 @@ public class TextArea extends JPanel implements ActionListener {
 				log.append("\nWhere would you like to go?\n");
 			}
 
-			
 			String encounter = null;
 			encounter = Encounter.randomEncounter(building.getID());
 			if (encounter.length() > 0) {
 				log.append("ENCOUNTER!\n");
 				log.append(encounter + "\n\n");
 			}
-			
 
 			// Have a battle every three steps
 			if (stepCount == 3) {
