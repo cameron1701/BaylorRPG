@@ -137,7 +137,6 @@ public class TextArea extends JPanel implements ActionListener {
 				log.append("You selected " + inputString);
 
 				// Change buildings
-				//building = new Building(building.setID(inputString));
 				building.setID(inputString);
 
 				// Print current building
@@ -148,6 +147,7 @@ public class TextArea extends JPanel implements ActionListener {
 				// Show building description
 				log.append(building.buildingDesc() + "\n");
 				building.printBuildingMenu(log);
+				
 				log.append("\nWhere would you like to go?\n");
 
 				if(building.getID().equals("CASH")) {
@@ -169,50 +169,15 @@ public class TextArea extends JPanel implements ActionListener {
 				building.printBuildingMenu(log);
 				log.append("\nWhere would you like to go?\n");
 			}
-			// Echo print
-			log.append("You selected " + inputString);
 
-			// Change buildings
-			building = new Building(building.setid(inputString));
-
-			// Print current building
-			log.append("\nYou are now in " + building.getID() + "\n\n");
-
-			// Show building description
-			log.append(building.buildingDesc() + "\n");
-
+			
 			String encounter = null;
 			encounter = Encounter.randomEncounter(building.getID());
 			if (encounter.length() > 0) {
 				log.append("ENCOUNTER!\n");
 				log.append(encounter + "\n\n");
 			}
-
-			// Have a battle in the BSB (for demo)
-			if (building.getID().equals("BSB")) {
-				Battle.battle();
-			}
-
-			// Ask to move
-			building.printBuildingMenu(log);
-			log.append("\nWhere would you like to go?\n");
-		}
-	}
-
-	private void createAndShowGUI() {
-		// Frame Set Up
-		this.frame = new JFrame("Map");
-		this.frame.setLocationRelativeTo(null);
-		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.frame.setPreferredSize(new Dimension(800, 700));
-		this.frame.setResizable(false);
-		this.setOpaque(true);
-		this.frame.add(this);
-
-		// Show Frame
-		this.frame.pack();
-		this.frame.setVisible(true);
-	}
+			
 
 			// Have a battle every three steps
 			if (stepCount == 3) {
