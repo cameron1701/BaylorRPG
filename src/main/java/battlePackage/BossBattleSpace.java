@@ -319,6 +319,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 		if (boss.getBoss().getCurrentHealth() > 0) {
 			return false;
 		}
+		boss.setDefeated(true);
 		return true;
 	}
 

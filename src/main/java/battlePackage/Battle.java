@@ -36,9 +36,9 @@ public class Battle {
 		});
 	}
 
-	public static void bossBattle(Player p, String id) {
+	public static void bossBattle(Player p, String id, EnemyList e) {
 		final Player player = p;
-		final EnemyList e = new EnemyList();
+		//final EnemyList e = new EnemyList();
 
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override

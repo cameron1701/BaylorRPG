@@ -2,6 +2,7 @@ package apackage;
 
 import Menu.Menu;
 import battlePackage.Battle;
+import battlePackage.EnemyList;
 import battlePackage.Player;
 
 import javax.swing.*;
@@ -24,6 +25,8 @@ public class TextArea extends JPanel implements ActionListener {
 
 	private int stepCount = 0;
 	private Building building = new Building("CASH");
+	
+	private EnemyList e = new EnemyList();
 
 	public TextArea(Player p) {
 		// Text Area Set Up
@@ -150,22 +153,22 @@ public class TextArea extends JPanel implements ActionListener {
 				
 				log.append("\nWhere would you like to go?\n");
 
-				if(building.getID().equals("CASH")) {
+				if(building.getID().equals("CASH") && !e.getBossList().get(1).getDefeated()) {
 					log.append("You have entered the domain of Dr. Cerny...\n" +
 								"Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
-				} else if(building.getID().equals("BSB")) {
+				} else if(building.getID().equals("BSB") && !e.getBossList().get(2).getDefeated()) {
 					log.append("You have entered the domain of Prof. Fry...\n" +
 							"Would you like to battle her? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
-				} else if (building.getID().equals("TEAL")) {
+				} else if (building.getID().equals("TEAL") && !e.getBossList().get(0).getDefeated()) {
 					log.append("You have entered the domain of Dr. Booth...\n" +
 							"Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
 				}
 
 			} else {
-				Battle.bossBattle(player, building.getID());
+				Battle.bossBattle(player, building.getID(), e);
 				building.printBuildingMenu(log);
 				log.append("\nWhere would you like to go?\n");
 			}
