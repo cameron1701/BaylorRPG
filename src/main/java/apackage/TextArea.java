@@ -163,39 +163,54 @@ public class TextArea extends JPanel implements ActionListener {
 				// Show boss battles if available
 				if (building.isValid(inputString) && building.getID().equals("CASH")
 						&& !e.getBossList().get(1).getDefeated()) {
-					log.append(
-							"You have entered the domain of Dr. Cerny...\n" + "Would you like to battle him? (Y/N) \n");
+					log.append("You have entered the domain of Dr. Cerny...\n"
+							+ "Would you like to battle him? Enter Y to battle. \n");
 					log.append("If no, enter where you would like to go.\n");
 				} else if (building.isValid(inputString) && building.getID().equals("BSB")
 						&& !e.getBossList().get(2).getDefeated()) {
-					log.append(
-							"You have entered the domain of Prof. Fry...\n" + "Would you like to battle her? (Y/N) \n");
+					log.append("You have entered the domain of Prof. Fry...\n"
+							+ "Would you like to battle her? Enter Y to battle. \n");
 					log.append("If no, enter where you would like to go.\n");
 				} else if (building.isValid(inputString) && building.getID().equals("TEAL")
 						&& !e.getBossList().get(0).getDefeated()) {
-					log.append(
-							"You have entered the domain of Dr. Booth...\n" + "Would you like to battle him? (Y/N) \n");
+					log.append("You have entered the domain of Dr. Booth...\n"
+							+ "Would you like to battle him? Enter Y to battle. \n");
 					log.append("If no, enter where you would like to go.\n");
 				}
 
 			} else {
+				// Have a boss battle!
+				log.append("\nBOSS BATTLE!!!\n");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				Battle.bossBattle(player, building.getID(), e);
 				building.printBuildingMenu(log);
 				log.append("\nWhere would you like to go?\n");
 			}
 
+			// Show an encounter if there is one
 			String encounter = null;
-			if(building.isValid(inputString)) {
+			if (building.isValid(inputString)) {
 				encounter = Encounter.randomEncounter(building.getID());
 				if (encounter.length() > 0) {
-					log.append("ENCOUNTER!\n");
+					log.append("\nENCOUNTER!\n");
 					log.append(encounter + "\n\n");
 				}
 			}
-			
 
 			// Have a battle every three steps
 			if (stepCount == 3) {
+				log.append("RANDOM BATTLE!!!\n");
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				Battle.battle(player);
 				stepCount = 0;
 			}

@@ -78,7 +78,7 @@ public class Building extends Map {
 					+ "classes required for your major. The road to travel to this location is the longest \n"
 					+ "of any you will make including a long stretch of swampland along the way. Do not \n"
 					+ "underestimate the enemies you may face here, including Exams, Stress and arduous Labs.\n"
-					+ "Boost your stamina and study abilities by visiting the conveniently located Starbucks"
+					+ "Boost your stamina and study abilities by visiting the conveniently located Starbucks "
 					+ "located on the first floor.\n";
 			break;
 		case "SLC":
@@ -90,8 +90,7 @@ public class Building extends Map {
 			break;
 		case "TEAL":
 			desc = "Teal is your home. You can go here to sleep, study, and relax. There are no enemies here\n"
-					+ "and is a great place to replenish your stats. If you die in the game, you will respawn\n"
-					+ "here.\n";
+					+ "and is a great place to replenish your stats.";
 			break;
 		case "FSTR":
 			desc = "Paul L. Foster Campus for Business and Innovation. You will never find a more wretched hive\n"
