@@ -321,7 +321,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 		// Update Enemy Menu Status
 		for (int i = 0; i < this.selectEnemyMenu.getItemCount(); i++) {
 			if (this.enemies.get(i).getCurrentHealth() <= 0) {
-				this.selectEnemyMenu.getItem(i).setText(this.enemies.get(i).getName() + ": Diseased");
+				this.selectEnemyMenu.getItem(i).setText(this.enemies.get(i).getName() + ": Deceased");
 				this.selectEnemyMenu.getItem(i).setEnabled(false);
 			} else {
 				this.selectEnemyMenu.getItem(i)
