@@ -93,4 +93,8 @@ public class Player {
 	public void attack(Enemy e) {
 		e.setCurrentHealth(Math.abs(this.attack - e.getDefense()));
 	}
+	
+	public void damage(int d) {
+		currentHealth -= d;
+	}
 }

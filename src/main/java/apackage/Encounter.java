@@ -13,11 +13,13 @@ public class Encounter {
         return random.nextInt(upperRange);
     }
 
-    public static String randomEncounter(String buildingID) {
+    public static String randomEncounter(String buildingID) throws IOException {
         int rand = generateRandomInt(10);
         String result = "";
+        BufferedReader bufferedReader = null;
+        
         if (rand != 0) {
-            BufferedReader bufferedReader = null;
+            
             switch (buildingID) {
                 case "BSB":
                     try {
@@ -35,12 +37,6 @@ public class Encounter {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            bufferedReader.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
                     }
                     break;
 
@@ -60,12 +56,6 @@ public class Encounter {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            bufferedReader.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
                     }
                     break;
 
@@ -85,12 +75,6 @@ public class Encounter {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            bufferedReader.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
                     }
                     break;
 
@@ -110,12 +94,6 @@ public class Encounter {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            bufferedReader.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
                     }
                     break;
 
@@ -135,12 +113,6 @@ public class Encounter {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            bufferedReader.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
                     }
                     break;
 
@@ -160,16 +132,16 @@ public class Encounter {
                         e.printStackTrace();
                     } catch (IOException e) {
                         e.printStackTrace();
-                    } finally {
-                        try {
-                            bufferedReader.close();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
                     }
+                     
                     break;
             }
         }
+        
+        if(bufferedReader != null) {
+        	bufferedReader.close();
+        }
+        
         return result;
     }
     

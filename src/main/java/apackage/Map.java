@@ -2,14 +2,11 @@ package apackage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 public class Map {
-	protected static List<String> buildingList = null;
 	protected JTextArea log;
 	JLabel label = new JLabel();
 	JTextField textfield = new JTextField("", 10);
-	private String selection;
 
 	public Map() {
 	}
@@ -20,12 +17,5 @@ public class Map {
 		label.setForeground(Color.green);
 		textfield.setVisible(true);
 		label.setVisible(true);
-
-		String temp = new String();
-		temp = "+----------------------------------+\n" + "        Select a building          ";
-	}
-	
-	public List<String> getBuildingList() {
-		return buildingList;
 	}
 }

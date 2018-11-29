@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class TextArea extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
@@ -16,7 +17,6 @@ public class TextArea extends JPanel implements ActionListener {
 	private JTextArea log;
 	private JScrollPane logScrollPane;
 	private JPanel buttonPanel;
-	private JButton nextButton;
 	private Player player;
 
 	private String inputString;
@@ -201,11 +201,17 @@ public class TextArea extends JPanel implements ActionListener {
 				// Show an encounter if there is one
 				String encounter = null;
 				if (building.isValid(inputString)) {
-					encounter = Encounter.randomEncounter(building.getID());
-					if (encounter.length() > 0) {
-						log.append("\nENCOUNTER!\n");
-						log.append(encounter + "\n\n");
+					try {
+						encounter = Encounter.randomEncounter(building.getID());
+						if (encounter.length() > 0) {
+							log.append("\nENCOUNTER!\n");
+							log.append(encounter + "\n\n");
+						}
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
 					}
+					
 				}
 	
 				// Have a battle every three steps
@@ -224,8 +230,8 @@ public class TextArea extends JPanel implements ActionListener {
 				if (e.bossesDefeated()) {
 					System.out.println("\n\n" + 
 								"*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + 
-								"*					   YOU						  *\n" + 
-								"*					   WIN   					  *\n" + 
+								"*                    YOU                         *\n" + 
+								"*                    WIN                         *\n" + 
 								"*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n");
 					System.out.println("\nThank you for playing BearQuest! We hope that you have enjoyed \n" + 
 								"our game, please email feedback to Cameron_Cole@baylor.edu\n" + 

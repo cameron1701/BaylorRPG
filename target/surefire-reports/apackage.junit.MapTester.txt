@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: apackage.junit.MapTester
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in apackage.junit.MapTester
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec <<< FAILURE! - in apackage.junit.MapTester
+testInitializedBuildingList  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at apackage.junit.MapTester.testInitializedBuildingList(MapTester.java:24)
+

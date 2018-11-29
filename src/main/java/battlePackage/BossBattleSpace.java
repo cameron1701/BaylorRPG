@@ -7,7 +7,6 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -39,7 +38,6 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 	private JScrollPane logScrollPane;
 	private Player player;
 	private BattleGraphics bGraphic;
-	private int index;
 	private Boss boss;
 	private Timer timer;
 	private Random rand = new Random();

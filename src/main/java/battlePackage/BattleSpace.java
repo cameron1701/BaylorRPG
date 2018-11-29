@@ -22,8 +22,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 
-import Story.Boss;
-
 public class BattleSpace extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
