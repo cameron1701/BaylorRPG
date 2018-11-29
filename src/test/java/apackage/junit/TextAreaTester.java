@@ -1,6 +1,7 @@
 package apackage.junit;
 
 import apackage.TextArea;
+import battlePackage.EnemyList;
 import battlePackage.Player;
 import java.awt.Component;
 import org.junit.jupiter.api.AfterEach;
@@ -13,7 +14,7 @@ public class TextAreaTester{
 	
 	@BeforeEach
 	void init() {
-		this.area = new TextArea(new Player("testP"));
+		this.area = new TextArea(new Player("testP"), new EnemyList());
 	}
 	
 	@Test

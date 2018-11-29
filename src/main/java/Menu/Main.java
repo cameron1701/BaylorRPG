@@ -101,7 +101,7 @@ public class Main implements ActionListener {
 			System.out.println("Game loaded!");
 
 			// Start new game
-			game.loadGame();
+			game.loadGame(window, container, titleNamePanel, gamePanel);
 		}
 	}
 }

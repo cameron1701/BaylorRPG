@@ -1,5 +1,6 @@
 package Menu;
 
+import battlePackage.EnemyList;
 import battlePackage.Player;
 
 import javax.swing.*;
@@ -18,13 +19,19 @@ public class Menu implements ActionListener {
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 22);
 	private JButton startNewGame, loadGame, saveGame, quitGame, back;
 	private Player player;
-	private Game game;
+	private Game game = new Game();
+	private EnemyList e = new EnemyList();
 
 	public Menu(){}
 
 	Menu(Game g, Player p){
 		this.player = p;
 		this.game = g;
+	}
+	
+	public Menu(EnemyList e, Player p){
+		e = e;
+		player = p;
 	}
 
 	public void createMenuScreen() {
@@ -123,7 +130,7 @@ public class Menu implements ActionListener {
 			System.out.println("Game loaded!");
 
 			// Load saved game
-			game.loadGame();
+			game.loadGame(window, container, titleNamePanel, gamePanel);
 		}
 
         if (event.getActionCommand().equals("Save Game")) {
@@ -131,7 +138,7 @@ public class Menu implements ActionListener {
 
 			// Save game
 			try {
-				game.saveGame();
+				game.saveGame(e, player);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

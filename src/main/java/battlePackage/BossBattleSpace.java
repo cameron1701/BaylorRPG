@@ -227,6 +227,8 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 						}
 					}
 				}, 3000);
+				
+				player.setCurrentHealth(30);
 			}
 		} else if (e.getSource() == this.returnButton) {
 			this.frame.dispose();
