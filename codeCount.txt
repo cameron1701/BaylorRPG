@@ -1,0 +1,19 @@
+Building list of source files...
+Read, Analyze & Count keywords in files................1         2         3         4         5         6         7         8         9         10        11        12        13        14        15        16        17        18                  DONE
+Looking for duplicate files............................          DONE
+Generating results to files..............DONE
+ 18 files for 12.1 files processed per second
+
+     Processing  Step     :  seconds
+------------------------- : --------
+ Build file list          :      0
+Read, Analyze & Count     :      0
+ Find duplicates          :      0
+  Generate results files  :      1
+               Total time :      1 seconds
+
+    Stack Dumps:  0
+         Errors:  0
+       Warnings:  0
+    Information:  0
+Uncounted Files:  0
