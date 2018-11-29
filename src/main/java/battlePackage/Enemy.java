@@ -69,6 +69,6 @@ public class Enemy {
 	}
 
 	public void attack(Player p) {
-		p.setCurrentHealth(Math.abs(this.attack - p.getDefense()));
+		p.damage(Math.abs(this.attack - p.getDefense()));
 	}
 }
