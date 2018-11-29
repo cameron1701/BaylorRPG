@@ -53,6 +53,7 @@ public class TextArea extends JPanel implements ActionListener {
 		this.enterButton.setName("ENTER");
 		this.enterButton.addActionListener(this);
 		this.enterButton.setBackground(Color.GREEN);
+		this.enterButton.setForeground(Color.black);
 		this.enterButton.setOpaque(true);
 		this.enterButton.setBorderPainted(false);
 		this.enterButton.setEnabled(true);
@@ -62,6 +63,7 @@ public class TextArea extends JPanel implements ActionListener {
 		this.menuButton.setName("MENU");
 		this.menuButton.addActionListener(this);
 		this.menuButton.setBackground(Color.GREEN);
+		this.menuButton.setForeground(Color.black);
 		this.menuButton.setOpaque(true);
 		this.menuButton.setBorderPainted(false);
 		this.menuButton.setEnabled(true);
@@ -89,7 +91,7 @@ public class TextArea extends JPanel implements ActionListener {
 		log.append("\nWhere would you like to go?\n");
 		log.append("\n+------------------------------+\n");
 		building.printBuildingMenu(log);
-		log.append("+------------------------------+\n");
+		log.append("Please capitalize the first letter\n" + "+------------------------------+\n");
 
 		this.setVisible(true);
 		// Create and Show Map
@@ -136,33 +138,41 @@ public class TextArea extends JPanel implements ActionListener {
 			input.requestFocus();
 
 			if (!inputString.equals("Y") && !inputString.equals("y")) {
-				// Echo print
-				log.append("You selected " + inputString);
 
 				// Change buildings
-				building.setID(inputString);
+				if (building.isValid(inputString)) {
+					// Echo print
+					log.append("You selected " + inputString);
 
-				// Print current building
-				log.append("\nYou are now in " + building.getID() + "\n\n");
+					building.setID(inputString);
 
-				stepCount++;
+					// Print current building
+					log.append("\nYou are now in " + building.getID() + "\n\n");
 
-				// Show building description
-				log.append(building.buildingDesc() + "\n");
-				building.printBuildingMenu(log);
+					stepCount++;
+
+					// Show building description
+					log.append(building.buildingDesc() + "\n");
+					building.printBuildingMenu(log);
+				} else {
+					log.append("Sorry, " + inputString + " is not an option.\n");
+				}
 
 				log.append("\nWhere would you like to go?\n");
 
 				// Show boss battles if available
-				if (building.getID().equals("CASH") && !e.getBossList().get(1).getDefeated()) {
+				if (building.isValid(inputString) && building.getID().equals("CASH")
+						&& !e.getBossList().get(1).getDefeated()) {
 					log.append(
 							"You have entered the domain of Dr. Cerny...\n" + "Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
-				} else if (building.getID().equals("BSB") && !e.getBossList().get(2).getDefeated()) {
+				} else if (building.isValid(inputString) && building.getID().equals("BSB")
+						&& !e.getBossList().get(2).getDefeated()) {
 					log.append(
 							"You have entered the domain of Prof. Fry...\n" + "Would you like to battle her? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
-				} else if (building.getID().equals("TEAL") && !e.getBossList().get(0).getDefeated()) {
+				} else if (building.isValid(inputString) && building.getID().equals("TEAL")
+						&& !e.getBossList().get(0).getDefeated()) {
 					log.append(
 							"You have entered the domain of Dr. Booth...\n" + "Would you like to battle him? (Y/N) \n");
 					log.append("If no, enter where you would like to go.\n");
@@ -175,11 +185,14 @@ public class TextArea extends JPanel implements ActionListener {
 			}
 
 			String encounter = null;
-			encounter = Encounter.randomEncounter(building.getID());
-			if (encounter.length() > 0) {
-				log.append("ENCOUNTER!\n");
-				log.append(encounter + "\n\n");
+			if(building.isValid(inputString)) {
+				encounter = Encounter.randomEncounter(building.getID());
+				if (encounter.length() > 0) {
+					log.append("ENCOUNTER!\n");
+					log.append(encounter + "\n\n");
+				}
 			}
+			
 
 			// Have a battle every three steps
 			if (stepCount == 3) {

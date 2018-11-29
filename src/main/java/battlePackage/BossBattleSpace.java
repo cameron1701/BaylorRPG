@@ -90,6 +90,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 		this.fightButton = new JButton("ATTACK");
 		this.fightButton.addActionListener(this);
 		this.fightButton.setBackground(Color.GREEN);
+		this.fightButton.setForeground(Color.black);
 		this.fightButton.setOpaque(true);
 		this.fightButton.setBorderPainted(false);
 		this.fightButton.setEnabled(false);
@@ -97,6 +98,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 		this.runButton = new JButton("RETREAT");
 		this.runButton.addActionListener(this);
 		this.runButton.setBackground(Color.GREEN);
+		this.runButton.setForeground(Color.black);
 		this.runButton.setOpaque(true);
 		this.runButton.setBorderPainted(false);
 		this.runButton.setEnabled(false);
@@ -104,12 +106,14 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 		this.startButton = new JButton("START");
 		this.startButton.addActionListener(this);
 		this.startButton.setBackground(Color.GREEN);
+		this.startButton.setForeground(Color.black);
 		this.startButton.setOpaque(true);
 		this.startButton.setBorderPainted(false);
 
 		this.endTurnButton = new JButton("END TURN");
 		this.endTurnButton.addActionListener(this);
 		this.endTurnButton.setBackground(Color.RED);
+		this.endTurnButton.setForeground(Color.black);
 		this.endTurnButton.setOpaque(true);
 		this.endTurnButton.setBorderPainted(false);
 		this.endTurnButton.setEnabled(false);
@@ -117,6 +121,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 		this.returnButton = new JButton("Return to Arena");
 		this.returnButton.addActionListener(this);
 		this.returnButton.setBackground(Color.GREEN);
+		this.returnButton.setForeground(Color.black);
 		this.returnButton.setOpaque(true);
 		this.returnButton.setBorderPainted(false);
 		this.returnButton.setEnabled(true);

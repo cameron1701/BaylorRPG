@@ -22,7 +22,6 @@ public class Map {
 		label.setVisible(true);
 
 		String temp = new String();
-		System.out.println(selection);
 		temp = "+----------------------------------+\n" + "        Select a building          ";
 	}
 	

@@ -172,4 +172,16 @@ public class Encounter {
         }
         return result;
     }
+    
+	public boolean isValid(String input) {
+		boolean flag = false;
+		
+		if(input.equals("Cashion") || input.equals("Penland") || input.equals("Moody") || input.equals("SUB")
+			|| input.equals("BSB") || input.equals("SLC") || input.equals("Teal") || input.equals("Foster")
+			|| input.equals("Waco Hall") || input.equals("Robinson Tower") || input.equals("Tidwell")) {
+			flag = true;
+		}
+		
+		return flag;
+	}
 }

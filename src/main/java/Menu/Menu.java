@@ -87,15 +87,6 @@ public class Menu implements ActionListener {
 		pauseGame.setFocusPainted(false);
 		// pauseGame.setBorderPainted(false);
 
-		// Create restart level button
-		restartLevel = new JButton("Restart Level");
-		restartLevel.setBackground(Color.black);
-		restartLevel.setForeground(Color.white);
-		restartLevel.setFont(normalFont);
-		restartLevel.addActionListener(this);
-		restartLevel.setFocusPainted(false);
-		// restartLevel.setBorderPainted(false);
-
 		// Create quit game button
 		quitGame = new JButton("Quit Game");
 		quitGame.setBackground(Color.black);
@@ -119,7 +110,6 @@ public class Menu implements ActionListener {
 		gamePanel.add(loadGame);
 		gamePanel.add(saveGame);
 		gamePanel.add(pauseGame);
-		gamePanel.add(restartLevel);
 		gamePanel.add(quitGame);
 		gamePanel.add(back);
 
@@ -157,6 +147,7 @@ public class Menu implements ActionListener {
 		gamePanel = new JPanel();
 		gamePanel.setBounds(300, 200, 180, 300);
 		gamePanel.setBackground(Color.black);
+		gamePanel.setForeground(Color.white);
 
 		// Create start new game button
 		startNewGame = new JButton("Start New Game");
@@ -194,15 +185,6 @@ public class Menu implements ActionListener {
 		pauseGame.setFocusPainted(false);
 		// pauseGame.setBorderPainted(false);
 
-		// Create restart level button
-		restartLevel = new JButton("Restart Level");
-		restartLevel.setBackground(Color.black);
-		restartLevel.setForeground(Color.white);
-		restartLevel.setFont(normalFont);
-		restartLevel.addActionListener(this);
-		restartLevel.setFocusPainted(false);
-		// restartLevel.setBorderPainted(false);
-
 		// Create quit game button
 		quitGame = new JButton("Quit Game");
 		quitGame.setBackground(Color.black);
@@ -226,7 +208,6 @@ public class Menu implements ActionListener {
 		gamePanel.add(loadGame);
 		gamePanel.add(saveGame);
 		gamePanel.add(pauseGame);
-		gamePanel.add(restartLevel);
 		gamePanel.add(quitGame);
 		gamePanel.add(back);
 
@@ -267,13 +248,6 @@ public class Menu implements ActionListener {
 
 			// Pause game
 			game.pauseGame();
-		}
-
-        if (event.getActionCommand().equals("Restart Level")) {
-			System.out.println("Level restarted!");
-
-			// Restart level
-			game.restartLevel();
 		}
 
         if (event.getActionCommand().equals("Quit Game")) {

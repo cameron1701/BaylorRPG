@@ -202,16 +202,12 @@ public class Game implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getActionCommand() == "Menu") {
-			System.out.println("Menu");
-
 			// Create Menu screen
 			Menu menu = new Menu(this, this.player);
 			menu.createMenuScreen(window, container, titleNamePanel, gamePanel);
 		}
 
 		if (event.getActionCommand() == "Map") {
-			System.out.println("Map");
-
 			// Create Map screen
 			Map map = new Map();
 			map.printMenu();
