@@ -29,6 +29,17 @@ public class EnemyList {
 		return enemyList.get(rand.nextInt(enemyList.size()));
 	}
 	
+	public boolean bossesDefeated() {
+		boolean flag = false;
+		
+		if(bossList.get(0).getDefeated() && bossList.get(1).getDefeated()
+			&& bossList.get(2).getDefeated()) {
+			flag = true;
+		}
+		
+		return flag;
+	}
+	
 	public List<Boss> makeBossList(){
 		List<Boss> boss = new ArrayList<Boss>();
 		

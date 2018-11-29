@@ -2,9 +2,13 @@ package Menu;
 
 import apackage.Map;
 import apackage.TextArea;
+import battlePackage.EnemyList;
 import battlePackage.Player;
 
 import javax.swing.*;
+
+import Story.Boss;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,7 +26,7 @@ public class Game implements ActionListener {
 	private File file = new File("BearQuestDB.csv");
 	private String[] headers;
 	private String playerName;
-	private Player player = null;
+	private Player player = new Player();
 
 	private List<Player> players = new ArrayList<Player>();
 	private JPanel mainTextPanel, menuPanel;
@@ -31,11 +35,14 @@ public class Game implements ActionListener {
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton menuButton, mapButton;
 	private JTextArea mainTextArea;
+	
+	private EnemyList e = new EnemyList();
 
 	public void createGameScreen(JFrame w, Container c, JPanel t, JPanel g, Player p) {
 
 		// Assign values to window, container, titleNamePanel, and gamePanel
 		this.window = w;
+		window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.container = c;
 		this.titleNamePanel = t;
 		this.gamePanel = g;
@@ -88,6 +95,8 @@ public class Game implements ActionListener {
 		mapButton.addActionListener(this);
 		mapButton.setActionCommand("Map");
 		menuPanel.add(mapButton);
+		
+		player = p;
 	}
 
 	void startNewGame(JFrame window, Container container, JPanel titleNamePanel, JPanel gamePanel) {
@@ -105,61 +114,63 @@ public class Game implements ActionListener {
 		player = new Player(playerName);
 
 		// Create a new game and open the screen
-		//Game game = new Game();
 		this.createGameScreen(window, container, titleNamePanel, gamePanel, player);
 	}
 
-	void loadGame() {
+	void loadGame(JFrame window, Container container, JPanel titleNamePanel, JPanel gamePanel) {
 		try {
 			Scanner reader = new Scanner(new FileReader(file));
 			String line = null, attackNames = null;
 			String[] col = null;
-			int currentHealth, totalHealth, attack, defense, level;
+			int currentHealth, totalHealth, attack, defense;
 			// Level l = null;
             List<String[]> lines = new ArrayList<>();
 
 			// Read
 			line = reader.nextLine();
-			headers = line.split(",");
 
 			// Read from .csv file
-			while (reader.hasNext()) {
-				line = reader.nextLine();
-				col = line.split(",");
-				lines.add(col);
-			}
+			line = reader.nextLine();
+			col = line.split(",");
 
 			// Close .csv file
 			reader.close();
 
 			// Get Player attributes from list of lines
-			for (int i = 0; i < lines.size(); i++) {
-				for (int j = 0; j < lines.get(i).length; j++) {
-					playerName = lines.get(i)[0];
-					currentHealth = Integer.parseInt(lines.get(i)[1]);
-					totalHealth = Integer.parseInt(lines.get(i)[2]);
-					attack = Integer.parseInt(lines.get(i)[3]);
-					defense = Integer.parseInt(lines.get(i)[4]);
-					level = Integer.parseInt(lines.get(i)[5]);
-					attackNames = lines.get(i)[6];
-					attackNames = attackNames.replace("_", " ");
 
-					// Create new instances of Level and Player classes, respectively
-					// l = new Level(level);
-					player = new Player(playerName);
+			player = new Player();
+			player.setName(col[0]);
+			player.setCurrentHealth(Integer.parseInt(col[1]));
+			player.setTotalHealth(Integer.parseInt(col[2]));
+			player.setAttack(Integer.parseInt(col[3]));
+			player.setDefense(Integer.parseInt(col[4]));
+			
+			e = new EnemyList();
+			
+			for(int i = 0; i < 3; i++) {
+				if(col[i + 5].equals("T")) {
+					e.getBossList().get(i).setDefeated(true);
+				} else {
+					e.getBossList().get(i).setDefeated(false);
 				}
 			}
+			
+			this.createGameScreen(window, container, titleNamePanel, gamePanel, player);
 
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR: File not found.");
 		}
 	}
 
-	public void saveGame() throws IOException {
+	public void saveGame(EnemyList eList, Player p) throws IOException {
 		try {
 			// Open file to write into in append mode
 			// Prevents old data from being overwritten
 			FileWriter writer = new FileWriter(file, true);
+			
+			List<Boss> list = eList.getBossList();
+			
+			player = p;
 			
 			// Write attributes to a CSV file
 			writer.write(player.getName() + ",");
@@ -167,6 +178,14 @@ public class Game implements ActionListener {
 			writer.write(player.getTotalHealth() + ",");
 			writer.write(player.getAttack() + ",");
 			writer.write(player.getDefense() + ",");
+			
+			for(int i = 0; i < 3; i++) {
+				if(list.get(i).getDefeated()) {
+					writer.write("T" + ",");
+				} else {
+					writer.write("F" + ",");
+				}
+			}
 			
 			// Write newline character at the end
 			writer.write("\n");
@@ -181,13 +200,6 @@ public class Game implements ActionListener {
 	}
 
 	void quitGame() {
-		// Save game
-		try {
-			this.saveGame();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
 		// Exit game
 		window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
 	}
@@ -206,7 +218,7 @@ public class Game implements ActionListener {
 			Map map = new Map();
 			map.printMenu();
 
-			new TextArea(this.player);
+			new TextArea(this.player, e);
             
 			window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
 		}

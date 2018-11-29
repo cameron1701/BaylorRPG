@@ -28,10 +28,11 @@ public class TextArea extends JPanel implements ActionListener {
 
 	private EnemyList e = new EnemyList();
 
-	public TextArea(Player p) {
+	public TextArea(Player p, EnemyList e) {
 		// Text Area Set Up
 		super(new BorderLayout());
 		this.player = p;
+		this.e = e;
 		this.log = new JTextArea(700, 700);
 		this.log.setOpaque(true);
 		this.log.setMargin(new Insets(5, 5, 5, 5));
@@ -132,7 +133,7 @@ public class TextArea extends JPanel implements ActionListener {
 			if (ev.getSource() == menuButton) {
 
 				// Create Menu screen
-				Menu menu = new Menu();
+				Menu menu = new Menu(e, player);
 				menu.createMenuScreen();
 			}
 			
@@ -218,6 +219,19 @@ public class TextArea extends JPanel implements ActionListener {
 					}
 					Battle.battle(player);
 					stepCount = 0;
+				}
+				
+				if (e.bossesDefeated()) {
+					System.out.println("\n\n" + 
+								"*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + 
+								"*					   YOU						  *\n" + 
+								"*					   WIN   					  *\n" + 
+								"*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n");
+					System.out.println("\nThank you for playing BearQuest! We hope that you have enjoyed \n" + 
+								"our game, please email feedback to Cameron_Cole@baylor.edu\n" + 
+								"Thanks again, and play again soon!\n");
+					
+					System.exit(0);
 				}
 			}
 		}

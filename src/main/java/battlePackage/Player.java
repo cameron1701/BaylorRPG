@@ -11,6 +11,10 @@ public class Player {
 	private int defense;
 	private List<String> attackNames = new ArrayList<String>();
 
+	public Player() {
+		
+	}
+	
 	public Player(String s) {
 		if(s != null) {
 			this.name = s;
@@ -51,7 +55,7 @@ public class Player {
 	}
 
 	public void setCurrentHealth(int currentHealth) {
-		this.currentHealth -= currentHealth;
+		this.currentHealth = currentHealth;
 	}
 
 	public String getName() {
