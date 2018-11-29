@@ -1,0 +1,8 @@
+body{
+   background:black;
+   font-family:"Lucida Console", Monaco, monospace;
+}
+
+h1, li{
+   color:"green";
+}
