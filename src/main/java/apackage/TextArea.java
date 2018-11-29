@@ -224,8 +224,8 @@ public class TextArea extends JPanel implements ActionListener {
 				if (e.bossesDefeated()) {
 					System.out.println("\n\n" + 
 								"*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n" + 
-								"*					   YOU						  *\n" + 
-								"*					   WIN   					  *\n" + 
+								"*                    YOU                         *\n" + 
+								"*                    WIN                         *\n" + 
 								"*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*\n");
 					System.out.println("\nThank you for playing BearQuest! We hope that you have enjoyed \n" + 
 								"our game, please email feedback to Cameron_Cole@baylor.edu\n" + 

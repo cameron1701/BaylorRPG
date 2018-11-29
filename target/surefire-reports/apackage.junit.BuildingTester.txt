@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: apackage.junit.BuildingTester
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.295 sec - in apackage.junit.BuildingTester
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.271 sec - in apackage.junit.BuildingTester
