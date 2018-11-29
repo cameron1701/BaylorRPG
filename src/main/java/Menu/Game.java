@@ -156,17 +156,20 @@ public class Game implements ActionListener {
 
 	public void saveGame() throws IOException {
 		try {
-			FileWriter writer = new FileWriter(file);
-
-			for (int i = 0; i < 1; i++) {
-				String str = new String();
-
-				/*
-				 * for (int j = 0; j < players.get(i).length - 1; j++) { str +=
-				 * (players.get(i)[j] + ","); } str += (players.get(i)[data.get(0).length - 1]);
-				 * writer.write(str.trim() + '\n');
-				 */
-			}
+			// Open file to write into in append mode
+			// Prevents old data from being overwritten
+			FileWriter writer = new FileWriter(file, true);
+			
+			// Write attributes to a CSV file
+			writer.write(player.getName() + ",");
+			writer.write(player.getCurrentHealth() + ",");
+			writer.write(player.getTotalHealth() + ",");
+			writer.write(player.getAttack() + ",");
+			writer.write(player.getDefense() + ",");
+			
+			// Write newline character at the end
+			writer.write("\n");
+			
 			writer.flush();
 			writer.close();
 
@@ -174,17 +177,6 @@ public class Game implements ActionListener {
 			e.printStackTrace();
 			System.out.println("ERROR: File not found");
 		}
-	}
-
-	void pauseGame() {
-		// Pause game
-
-	}
-
-	void restartLevel() {
-		// Level level = new Level(1);
-
-		// level.restart(player);
 	}
 
 	void quitGame() {

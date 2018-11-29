@@ -15,7 +15,7 @@ public class Menu implements ActionListener {
 	private JLabel titleNameLabel;
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 40);
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 22);
-	private JButton startNewGame, loadGame, saveGame, pauseGame, restartLevel, quitGame, back;
+	private JButton startNewGame, loadGame, saveGame, quitGame, back;
 	private Player player;
 	private Game game;
 
@@ -78,15 +78,6 @@ public class Menu implements ActionListener {
 		saveGame.setFocusPainted(false);
 		// saveGame.setBorderPainted(false);
 
-		// Create pause game button
-		pauseGame = new JButton("Pause Game");
-		pauseGame.setBackground(Color.black);
-		pauseGame.setForeground(Color.white);
-		pauseGame.setFont(normalFont);
-		pauseGame.addActionListener(this);
-		pauseGame.setFocusPainted(false);
-		// pauseGame.setBorderPainted(false);
-
 		// Create quit game button
 		quitGame = new JButton("Quit Game");
 		quitGame.setBackground(Color.black);
@@ -109,7 +100,6 @@ public class Menu implements ActionListener {
 		gamePanel.add(startNewGame);
 		gamePanel.add(loadGame);
 		gamePanel.add(saveGame);
-		gamePanel.add(pauseGame);
 		gamePanel.add(quitGame);
 		gamePanel.add(back);
 
@@ -176,15 +166,6 @@ public class Menu implements ActionListener {
 		saveGame.setFocusPainted(false);
 		// saveGame.setBorderPainted(false);
 
-		// Create pause game button
-		pauseGame = new JButton("Pause Game");
-		pauseGame.setBackground(Color.black);
-		pauseGame.setForeground(Color.white);
-		pauseGame.setFont(normalFont);
-		pauseGame.addActionListener(this);
-		pauseGame.setFocusPainted(false);
-		// pauseGame.setBorderPainted(false);
-
 		// Create quit game button
 		quitGame = new JButton("Quit Game");
 		quitGame.setBackground(Color.black);
@@ -207,7 +188,6 @@ public class Menu implements ActionListener {
 		gamePanel.add(startNewGame);
 		gamePanel.add(loadGame);
 		gamePanel.add(saveGame);
-		gamePanel.add(pauseGame);
 		gamePanel.add(quitGame);
 		gamePanel.add(back);
 
@@ -243,13 +223,6 @@ public class Menu implements ActionListener {
 			}
 		}
 
-        if (event.getActionCommand().equals("Pause Game")) {
-			System.out.println("Game paused!");
-
-			// Pause game
-			game.pauseGame();
-		}
-
         if (event.getActionCommand().equals("Quit Game")) {
 			System.out.println("Game quit!");
 
@@ -260,8 +233,8 @@ public class Menu implements ActionListener {
         if (event.getActionCommand().equals("<<")) {
 			System.out.println("Going back...");
 
-			// Create game screen
-			//game.createGameScreen(window, container, titleNamePanel, gamePanel, player);
+			// Close Menu window
+			window.dispose();
 		}
 	}
 }
