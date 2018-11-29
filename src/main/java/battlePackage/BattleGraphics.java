@@ -21,16 +21,16 @@ public class BattleGraphics extends JPanel {
 		// Get Result type
 		if (result.equals("win")) {
 			this.fileName = "win.png";
-
 		} else if (result.equals("retreat")) {
 			this.fileName = "retreat.png";
-		} else {
+		} else if (result.equals("lose")){
 			this.fileName = "lose.png";
+		} else {
+			throw new IOException("Bad Input");
 		}
 
 		// Get Image
 		//java.net.URL imageURL = BattleGraphics.class.getResource(fileName);
-		
 		this.image = ImageIO.read(new File(this.fileName));
 		//this.image = (BufferedImage) imageURL.getContent();
 		

@@ -2,10 +2,12 @@ package apackage;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Building extends Map {
 	private String id;
 	private String desc;
+	private List<String> buildingList = new ArrayList<String>();
 
 	public Building(String id) {
 		this.setID(id);
@@ -13,7 +15,7 @@ public class Building extends Map {
 
 	public void printBuildingMenu(JTextArea log) {
         // Make a list of buildings we want in map
-        buildingList = new ArrayList<>();
+        //buildingList = new ArrayList<>();
         buildingList.add("Cashion");
         buildingList.add("Penland");
         buildingList.add("Moody");

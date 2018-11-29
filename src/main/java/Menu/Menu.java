@@ -29,8 +29,8 @@ public class Menu implements ActionListener {
 		this.game = g;
 	}
 	
-	public Menu(EnemyList e, Player p){
-		e = e;
+	public Menu(EnemyList eList, Player p){
+		e = eList;
 		player = p;
 	}
 

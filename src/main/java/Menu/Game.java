@@ -14,7 +14,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,14 +23,10 @@ public class Game implements ActionListener {
 	private Container container;
 	private JPanel titleNamePanel, gamePanel;
 	private File file = new File("BearQuestDB.csv");
-	private String[] headers;
 	private String playerName;
 	private Player player = new Player();
 
-	private List<Player> players = new ArrayList<Player>();
 	private JPanel mainTextPanel, menuPanel;
-	private JLabel titleNameLabel;
-	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton menuButton, mapButton;
 	private JTextArea mainTextArea;
@@ -120,11 +115,8 @@ public class Game implements ActionListener {
 	void loadGame(JFrame window, Container container, JPanel titleNamePanel, JPanel gamePanel) {
 		try {
 			Scanner reader = new Scanner(new FileReader(file));
-			String line = null, attackNames = null;
-			String[] col = null;
-			int currentHealth, totalHealth, attack, defense;
-			// Level l = null;
-            List<String[]> lines = new ArrayList<>();
+			String line;
+			String[] col;
 
 			// Read
 			line = reader.nextLine();

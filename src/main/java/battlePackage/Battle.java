@@ -7,8 +7,6 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import Story.Boss;
-
 public class Battle {
 	public static void battle(Player p) {
 		final Player player = p;
