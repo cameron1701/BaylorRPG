@@ -189,7 +189,7 @@ public class Game implements ActionListener {
 		}
 
 		// Exit game
-		System.exit(0);
+		window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
 	}
 
 	@Override
@@ -197,7 +197,8 @@ public class Game implements ActionListener {
 		if (event.getActionCommand() == "Menu") {
 			// Create Menu screen
 			Menu menu = new Menu(this, this.player);
-			menu.createMenuScreen(window, container, titleNamePanel, gamePanel);
+			//menu.createMenuScreen(window, container, titleNamePanel, gamePanel);
+			menu.createMenuScreen();
 		}
 
 		if (event.getActionCommand() == "Map") {

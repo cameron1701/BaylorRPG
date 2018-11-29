@@ -67,11 +67,11 @@ public class TextArea extends JPanel implements ActionListener {
 		this.menuButton.setOpaque(true);
 		this.menuButton.setBorderPainted(false);
 		this.menuButton.setEnabled(true);
-		this.menuButton.setActionCommand("Menu");
+		//this.menuButton.setActionCommand("Menu");
 
 		// Make buttons have a buttonListener
 		enterButton.addActionListener(buttonListener);
-		menuButton.addActionListener(this);
+		menuButton.addActionListener(buttonListener);
 
 		// Make input text field
 		input = new JTextField(20);
@@ -104,15 +104,12 @@ public class TextArea extends JPanel implements ActionListener {
 		});
 	}
 
+	
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		if (event.getActionCommand() == "Menu") {
-
-			// Create Menu screen
-			Menu menu = new Menu();
-			menu.createMenuScreen();
-		}
+	
 	}
+	
 
 	public void createAndShowGUI() {
 		// Frame Set Up
@@ -132,87 +129,96 @@ public class TextArea extends JPanel implements ActionListener {
 
 	public class ButtonListener implements ActionListener {
 		public void actionPerformed(final ActionEvent ev) {
-			// Get input from input box
-			inputString = input.getText();
-			input.setText("");
-			input.requestFocus();
+			if (ev.getSource() == menuButton) {
 
-			if (!inputString.equals("Y") && !inputString.equals("y")) {
-
-				// Change buildings
-				if (building.isValid(inputString)) {
-					// Echo print
-					log.append("You selected " + inputString);
-
-					building.setID(inputString);
-
-					// Print current building
-					log.append("\nYou are now in " + building.getID() + "\n\n");
-
-					stepCount++;
-
-					// Show building description
-					log.append(building.buildingDesc() + "\n");
-					building.printBuildingMenu(log);
+				// Create Menu screen
+				Menu menu = new Menu();
+				menu.createMenuScreen();
+			}
+			
+			if(ev.getSource() == enterButton) {
+				// Get input from input box
+				inputString = input.getText();
+				input.setText("");
+				input.requestFocus();
+	
+				if (!inputString.equals("Y") && !inputString.equals("y")) {
+	
+					// Change buildings
+					if (building.isValid(inputString)) {
+						// Echo print
+						log.append("You selected " + inputString);
+	
+						building.setID(inputString);
+	
+						// Print current building
+						log.append("\nYou are now in " + building.getID() + "\n\n");
+	
+						stepCount++;
+	
+						// Show building description
+						log.append(building.buildingDesc() + "\n");
+						building.printBuildingMenu(log);
+					} else {
+						log.append("Sorry, " + inputString + " is not an option.\n");
+					}
+	
+					log.append("\nWhere would you like to go?\n");
+	
+					// Show boss battles if available
+					if (building.isValid(inputString) && building.getID().equals("CASH")
+							&& !e.getBossList().get(1).getDefeated()) {
+						log.append("You have entered the domain of Dr. Cerny...\n"
+								+ "Would you like to battle him? Enter Y to battle. \n");
+						log.append("If no, enter where you would like to go.\n");
+					} else if (building.isValid(inputString) && building.getID().equals("BSB")
+							&& !e.getBossList().get(2).getDefeated()) {
+						log.append("You have entered the domain of Prof. Fry...\n"
+								+ "Would you like to battle her? Enter Y to battle. \n");
+						log.append("If no, enter where you would like to go.\n");
+					} else if (building.isValid(inputString) && building.getID().equals("TEAL")
+							&& !e.getBossList().get(0).getDefeated()) {
+						log.append("You have entered the domain of Dr. Booth...\n"
+								+ "Would you like to battle him? Enter Y to battle. \n");
+						log.append("If no, enter where you would like to go.\n");
+					}
+	
 				} else {
-					log.append("Sorry, " + inputString + " is not an option.\n");
+					// Have a boss battle!
+					log.append("\nBOSS BATTLE!!!\n");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					Battle.bossBattle(player, building.getID(), e);
+					building.printBuildingMenu(log);
+					log.append("\nWhere would you like to go?\n");
 				}
-
-				log.append("\nWhere would you like to go?\n");
-
-				// Show boss battles if available
-				if (building.isValid(inputString) && building.getID().equals("CASH")
-						&& !e.getBossList().get(1).getDefeated()) {
-					log.append("You have entered the domain of Dr. Cerny...\n"
-							+ "Would you like to battle him? Enter Y to battle. \n");
-					log.append("If no, enter where you would like to go.\n");
-				} else if (building.isValid(inputString) && building.getID().equals("BSB")
-						&& !e.getBossList().get(2).getDefeated()) {
-					log.append("You have entered the domain of Prof. Fry...\n"
-							+ "Would you like to battle her? Enter Y to battle. \n");
-					log.append("If no, enter where you would like to go.\n");
-				} else if (building.isValid(inputString) && building.getID().equals("TEAL")
-						&& !e.getBossList().get(0).getDefeated()) {
-					log.append("You have entered the domain of Dr. Booth...\n"
-							+ "Would you like to battle him? Enter Y to battle. \n");
-					log.append("If no, enter where you would like to go.\n");
+	
+				// Show an encounter if there is one
+				String encounter = null;
+				if (building.isValid(inputString)) {
+					encounter = Encounter.randomEncounter(building.getID());
+					if (encounter.length() > 0) {
+						log.append("\nENCOUNTER!\n");
+						log.append(encounter + "\n\n");
+					}
 				}
-
-			} else {
-				// Have a boss battle!
-				log.append("\nBOSS BATTLE!!!\n");
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+	
+				// Have a battle every three steps
+				if (stepCount == 3) {
+					log.append("RANDOM BATTLE!!!\n");
+					try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					Battle.battle(player);
+					stepCount = 0;
 				}
-				Battle.bossBattle(player, building.getID(), e);
-				building.printBuildingMenu(log);
-				log.append("\nWhere would you like to go?\n");
-			}
-
-			// Show an encounter if there is one
-			String encounter = null;
-			if (building.isValid(inputString)) {
-				encounter = Encounter.randomEncounter(building.getID());
-				if (encounter.length() > 0) {
-					log.append("\nENCOUNTER!\n");
-					log.append(encounter + "\n\n");
-				}
-			}
-
-			// Have a battle every three steps
-			if (stepCount == 3) {
-				log.append("RANDOM BATTLE!!!\n");
-				try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				Battle.battle(player);
-				stepCount = 0;
 			}
 		}
 	}

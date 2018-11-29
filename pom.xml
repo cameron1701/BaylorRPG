@@ -79,6 +79,11 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19</version>
 				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>MainGame.MainClass</mainClass>
+						</manifest>
+					</archive>
 					<includes>
 						<include>**/*.java</include>
 					</includes>

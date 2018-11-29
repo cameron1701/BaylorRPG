@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 
 public class Menu implements ActionListener {
@@ -107,93 +108,6 @@ public class Menu implements ActionListener {
 		container.add(gamePanel);
 	}
 
-	public void createMenuScreen(JFrame w, Container c, JPanel t, JPanel g) {
-		// Assign values to window, container, titleNamePanel, and gamePanel
-		this.window = w;
-		this.container = c;
-		this.titleNamePanel = t;
-		this.gamePanel = g;
-
-		// Create frame
-		window = new JFrame("BearQuest");
-		window.setSize(800, 700);
-		window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		window.getContentPane().setBackground(Color.black);
-		window.setLayout(null);
-		window.setResizable(false);
-		window.setLocationRelativeTo(null);
-		window.setVisible(true);
-		container = window.getContentPane();
-
-		// Create title panel
-		titleNamePanel = new JPanel();
-		titleNamePanel.setBounds(100, 100, 600, 80);
-		titleNamePanel.setBackground(Color.black);
-		titleNameLabel = new JLabel("Game Menu");
-		titleNameLabel.setForeground(Color.white);
-		titleNameLabel.setFont(titleFont);
-
-		// Create start new game panel
-		gamePanel = new JPanel();
-		gamePanel.setBounds(300, 200, 180, 300);
-		gamePanel.setBackground(Color.black);
-		gamePanel.setForeground(Color.white);
-
-		// Create start new game button
-		startNewGame = new JButton("Start New Game");
-		startNewGame.setBackground(Color.black);
-		startNewGame.setForeground(Color.white);
-		startNewGame.setFont(normalFont);
-		startNewGame.addActionListener(this);
-		startNewGame.setFocusPainted(false);
-		// startNewGame.setBorderPainted(false);
-
-		// Create start new game button
-		loadGame = new JButton("Load Game");
-		loadGame.setBackground(Color.black);
-		loadGame.setForeground(Color.white);
-		loadGame.setFont(normalFont);
-		loadGame.addActionListener(this);
-		loadGame.setFocusPainted(false);
-		// loadGame.setBorderPainted(false);
-
-		// Create save game button
-		saveGame = new JButton("Save Game");
-		saveGame.setBackground(Color.black);
-		saveGame.setForeground(Color.white);
-		saveGame.setFont(normalFont);
-		saveGame.addActionListener(this);
-		saveGame.setFocusPainted(false);
-		// saveGame.setBorderPainted(false);
-
-		// Create quit game button
-		quitGame = new JButton("Quit Game");
-		quitGame.setBackground(Color.black);
-		quitGame.setForeground(Color.white);
-		quitGame.setFont(normalFont);
-		quitGame.addActionListener(this);
-		quitGame.setFocusPainted(false);
-		// quitGame.setBorderPainted(false);
-
-		// Create back button
-		back = new JButton("<<");
-		back.setBackground(Color.black);
-		back.setForeground(Color.white);
-		back.setFont(normalFont);
-		back.addActionListener(this);
-		back.setFocusPainted(false);
-		// back.setBorderPainted(false);
-
-		titleNamePanel.add(titleNameLabel);
-		gamePanel.add(startNewGame);
-		gamePanel.add(loadGame);
-		gamePanel.add(saveGame);
-		gamePanel.add(quitGame);
-		gamePanel.add(back);
-
-		container.add(titleNamePanel);
-		container.add(gamePanel);
-	}
 
 	public void actionPerformed(ActionEvent event) {
 		//Game game = new Game();
@@ -227,7 +141,8 @@ public class Menu implements ActionListener {
 			System.out.println("Game quit!");
 
 			// Quit game
-			game.quitGame();
+			window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
+			System.exit(0);
 		}
 
         if (event.getActionCommand().equals("<<")) {
