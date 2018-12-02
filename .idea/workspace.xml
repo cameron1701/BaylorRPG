@@ -118,7 +118,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -324,7 +324,7 @@
       <workItem from="1543468783489" duration="138000" />
       <workItem from="1543469246713" duration="12000" />
       <workItem from="1543469277274" duration="2159000" />
-      <workItem from="1543724884891" duration="2689000" />
+      <workItem from="1543724884891" duration="3459000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;">
       <created>1540022019181</created>
@@ -393,7 +393,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80647000" />
+    <option name="totallyTimeSpent" value="81417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,8 +405,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34120172" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
