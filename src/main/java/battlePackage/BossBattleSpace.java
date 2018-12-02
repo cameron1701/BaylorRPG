@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -41,6 +43,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 	private Boss boss;
 	private Timer timer;
 	private Random rand = new Random();
+	private Logger logger = Logger.getLogger("Error Logger");
 
 	BossBattleSpace(Player p, Boss b) {
 		// Text Area Set Up
@@ -183,7 +186,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 						showResult("retreat");
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+						logger.log(Level.SEVERE, "File Not Found!");
 					}
 				}
 			}, 3000);
@@ -221,7 +224,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 							showResult("lose");
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
-							e.printStackTrace();
+							logger.log(Level.SEVERE, "File Not Found!");
 						}
 					}
 				}, 3000);
@@ -266,7 +269,7 @@ public class BossBattleSpace extends JPanel implements ActionListener {
 							showResult("win");
 						} catch (IOException e) {
 							// TODO Auto-generated catch block
-							e.printStackTrace();
+							logger.log(Level.SEVERE, "File Not Found!");
 						}
 					}
 				}, 3000);

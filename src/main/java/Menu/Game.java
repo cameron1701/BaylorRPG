@@ -16,6 +16,8 @@ import java.awt.event.WindowEvent;
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Game implements ActionListener {
 
@@ -30,6 +32,7 @@ public class Game implements ActionListener {
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton menuButton, mapButton;
 	private JTextArea mainTextArea;
+	private Logger logger = Logger.getLogger("Error Logger");
 	
 	private EnemyList e = new EnemyList();
 
@@ -186,8 +189,7 @@ public class Game implements ActionListener {
 			writer.close();
 
 		} catch (IOException e) {
-			e.printStackTrace();
-			System.out.println("ERROR: File not found");
+			logger.log(Level.SEVERE, "File Not Found!");
 		}
 	}
 

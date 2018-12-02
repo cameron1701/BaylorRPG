@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -41,6 +43,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 	private List<Enemy> enemies;
 	private Timer timer;
 	private Random rand = new Random();
+	private Logger logger = Logger.getLogger("Error Logger");
 
 	public BattleSpace(Player p, List<Enemy> enemies) {
 		// Text Area Set Up
@@ -182,7 +185,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 					try {
 						showResult("retreat");
 					} catch (IOException e) {
-						e.printStackTrace();
+						logger.log(Level.SEVERE, "File Not Found!");
 					}
 				}
 			}, 3000);
@@ -225,7 +228,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 						try {
 							showResult("lose");
 						} catch (IOException e) {
-							e.printStackTrace();
+							logger.log(Level.SEVERE, "File Not Found!");
 						}
 					}
 				}, 3000);
@@ -276,7 +279,7 @@ public class BattleSpace extends JPanel implements ActionListener {
 						try {
 							showResult("win");
 						} catch (IOException e) {
-							e.printStackTrace();
+							logger.log(Level.SEVERE, "File Not Found!");
 						}
 					}
 				}, 3000);

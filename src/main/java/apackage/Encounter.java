@@ -5,8 +5,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Encounter {
+	private static Logger logger = Logger.getLogger("Error Logger");
 
     public static int generateRandomInt(int upperRange) {
         Random random = new Random();
@@ -34,9 +37,9 @@ public class Encounter {
                             }
                         }
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");
                     } catch (IOException e) {
-                        e.printStackTrace();
+                    	logger.log(Level.SEVERE, "File Not Found!");
                     }
                     break;
 
@@ -53,9 +56,9 @@ public class Encounter {
                             }
                         }
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     }
                     break;
 
@@ -72,9 +75,9 @@ public class Encounter {
                             }
                         }
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     }
                     break;
 
@@ -91,9 +94,9 @@ public class Encounter {
                             }
                         }
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     }
                     break;
 
@@ -110,9 +113,9 @@ public class Encounter {
                             }
                         }
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     }
                     break;
 
@@ -129,9 +132,9 @@ public class Encounter {
                             }
                         }
                     } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        logger.log(Level.SEVERE, "File Not Found!");;
                     }
                      
                     break;

@@ -10,6 +10,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TextArea extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
@@ -22,6 +24,7 @@ public class TextArea extends JPanel implements ActionListener {
 	private String inputString;
 	private JTextField input;
 	private JButton enterButton, menuButton;
+	private Logger logger = Logger.getLogger("Error Logger");
 
 	private int stepCount = 0;
 	private Building building = new Building("CASH");
@@ -230,7 +233,7 @@ public class TextArea extends JPanel implements ActionListener {
 						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+						logger.log(Level.SEVERE, "Sleep Interrupted!");
 					}
 					Battle.battle(player);
 					stepCount = 0;

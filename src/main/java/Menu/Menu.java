@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Menu implements ActionListener {
 	private JFrame window;
@@ -21,6 +23,7 @@ public class Menu implements ActionListener {
 	private Player player;
 	private Game game = new Game();
 	private EnemyList e = new EnemyList();
+	private Logger logger = Logger.getLogger("Error Logger");
 
 	public Menu(){}
 
@@ -140,7 +143,7 @@ public class Menu implements ActionListener {
 			try {
 				game.saveGame(e, player);
 			} catch (IOException e) {
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "File Not Found!");
 			}
 		}
 

@@ -6,6 +6,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,6 +23,7 @@ public class Main implements ActionListener {
 	private Font titleFont = new Font("Times New Roman", Font.PLAIN, 90);
 	private Font normalFont = new Font("Times New Roman", Font.PLAIN, 28);
 	private JButton startNewGame, loadGame;
+	private static Logger logger = Logger.getLogger("Error Logger");
 
 	public void createStartScreen() throws IOException {
 		// Create frame
@@ -80,7 +83,7 @@ public class Main implements ActionListener {
 				try {
 					guiMaker.createStartScreen();
 				} catch (IOException e) {
-					e.printStackTrace();
+					logger.log(Level.SEVERE, "File Not Found!");
 				}
 			}
 		});

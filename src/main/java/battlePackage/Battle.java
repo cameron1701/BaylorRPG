@@ -2,12 +2,16 @@ package battlePackage;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class Battle {
+	private static Logger logger = Logger.getLogger("Error Logger");
+	
 	public static void battle(Player p) {
 		final Player player = p;
 		final EnemyList e = new EnemyList();
@@ -27,7 +31,7 @@ public class Battle {
 					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 						| UnsupportedLookAndFeelException e) {
-					e.printStackTrace();
+					logger.log(Level.SEVERE, "Exception Thrown!", e);
 				}
 
 			}
@@ -55,7 +59,7 @@ public class Battle {
 					UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 						| UnsupportedLookAndFeelException e) {
-					e.printStackTrace();
+					logger.log(Level.SEVERE, "Exception Thrown!", e);
 				}
 
 			}

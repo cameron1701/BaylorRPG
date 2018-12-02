@@ -1,6 +1,8 @@
 package MainGame;
 
 import java.awt.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import Menu.*;
 
@@ -8,6 +10,7 @@ public class MainClass extends Canvas implements Runnable {
 	private static final long serialVersionUID = 7034980898387217024L;
 	public static final int WIDTH = 800, HEIGHT = 640;
 	private Thread thread;
+	private Logger logger = Logger.getLogger("Error Logger");
 
 	// Default constructor that creates the main game window
 	public MainClass() {
@@ -25,7 +28,7 @@ public class MainClass extends Canvas implements Runnable {
 		try {
 			thread.join();
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.log(Level.SEVERE, "Thread Not Stopped");
 		}
 	}
 
