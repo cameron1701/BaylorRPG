@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="Encounters Use Case Added" />
+    <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="Encounters Use Case Added">
+      <change beforePath="$PROJECT_DIR$/Iteration-3/Documentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Iteration-3/Documentation.pdf" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,7 +120,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -324,7 +326,7 @@
       <workItem from="1543468783489" duration="138000" />
       <workItem from="1543469246713" duration="12000" />
       <workItem from="1543469277274" duration="2159000" />
-      <workItem from="1543724884891" duration="3459000" />
+      <workItem from="1543724884891" duration="3517000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;">
       <created>1540022019181</created>
@@ -393,7 +395,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81417000" />
+    <option name="totallyTimeSpent" value="81475000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,7 +407,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34120172" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
