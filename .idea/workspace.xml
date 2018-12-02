@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="Encounters Use Case Added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apackage/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apackage/Building.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" afterDir="false" />
-    </list>
+    <list default="true" id="cc3a3799-3b48-46de-88c4-2ce98155b4a2" name="Default Changelist" comment="Encounters Use Case Added" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +24,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+            <state relative-caret-position="20">
+              <caret line="207" column="17" lean-forward="true" selection-start-line="207" selection-start-column="17" selection-end-line="207" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Encounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -102,6 +107,7 @@
         <option value="$PROJECT_DIR$/Foster Encounters.txt" />
         <option value="$PROJECT_DIR$/src/main/java/apackage/Building.java" />
         <option value="$PROJECT_DIR$/src/main/java/apackage/TextArea.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apackage/Encounter.java" />
       </list>
     </option>
   </component>
@@ -318,7 +324,7 @@
       <workItem from="1543468783489" duration="138000" />
       <workItem from="1543469246713" duration="12000" />
       <workItem from="1543469277274" duration="2159000" />
-      <workItem from="1543724884891" duration="1577000" />
+      <workItem from="1543724884891" duration="2689000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Game class removed, extra Window class in apackage.junit removed, list of buildings added to Map class&quot;">
       <created>1540022019181</created>
@@ -387,7 +393,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79535000" />
+    <option name="totallyTimeSpent" value="80647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,14 +417,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3299363" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32866243" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32866243" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32866243" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007153" side_tool="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49928468" weight="0.32866243" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -704,8 +710,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/apackage/TextArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="94" column="38" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
+        <state relative-caret-position="20">
+          <caret line="207" column="17" lean-forward="true" selection-start-line="207" selection-start-column="17" selection-end-line="207" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/apackage/Encounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
