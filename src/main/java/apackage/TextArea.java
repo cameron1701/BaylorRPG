@@ -92,6 +92,7 @@ public class TextArea extends JPanel implements ActionListener {
 		log.append("\nWhere would you like to go?\n");
 		log.append("\n+------------------------------+\n");
 		building.printBuildingMenu(log);
+		building.buildingList.clear();
 		log.append("Please capitalize the first letter\n" + "+------------------------------+\n");
 
 		this.setVisible(true);
@@ -159,12 +160,16 @@ public class TextArea extends JPanel implements ActionListener {
 	
 						// Show building description
 						log.append(building.buildingDesc() + "\n");
-						building.printBuildingMenu(log);
+						//building.printBuildingMenu(log);
 					} else {
 						log.append("Sorry, " + inputString + " is not an option.\n");
 					}
 	
 					log.append("\nWhere would you like to go?\n");
+					log.append("\n+------------------------------+\n");
+					building.printBuildingMenu(log);
+					building.buildingList.clear();
+					log.append("Please capitalize the first letter\n" + "+------------------------------+\n");
 	
 					// Show boss battles if available
 					if (building.isValid(inputString) && building.getID().equals("CASH")
@@ -194,8 +199,12 @@ public class TextArea extends JPanel implements ActionListener {
 						e1.printStackTrace();
 					}
 					Battle.bossBattle(player, building.getID(), e);
+					log.append("\n+------------------------------+\n");
 					building.printBuildingMenu(log);
-					log.append("\nWhere would you like to go?\n");
+					building.buildingList.clear();
+					log.append("Please capitalize the first letter\n" + "+------------------------------+\n");
+					/*building.printBuildingMenu(log);
+					log.append("\nWhere would you like to go?\n");*/
 				}
 	
 				// Show an encounter if there is one

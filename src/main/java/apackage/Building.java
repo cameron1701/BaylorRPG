@@ -7,7 +7,7 @@ import java.util.List;
 public class Building extends Map {
 	private String id;
 	private String desc;
-	private List<String> buildingList = new ArrayList<String>();
+	public List<String> buildingList = new ArrayList<String>();
 
 	public Building(String id) {
 		this.setID(id);
